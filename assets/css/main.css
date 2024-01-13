@@ -389,7 +389,7 @@
   z-index: 6;
 }
 /* 공통 */
-.title em {
+em {
   color: rgb(255, 202, 32);
 }
 .sc-creator .title .second-line {
@@ -1064,7 +1064,7 @@
   letter-spacing: -0.4px;
   text-transform: uppercase;
 }
-.sc-classic-space .bottom-section h3 {
+.sc-classic-space .bottom-section .sub-title {
   position: absolute;
   zoom: 1.6;
   top: 241px;
@@ -1076,9 +1076,6 @@
   font-weight: 300;
   letter-spacing: -0.4px;
   text-transform: uppercase;
-}
-.sc-classic-space .bottom-section em {
-  color: rgb(255, 202, 32);
 }
 .sc-classic-space .bottom-section .description {
   position: absolute;
@@ -1123,6 +1120,19 @@
   width: 100%;
   max-width: 100%;
   background-color: #16244a;
+  z-index: 1;
+}
+.sc-spacesuits::before {
+  position: absolute;
+  content: "";
+  zoom: 1.6;
+  width: 1260px;
+  height: 2774px;
+  top: 0px;
+  left: -30px;
+  display: block;
+  background: url("../imgs/space-bg3.png") no-repeat center / cover;
+  z-index: -1;
 }
 .sc-spacesuits .alien1 {
   position: absolute;
@@ -1130,6 +1140,7 @@
   left: -156px;
   top: 16px;
   width: 102px;
+  z-index: 1;
 }
 .sc-spacesuits .alien2 {
   position: absolute;
@@ -1137,6 +1148,7 @@
   left: 1160px;
   top: 15px;
   width: 107px;
+  z-index: 1;
 }
 .sc-spacesuits .yellow-white-block {
   position: absolute;
@@ -1145,4 +1157,315 @@
   top: -47px;
   width: 1604px;
   max-width: none;
+  z-index: 1;
+}
+.sc-spacesuits .ground-bg {
+  position: absolute;
+  zoom: 1.6;
+  left: -227px;
+  top: 460px;
+  width: 1655px;
+  max-width: none;
+}
+.sc-spacesuits .follow-ufo {
+  position: absolute;
+  zoom: 1.6;
+  left: 379px;
+  top: -17px;
+  width: 450px;
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.sc-spacesuits .label {
+  top: 400px;
+  left: 39px;
+  width: 158px;
+  z-index: 2;
+}
+.sc-spacesuits .title {
+  top: 400px;
+  left: 237px;
+  width: 726px;
+  z-index: 2;
+}
+/* 공통 */
+.sc-spacesuits [class*="bubble-"] {
+  position: absolute;
+  zoom: 1.6;
+  width: 129px;
+  height: 74px;
+  background: url("../svgs/bubble.svg") no-repeat center / cover;
+  z-index: 2;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.sc-spacesuits [class*="text-"] {
+  position: absolute;
+  zoom: 1.6;
+  color: #0e1730;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.sc-spacesuits [class*="bubble-"].show {
+  opacity: 1;
+}
+.sc-spacesuits [class*="text-"].show {
+  opacity: 1;
+}
+.sc-spacesuits > img {
+  position: absolute;
+  zoom: 1.6;
+  padding-top: 200px;
+  z-index: 1;
+  transition: 0.2s ease-in-out;
+}
+.sc-spacesuits .bubble-scientist {
+  left: 199px;
+  top: 525px;
+}
+.sc-spacesuits .bubble-bad {
+  left: 427px;
+  top: 525px;
+}
+.sc-spacesuits .bubble-good {
+  left: 651px;
+  top: 525px;
+}
+.sc-spacesuits .bubble-mechanic {
+  left: 872px;
+  top: 525px;
+}
+.sc-spacesuits .bubble-soldier {
+  left: 1059px;
+  top: 525px;
+}
+.sc-spacesuits .text-scientist {
+  top: 547px;
+  left: 203px;
+  width: 119px;
+}
+.sc-spacesuits .text-bad {
+  top: 547px;
+  left: 434px;
+  width: 116px;
+}
+.sc-spacesuits .text-good {
+  top: 547px;
+  left: 655px;
+  width: 119px;
+}
+.sc-spacesuits .text-mechanic {
+  top: 547px;
+  left: 878px;
+  width: 119px;
+}
+.sc-spacesuits .text-soldier {
+  top: 547px;
+  left: 1065px;
+  width: 119px;
+}
+.sc-spacesuits .scientist {
+  left: 20px;
+  top: 319px;
+  width: 253px;
+}
+.sc-spacesuits .bad {
+  left: 233px;
+  top: 309px;
+  width: 283px;
+}
+.sc-spacesuits .good {
+  left: 510px;
+  top: 308px;
+  width: 181px;
+}
+.sc-spacesuits .mechanic {
+  left: 745px;
+  top: 270px;
+  width: 164px;
+}
+.sc-spacesuits .soldier {
+  left: 917px;
+  top: 310px;
+  width: 262px;
+}
+
+.sc-lego-value {
+  position: relative;
+  height: 1200px;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #16244a;
+}
+.sc-lego-value .title {
+  top: 11px;
+  left: 239px;
+  width: 663px;
+  z-index: 1;
+}
+.sc-lego-value .description {
+  top: 133px;
+  left: 495px;
+  width: 251px;
+  z-index: 1;
+}
+.sc-lego-value .photo {
+  position: absolute;
+  left: 240px;
+  top: 161px;
+  width: 780px;
+  zoom: 1.6;
+  z-index: 1;
+}
+.sc-lego-value .attach {
+  position: absolute;
+  left: 777px;
+  top: 125px;
+  width: 211px;
+  zoom: 1.6;
+  z-index: 1;
+}
+
+.sc-2011 {
+  position: relative;
+  /* width: 100vw; */
+  width: 100%;
+  height: 3760px;
+  max-width: 100%;
+  background-color: #16244a;
+}
+.sc-2011 .top-section {
+  position: absolute;
+  width: 100%;
+
+  z-index: 1;
+}
+.sc-2011 .label {
+  top: 38px;
+  left: 39px;
+  width: 133px;
+  z-index: 1;
+}
+.sc-2011 .title {
+  top: 38px;
+  left: 239px;
+  width: 558px;
+  z-index: 1;
+}
+.sc-2011 .description {
+  top: 85px;
+  left: 395px;
+  width: 426px;
+  z-index: 1;
+}
+.sc-2011 .mechanic {
+  position: absolute;
+  zoom: 1.6;
+  left: 452px;
+  top: 247px;
+  width: 123px;
+}
+.sc-2011 .good {
+  position: absolute;
+  zoom: 1.6;
+  left: 274px;
+  top: 275px;
+  width: 135px;
+}
+.sc-2011 .bad {
+  position: absolute;
+  zoom: 1.6;
+  left: 65px;
+  top: 276px;
+  width: 212px;
+}
+.sc-2011 .scientist {
+  position: absolute;
+  zoom: 1.6;
+  left: -95px;
+  top: 284px;
+  width: 189px;
+}
+.sc-2011 .atom {
+  position: absolute;
+  zoom: 1.6;
+  left: -280px;
+  top: 280px;
+  width: 200px;
+}
+.sc-2011 .alien2 {
+  position: absolute;
+  zoom: 1.6;
+  left: -439px;
+  top: 287px;
+  width: 150px;
+}
+.sc-2011 .alien3 {
+  position: absolute;
+  zoom: 1.6;
+  left: -621px;
+  top: 286px;
+  width: 134px;
+}
+.sc-2011 .alien4 {
+  position: absolute;
+  zoom: 1.6;
+  left: -812px;
+  top: 283px;
+  width: 140px;
+}
+.sc-2011 .rocket {
+  position: absolute;
+  zoom: 1.6;
+  width: 572px;
+  left: 1206px;
+  top: -250px;
+  height: 802px;
+  background: url("../imgs/rocket.png") no-repeat center / cover;
+  z-index: 1;
+}
+.sc-2011 .bottom-section strong {
+  position: absolute;
+  zoom: 1.6;
+  top: 745px;
+  left: 321px;
+  width: 558px;
+  color: #ffca20;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.sc-2011 .planet2 {
+  position: absolute;
+  zoom: 1.6;
+  left: 936px;
+  top: 680px;
+  width: 198px;
+  z-index: 1;
+}
+.sc-2011 .planet3 {
+  position: absolute;
+  zoom: 1.6;
+  left: 3px;
+  top: 502px;
+  width: 356px;
+  z-index: 1;
+}
+.sc-2011 .main-console {
+  position: absolute;
+  zoom: 1.6;
+  left: -22px;
+  top: 992px;
+  width: 1244px;
+  max-width: none;
+  z-index: 1;
 }

@@ -220,3 +220,76 @@ const spaceMotion2 = gsap.timeline({
 spaceMotion2
   .from(".sc-classic-space .big-blue-lego", { y: "30%" }, "a")
   .from(".sc-classic-space .cruiser", { y: "20%" }, "a");
+
+// .sc-spacesuits
+const alienMotion = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sc-spacesuits",
+    start: "0% 80%",
+    end: "40% 100%",
+    scrub: true,
+    // markers: true,
+  },
+});
+alienMotion
+  .to(".sc-spacesuits .alien1", { x: 335, y: -8, rotate: "15deg" }, "a")
+  .to(".sc-spacesuits .alien2", { x: -234, y: -13, rotate: "-20deg" }, "a");
+
+document.addEventListener("mousemove", function (e) {
+  gsap.to(".follow-ufo", {
+    x: e.clientX - 900,
+    duration: 0.3,
+  });
+});
+
+$(".sc-spacesuits > img").mouseenter(function () {
+  let target = $(this).attr("class");
+  $(`.text-${target}, .bubble-${target}`).addClass("show");
+  $(this).css("transform", "translateY(-10%)");
+});
+
+$(".sc-spacesuits > img").mouseleave(function () {
+  let target = $(this).attr("class");
+  $(`.text-${target}, .bubble-${target}`).removeClass("show");
+  $(this).css("transform", "translateY(0)");
+});
+
+// sc-lego-value
+const photoMotion = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sc-lego-value",
+    start: "0% 80%",
+    end: "80% 100%",
+    scrub: true,
+    // markers: true,
+  },
+});
+photoMotion
+  .to(".sc-lego-value .photo", { rotate: "-10deg" }, "a")
+  .from(".sc-lego-value .attach", { x: 366 }, "a");
+
+// sc-2011
+gsap.to(".sc-2011 .rocket", {
+  scrollTrigger: {
+    trigger: ".sc-2011",
+    start: "0% 90%",
+    end: "20% 100%",
+    scrub: true,
+    // markers: true,
+  },
+  x: -430,
+});
+
+gsap.to(".sc-2011 .boarding-line", {
+  scrollTrigger: {
+    trigger: ".sc-2011",
+    start: "0% 55%",
+    end: "60% 100%",
+    scrub: true,
+    invalidateOnRefresh: true,
+    // markers: true,
+  },
+  x: function () {
+    return window.innerWidth;
+  },
+});
