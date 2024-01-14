@@ -1,17 +1,16 @@
 // sc-main
-gsap.to(".sc-main .img-wrapper", {
+const atomMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-main",
     start: "5% 0%",
-    end: "100% 0%",
+    end: "120% 0%",
     scrub: true,
-    invalidateOnRefresh: true,
     // markers: true,
   },
-  y: 700,
-  // y: function () {},
-  scale: 0.25,
 });
+atomMotion
+  .to(".sc-main .img-wrapper", { y: 700 }, "a")
+  .to(".sc-main .img-wrapper", { scale: 0.25 }, "a+=0.1");
 
 // sc-beginning
 const beginningMotion = gsap.timeline({
@@ -162,19 +161,19 @@ scatterMotion
   .to(".sc-first-sets .pile-g3", { x: -178, y: 107 }, "a")
   .to(".sc-first-sets .pile-g4", { x: -67, y: 177 }, "a")
   .to(".sc-first-sets .pile-g5", { x: 52, y: 226 }, "a")
-  .to(".sc-first-sets .pile-y1", { y: 610 }, "b")
-  .to(".sc-first-sets .pile-y2", { y: 377, rotate: "17deg" }, "b")
-  .to(".sc-first-sets .pile-y3", { y: 467, rotate: "32deg" }, "b")
-  .to(".sc-first-sets .pile-y4", { x: -6, y: 462, rotate: "6deg" }, "b")
-  .to(".sc-first-sets .pile-dg1", { x: -67, y: 194 }, "b")
-  .to(".sc-first-sets .pile-dg2", { y: 449 }, "b")
-  .to(".sc-first-sets .pile-dg3", { x: -5, y: 711 }, "b")
-  .to(".sc-first-sets .pile-dg4", { y: 117 }, "b")
-  .to(".sc-first-sets .pile-g1", { y: 627 }, "b")
-  .to(".sc-first-sets .pile-g2", { y: 162 }, "b")
-  .to(".sc-first-sets .pile-g3", { x: -9, y: 214 }, "b")
-  .to(".sc-first-sets .pile-g4", { x: -6, y: 325 }, "b")
-  .to(".sc-first-sets .pile-g5", { x: -4, y: 721, rotate: "-49deg" }, "b");
+  .to(".sc-first-sets .pile-y1", { y: 814 }, "b")
+  .to(".sc-first-sets .pile-y2", { y: 739, rotate: "75deg" }, "b")
+  .to(".sc-first-sets .pile-y3", { y: 727, rotate: "60deg" }, "b")
+  .to(".sc-first-sets .pile-y4", { x: -6, y: 750, rotate: "-35deg" }, "b")
+  .to(".sc-first-sets .pile-dg1", { x: -67, y: 469 }, "b")
+  .to(".sc-first-sets .pile-dg2", { y: 644 }, "b")
+  .to(".sc-first-sets .pile-dg3", { x: -5, y: 818 }, "b")
+  .to(".sc-first-sets .pile-dg4", { y: 484 }, "b")
+  .to(".sc-first-sets .pile-g1", { y: 818 }, "b")
+  .to(".sc-first-sets .pile-g2", { y: 487 }, "b")
+  .to(".sc-first-sets .pile-g3", { x: -9, y: 692 }, "b")
+  .to(".sc-first-sets .pile-g4", { x: -6, y: 554 }, "b")
+  .to(".sc-first-sets .pile-g5", { x: -4, y: 942, rotate: "-49deg" }, "b");
 
 // sc-classic-space
 const spaceMotion = gsap.timeline({
@@ -187,8 +186,8 @@ const spaceMotion = gsap.timeline({
   },
 });
 spaceMotion
-  .to(".sc-classic-space .top-section-content", { x: -1800 }, "a")
-  .to(".sc-classic-space .top-section", { y: 900 }, "a");
+  .to(".sc-classic-space .top-section", { y: "90%" }, "a")
+  .to(".sc-classic-space .top-section-content", { x: "-90%" }, "a+=0.1");
 
 let counter2 = { counter: 0 };
 gsap.to(counter2, {
@@ -292,4 +291,16 @@ gsap.to(".sc-2011 .boarding-line", {
   x: function () {
     return window.innerWidth;
   },
+});
+
+//footer
+gsap.to(".launch-rocket", {
+  scrollTrigger: {
+    trigger: ".footer",
+    start: "0% 100%",
+    end: "30% 0%",
+    scrub: true,
+    // markers: true,
+  },
+  y: -573,
 });

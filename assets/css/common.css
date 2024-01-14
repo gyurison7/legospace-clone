@@ -6,3 +6,19 @@
   clip: rect(0, 0, 0, 0);
   margin: -1px;
 }
+
+@media (min-width: 1366px) {
+  :root {
+    --zoom: 1.138;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --zoom: 1.28;
+  }
+}
+@media (min-width: 1920px) {
+  :root {
+    --zoom: 1.6;
+  }
+}

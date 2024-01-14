@@ -67,10 +67,10 @@ body {
 .tt {
   font-family: "TTInterfaces", Arial, sans-serif;
 }
-/* body {
+body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 body::-webkit-scrollbar {
   display: none;
-} */
+}

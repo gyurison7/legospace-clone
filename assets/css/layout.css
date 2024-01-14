@@ -11,7 +11,7 @@ header .logo a {
   position: absolute;
   width: 115px;
   height: 48px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   top: 8px;
   left: 23px;
   background: url("../imgs/logo.png") no-repeat center / cover;
@@ -22,10 +22,180 @@ header .anchor-menu a {
   left: 1114px;
   width: 46px;
   height: 46px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   background: url("../svgs/menu-yellow.svg") no-repeat center / cover;
   transition: all 0.2s;
 }
 header .anchor-menu a:hover {
   background: url("../svgs/menu-skyblue.svg") no-repeat center / cover;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  /* height: 1567px; */
+  height: calc(100vw * 0.816);
+  margin-top: calc(100vw * 0.816 * -1);
+  /* margin-top: -1567px; */
+  background-color: #121023;
+}
+footer::before {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  zoom: var(--zoom);
+  background: url("../imgs/space-bg2.png") no-repeat center / cover;
+}
+footer .label {
+  top: 626px;
+  left: 39px;
+  width: 226px;
+}
+footer .designer-area .designer {
+  position: absolute;
+  top: 652px;
+  left: 391px;
+  width: 200px;
+  height: 33px;
+  color: #193261;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+  zoom: var(--zoom);
+  z-index: 1;
+}
+footer .designer-area .designer:hover {
+  color: #fdf8f1;
+}
+footer .designer-area li {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 300;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+}
+footer .designer-area .telegram {
+  position: absolute;
+  top: 801px;
+  left: 496px;
+  width: 136px;
+  color: #88b2e0;
+  zoom: var(--zoom);
+}
+footer .designer-area .instagram {
+  position: absolute;
+  top: 801px;
+  left: 660px;
+  width: 136px;
+  color: #ffca20;
+  zoom: var(--zoom);
+}
+footer .designer-area .whatsapp {
+  position: absolute;
+  top: 801px;
+  left: 836px;
+  width: 136px;
+  color: #bce63c;
+  zoom: var(--zoom);
+}
+footer .designer-area p {
+  position: absolute;
+  top: 845px;
+  left: 496px;
+  width: 422px;
+  color: #88b2e0;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  zoom: var(--zoom);
+}
+footer .designer-area .sources {
+  position: absolute;
+  top: 862px;
+  left: 1069px;
+  width: 96px;
+  height: 25px;
+  color: #88b2e0;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 600;
+  zoom: var(--zoom);
+}
+footer .spaceship4 {
+  position: absolute;
+  width: 610px;
+  left: 557px;
+  top: 460px;
+  height: 300px;
+  background: url("../imgs/spaceship4.png") no-repeat center / cover;
+  zoom: var(--zoom);
+  z-index: 2;
+  animation: spaceship4Animation 10s ease-in infinite;
+}
+footer .img-wrapper img {
+  position: absolute;
+  zoom: var(--zoom);
+}
+footer .launch-rocket {
+  width: 1984px;
+  top: 0;
+  left: -392px;
+  max-width: none;
+  overflow: hidden;
+  z-index: 1;
+  will-change: transform;
+}
+@keyframes spaceship4Animation {
+  0% {
+    transform: translateY(0) rotate(345deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(345deg);
+  }
+  100% {
+    transform: translateY(0) rotate(345deg);
+  }
+}
+@keyframes designerAnimation {
+  0% {
+    transform: translateY(0) rotate(352deg);
+  }
+  50% {
+    transform: translateY(-48px) rotate(352deg);
+  }
+  100% {
+    transform: translateY(0) rotate(352deg);
+  }
+}
+
+@keyframes alienAnimation {
+  0% {
+    transform: translateY(0) rotate(8deg);
+  }
+  50% {
+    transform: translateY(-48px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(8deg);
+  }
+}
+footer .designer-lego {
+  left: 210px;
+  top: 609px;
+  width: 284px;
+  animation: designerAnimation 10s ease-in infinite;
+}
+footer .yellow-bubble {
+  left: 426px;
+  top: 632px;
+  width: 129px;
+}
+footer .alien4 {
+  left: 1048px;
+  top: 690px;
+  width: 121px;
+  animation: alienAnimation 10s ease-in infinite;
 }

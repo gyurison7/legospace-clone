@@ -6,7 +6,8 @@
 .sc-main {
   position: relative;
   width: 100%;
-  height: 1152px;
+  /* height: 1152px; */
+  height: calc(100vw * 0.6);
   max-width: 100%;
   min-height: 720px;
   color: #fdf8f1;
@@ -23,7 +24,7 @@
   height: 956px;
   top: -232px;
   left: 119px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   filter: blur(50px);
   border-radius: 3000px;
   background-image: radial-gradient(
@@ -36,7 +37,7 @@
   position: absolute;
   width: 73px;
   height: 73px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   top: 103px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -61,7 +62,7 @@
 }
 .sc-main .text-wrapper p {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 288px;
   font-weight: 300;
   text-transform: uppercase;
@@ -83,7 +84,7 @@
   height: 50px;
   top: 497px;
   left: 39px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   text-transform: uppercase;
   background: url("../imgs/start1.png") no-repeat center / cover;
   transition: all 0.3s ease-in-out;
@@ -111,7 +112,7 @@
   width: 1005px;
   top: 43px;
   left: 78px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 1;
 }
 .sc-main .site-of-the-day a {
@@ -120,7 +121,7 @@
   height: 97px;
   top: 101px;
   right: 0;
-  zoom: 1.6;
+  zoom: var(--zoom);
   background: url("../imgs/siteoftheday.png") no-repeat center / cover;
 }
 .sc-main .honors {
@@ -129,7 +130,7 @@
   height: 170px;
   top: 268px;
   right: 0;
-  zoom: 1.6;
+  zoom: var(--zoom);
 }
 .sc-main .honors a {
   position: absolute;
@@ -142,7 +143,7 @@
   width: 288px;
   top: 487px;
   left: 870px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
@@ -153,7 +154,7 @@
   width: 100%;
   top: 533px;
   left: 0;
-  zoom: 1.6;
+  zoom: var(--zoom);
   text-align: center;
   font-size: 122px;
   font-weight: 300;
@@ -168,7 +169,8 @@
 .sc-beginning {
   position: relative;
   width: 100%;
-  height: 2302px;
+  /* height: 2302px; */
+  height: calc(100vw * 1.199);
   max-width: 100%;
   background-color: #ffca20;
   overflow: hidden;
@@ -183,7 +185,7 @@
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
-  zoom: 1.6;
+  zoom: var(--zoom);
 }
 .sc-beginning .label {
   top: 110px;
@@ -199,13 +201,13 @@
   font-weight: 300;
   letter-spacing: -0.4px;
   text-transform: uppercase;
-  zoom: 1.6;
+  zoom: var(--zoom);
 }
 .sc-beginning .title {
   top: 110px;
   left: 239px;
   width: 691px;
-  zoom: 1.6;
+  zoom: var(--zoom);
 }
 /* 공통 description */
 .description {
@@ -214,7 +216,7 @@
   line-height: 20px;
   font-weight: 400;
   color: #fdf8f1;
-  zoom: 1.6;
+  zoom: var(--zoom);
 }
 .sc-beginning .description {
   top: 232px;
@@ -237,7 +239,7 @@
   left: -43px;
   top: 246px;
   width: 206px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   animation: spaceshipAnimation 10s linear infinite;
 }
 .sc-beginning .spaceship {
@@ -245,7 +247,7 @@
   left: 891px;
   top: -64px;
   width: 471px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   animation: spaceshipAnimation 10s linear infinite;
 }
 .sc-beginning .alien1 {
@@ -253,7 +255,7 @@
   left: -156px;
   top: 516px;
   width: 152px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 3;
 }
 .sc-beginning .alien2 {
@@ -261,7 +263,7 @@
   left: 1160px;
   top: 515px;
   width: 152px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 3;
 }
 .sc-beginning .block-bottom {
@@ -269,7 +271,7 @@
   left: -184px;
   top: 470px;
   width: 1557px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 2;
 }
 .sc-beginning .block-top {
@@ -277,7 +279,7 @@
   left: -178px;
   top: 637px;
   width: 1557px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 5;
 }
 .sc-beginning .ufo {
@@ -285,7 +287,7 @@
   left: 1282px;
   top: 539px;
   width: 479px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 5;
 }
 /* bottom-bg */
@@ -296,7 +298,7 @@
   left: -4px;
   top: 681px;
   height: 761px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   background-color: #0e1730;
 }
 .sc-beginning .bottom-content-area > * {
@@ -304,7 +306,7 @@
   font-weight: 300;
   letter-spacing: -0.4px;
   text-transform: uppercase;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 5;
 }
 .sc-beginning .bottom-section strong {
@@ -323,7 +325,7 @@
   font-size: 30px;
   line-height: 38px;
 }
-@keyframes planetAnimaion {
+@keyframes planetAnimation {
   0% {
     transform: translateY(0%);
   }
@@ -336,7 +338,7 @@
 }
 .sc-beginning .bottom-section .img-wrapper > * {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 5;
   transform: rotate(355deg);
 }
@@ -349,7 +351,7 @@
   width: 286px;
   top: 806px;
   left: 919px;
-  animation: planetAnimaion 25s linear infinite;
+  animation: planetAnimation 25s linear infinite;
 }
 
 .sc-lego-space {
@@ -358,7 +360,8 @@
 .sc-creator {
   position: relative;
   width: 100%;
-  height: 3648px;
+  /* height: 3648px; */
+  height: calc(100vw * 1.9);
   max-width: 100%;
   background-color: #0e1730;
   overflow: visible;
@@ -370,7 +373,7 @@
   left: -7px;
   top: -744px;
   height: 2799px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   background: url("../imgs/space-bg.png") no-repeat center / cover;
   z-index: 4;
 }
@@ -418,7 +421,7 @@ em {
 .sc-creator .creator-area::before {
   position: absolute;
   content: "";
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 839px;
   left: 68px;
   top: 8px;
@@ -428,7 +431,7 @@ em {
 }
 .sc-creator .creator-bg {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   /* left: 353px;
   top: 63px; */
   width: 272px;
@@ -438,7 +441,7 @@ em {
 }
 .sc-creator .creator {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 173px;
   left: 365px;
   top: 95px;
@@ -454,7 +457,7 @@ em {
 }
 .sc-creator .bottom-section strong {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   top: 690px;
   left: 701px;
   width: 423px;
@@ -475,7 +478,7 @@ em {
 .sc-creator .parts-area div::before {
   position: absolute;
   content: "";
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 136px;
   height: 136px;
   border-radius: 50%;
@@ -497,7 +500,7 @@ em {
 .sc-creator .parts-area span {
   position: absolute;
   width: 70px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   color: #fdf8f1;
   font-size: 16px;
   font-weight: 400;
@@ -518,7 +521,7 @@ em {
 }
 .sc-creator .parts-area img {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 6;
 }
 .sc-creator .yellow-parts {
@@ -538,7 +541,7 @@ em {
 }
 .sc-creator .ufo2 {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: -61px;
   top: 193px;
   width: 440px;
@@ -546,7 +549,7 @@ em {
 }
 .sc-creator .ufo3 {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 583px;
   top: 248px;
   left: -620px;
@@ -644,7 +647,7 @@ em {
 }
 .sc-creator .yellow-lego {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 339px;
   top: 1071px;
   width: 156px;
@@ -653,7 +656,7 @@ em {
 }
 .sc-creator .white-lego {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 570px;
   top: 992px;
   width: 99px;
@@ -662,7 +665,7 @@ em {
 }
 .sc-creator .blue-lego {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 799px;
   top: 880px;
   width: 99px;
@@ -672,7 +675,7 @@ em {
 
 .sc-creator .planet2 {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: -118px;
   top: 1125px;
   width: 198px;
@@ -681,7 +684,7 @@ em {
 }
 .sc-creator .spaceship3 {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 275px;
   top: 855px;
   width: 680px;
@@ -714,7 +717,7 @@ em {
   top: 1698px;
   left: 240px;
   width: 159px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   color: #fdf8f1;
   font-size: 12px;
   line-height: 15px;
@@ -727,12 +730,12 @@ em {
   left: -138px;
   top: 1775px;
   width: 609px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 4;
 }
 .sc-first-sets .boy {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 297px;
   top: 1120px;
   width: 1392px;
@@ -740,7 +743,7 @@ em {
 }
 .sc-first-sets .shuttle {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 230px;
   left: 1281px;
   top: 1973px;
@@ -750,7 +753,7 @@ em {
 }
 .sc-first-sets .table {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 3558px;
   left: -1558px;
   top: 2062px;
@@ -759,7 +762,7 @@ em {
 }
 .sc-first-sets [class*="pile-"] {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   background: no-repeat center / cover;
 }
 .sc-first-sets .pile-y1 {
@@ -882,9 +885,9 @@ em {
 
 .sc-classic-space {
   position: relative;
-  /* width: 100vw; */
   width: 100%;
-  height: 3104px;
+  /* height: 3104px; */
+  height: calc(100vw * 1.617);
   max-width: 100%;
   background: #121023;
 }
@@ -900,39 +903,42 @@ em {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
+  z-index: 42;
 }
 .sc-classic-space .top-section-content {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
 }
 .sc-classic-space .title {
   top: 143px;
   left: 239px;
   width: 558px;
 }
-.sc-classic-space li strong {
+.sc-classic-space .classic-space-list li strong {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   color: #dbdbdb;
   font-size: 14px;
   line-height: 22px;
   font-weight: 300;
   text-transform: uppercase;
 }
-.sc-classic-space li span {
+.sc-classic-space .classic-space-list li span {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   color: #dbdbdb;
   font-size: 14px;
   line-height: 1.55;
   font-weight: 300;
   text-transform: uppercase;
 }
-.sc-classic-space li p {
+.sc-classic-space .classic-space-list li p {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   color: #dbdbdb;
   font-size: 10px;
   line-height: 13px;
@@ -1015,7 +1021,7 @@ em {
 }
 .sc-classic-space .top-section .img-wrapper img {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
 }
 .sc-classic-space .top-section .img-wrapper img:first-child {
   left: 26px;
@@ -1044,16 +1050,15 @@ em {
 }
 .sc-classic-space .bottom-section {
   position: relative;
-  height: 1120px;
-  /* width: 100vw; */
   width: 100%;
-  max-width: 100%;
-  /* background-color: #121023; */
-  margin-top: -1120px;
+  /* height: 1120px; */
+  height: calc(100vw * 0.583);
+  /* margin-top: -1120px; */
+  margin-top: calc(100vw * 0.583 * -1);
 }
 .sc-classic-space .bottom-section strong {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   top: 115px;
   left: 27px;
   width: 558px;
@@ -1066,7 +1071,7 @@ em {
 }
 .sc-classic-space .bottom-section .sub-title {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   top: 241px;
   left: 239px;
   width: 603px;
@@ -1079,7 +1084,7 @@ em {
 }
 .sc-classic-space .bottom-section .description {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   top: 396px;
   left: 496px;
   width: 159px;
@@ -1092,21 +1097,21 @@ em {
 .sc-classic-space .bottom-section .big-blue-lego {
   display: block;
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 81px;
   top: 374px;
   width: 238px;
 }
 .sc-classic-space .bottom-section .cruiser {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 610px;
   top: 127px;
   width: 858px;
 }
 .sc-classic-space .bottom-section .yellow-block {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: -90px;
   top: 509px;
   width: 1380px;
@@ -1115,9 +1120,9 @@ em {
 
 .sc-spacesuits {
   position: relative;
-  height: 1472px;
-  /* width: 100vw; */
   width: 100%;
+  /* height: 1472px; */
+  height: calc(100vw * 0.767);
   max-width: 100%;
   background-color: #16244a;
   z-index: 1;
@@ -1125,7 +1130,7 @@ em {
 .sc-spacesuits::before {
   position: absolute;
   content: "";
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 1260px;
   height: 2774px;
   top: 0px;
@@ -1136,7 +1141,7 @@ em {
 }
 .sc-spacesuits .alien1 {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: -156px;
   top: 16px;
   width: 102px;
@@ -1144,7 +1149,7 @@ em {
 }
 .sc-spacesuits .alien2 {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 1160px;
   top: 15px;
   width: 107px;
@@ -1152,7 +1157,7 @@ em {
 }
 .sc-spacesuits .yellow-white-block {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: -202px;
   top: -47px;
   width: 1604px;
@@ -1161,7 +1166,7 @@ em {
 }
 .sc-spacesuits .ground-bg {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: -227px;
   top: 460px;
   width: 1655px;
@@ -1169,7 +1174,7 @@ em {
 }
 .sc-spacesuits .follow-ufo {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   left: 379px;
   top: -17px;
   width: 450px;
@@ -1192,7 +1197,7 @@ em {
 /* 공통 */
 .sc-spacesuits [class*="bubble-"] {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 129px;
   height: 74px;
   background: url("../svgs/bubble.svg") no-repeat center / cover;
@@ -1202,7 +1207,7 @@ em {
 }
 .sc-spacesuits [class*="text-"] {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   color: #0e1730;
   font-size: 15px;
   line-height: 15px;
@@ -1220,7 +1225,7 @@ em {
 }
 .sc-spacesuits > img {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   padding-top: 200px;
   z-index: 1;
   transition: 0.2s ease-in-out;
@@ -1298,8 +1303,9 @@ em {
 
 .sc-lego-value {
   position: relative;
-  height: 1200px;
-  width: 100vw;
+  width: 100%;
+  /* height: 1200px; */
+  height: calc(100vw * 0.625);
   max-width: 100%;
   background-color: #16244a;
 }
@@ -1320,7 +1326,7 @@ em {
   left: 240px;
   top: 161px;
   width: 780px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 1;
 }
 .sc-lego-value .attach {
@@ -1328,22 +1334,21 @@ em {
   left: 777px;
   top: 125px;
   width: 211px;
-  zoom: 1.6;
+  zoom: var(--zoom);
   z-index: 1;
 }
 
 .sc-2011 {
   position: relative;
-  /* width: 100vw; */
   width: 100%;
-  height: 3760px;
+  /* height: 3760px; */
+  height: calc(100vw * 1.958);
   max-width: 100%;
   background-color: #16244a;
 }
 .sc-2011 .top-section {
   position: absolute;
   width: 100%;
-
   z-index: 1;
 }
 .sc-2011 .label {
@@ -1364,65 +1369,9 @@ em {
   width: 426px;
   z-index: 1;
 }
-.sc-2011 .mechanic {
-  position: absolute;
-  zoom: 1.6;
-  left: 452px;
-  top: 247px;
-  width: 123px;
-}
-.sc-2011 .good {
-  position: absolute;
-  zoom: 1.6;
-  left: 274px;
-  top: 275px;
-  width: 135px;
-}
-.sc-2011 .bad {
-  position: absolute;
-  zoom: 1.6;
-  left: 65px;
-  top: 276px;
-  width: 212px;
-}
-.sc-2011 .scientist {
-  position: absolute;
-  zoom: 1.6;
-  left: -95px;
-  top: 284px;
-  width: 189px;
-}
-.sc-2011 .atom {
-  position: absolute;
-  zoom: 1.6;
-  left: -280px;
-  top: 280px;
-  width: 200px;
-}
-.sc-2011 .alien2 {
-  position: absolute;
-  zoom: 1.6;
-  left: -439px;
-  top: 287px;
-  width: 150px;
-}
-.sc-2011 .alien3 {
-  position: absolute;
-  zoom: 1.6;
-  left: -621px;
-  top: 286px;
-  width: 134px;
-}
-.sc-2011 .alien4 {
-  position: absolute;
-  zoom: 1.6;
-  left: -812px;
-  top: 283px;
-  width: 140px;
-}
 .sc-2011 .rocket {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   width: 572px;
   left: 1206px;
   top: -250px;
@@ -1430,42 +1379,489 @@ em {
   background: url("../imgs/rocket.png") no-repeat center / cover;
   z-index: 1;
 }
+.sc-2011 .boarding-line img {
+  position: absolute;
+  zoom: var(--zoom);
+}
+.sc-2011 .boarding-line .mechanic {
+  left: 452px;
+  top: 247px;
+  width: 123px;
+}
+.sc-2011 .boarding-line .good {
+  left: 274px;
+  top: 275px;
+  width: 135px;
+}
+.sc-2011 .boarding-line .bad {
+  left: 65px;
+  top: 276px;
+  width: 212px;
+}
+.sc-2011 .boarding-line .scientist {
+  left: -95px;
+  top: 284px;
+  width: 189px;
+}
+.sc-2011 .boarding-line .atom {
+  left: -280px;
+  top: 280px;
+  width: 200px;
+}
+.sc-2011 .boarding-line .alien2 {
+  left: -439px;
+  top: 287px;
+  width: 150px;
+}
+.sc-2011 .boarding-line .alien3 {
+  left: -621px;
+  top: 286px;
+  width: 134px;
+}
+.sc-2011 .boarding-line .alien4 {
+  left: -812px;
+  top: 283px;
+  width: 140px;
+}
 .sc-2011 .bottom-section strong {
   position: absolute;
-  zoom: 1.6;
+  zoom: var(--zoom);
   top: 745px;
   left: 321px;
   width: 558px;
   color: #ffca20;
+  text-align: center;
   font-size: 30px;
   line-height: 38px;
   font-weight: 300;
   letter-spacing: -0.4px;
   text-transform: uppercase;
+  z-index: 2;
+}
+.sc-2011 .bottom-section img {
+  position: absolute;
+  zoom: var(--zoom);
   z-index: 1;
 }
-.sc-2011 .planet2 {
-  position: absolute;
-  zoom: 1.6;
+@keyframes arrowAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+.sc-2011 .bottom-section .arrow {
+  left: 590px;
+  top: 814px;
+  width: 20px;
+  animation: arrowAnimation 3s ease-in-out infinite;
+}
+@keyframes bluePlanetAnimation {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+
+  25% {
+    transform: translateX(1px) translateY(-357px);
+  }
+
+  50% {
+    transform: translateX(1px) translateY(42px);
+  }
+
+  75% {
+    transform: translateX(-144px) translateY(-133px);
+  }
+
+  100% {
+    transform: translateX(74px) translateY(-204px);
+  }
+}
+@keyframes greenPlanetAnimation {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(1px) translateY(144px);
+  }
+  50% {
+    transform: translateX(1px) translateY(-144px);
+  }
+  75% {
+    transform: translateX(161px) translateY(-36px);
+  }
+  100% {
+    transform: translateX(-161px) translateY(-36px);
+  }
+}
+.sc-2011 .bottom-section .planet2 {
   left: 936px;
   top: 680px;
   width: 198px;
-  z-index: 1;
+  animation: bluePlanetAnimation 60s linear infinite;
 }
-.sc-2011 .planet3 {
-  position: absolute;
-  zoom: 1.6;
+.sc-2011 .bottom-section .planet3 {
   left: 3px;
   top: 502px;
   width: 356px;
-  z-index: 1;
+  animation: greenPlanetAnimation 60s linear infinite;
 }
-.sc-2011 .main-console {
-  position: absolute;
-  zoom: 1.6;
+.sc-2011 .bottom-section .main-console {
   left: -22px;
   top: 992px;
   width: 1244px;
   max-width: none;
-  z-index: 1;
+}
+@keyframes goodAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) rotate(17deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateY(0px) rotate(17deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0px) rotate(17deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateY(52px) rotate(17deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateY(-52px) rotate(17deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(52px) rotate(17deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateY(-52px) rotate(17deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateY(52px) rotate(17deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-52px) rotate(17deg);
+  }
+}
+@keyframes scientistAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) rotate(337deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateY(0px) rotate(337deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0px) rotate(337deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateY(-52px) rotate(337deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateY(52px) rotate(337deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-52px) rotate(337deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateY(52px) rotate(337deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateY(-52px) rotate(337deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(52px) rotate(337deg);
+  }
+}
+@keyframes badAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(0px) rotate(0deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(0px) rotate(15deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateX(0px) rotate(15deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateX(-71px) rotate(15deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateX(71px) rotate(15deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-71px) rotate(15deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(71px) rotate(15deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateX(-71px) rotate(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(71px) rotate(15deg);
+  }
+}
+@keyframes mechanicAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) rotate(18deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateY(0px) rotate(18deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateY(0px) rotate(18deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateY(-48px) rotate(18deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateY(48px) rotate(18deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-48px) rotate(18deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateY(48px) rotate(18deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateY(-48px) rotate(18deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(48px) rotate(18deg);
+  }
+}
+@keyframes atomAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(0px) translateY(0px) rotate(12deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(0px) translateY(0px) rotate(12deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(12deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateX(-30px) translateY(-29px) rotate(12deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateX(30px) translateY(29px) rotate(12deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-30px) translateY(-29px) rotate(12deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(30px) translateY(29px) rotate(12deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateX(-30px) translateY(-29px) rotate(12deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(30px) translateY(29px) rotate(12deg);
+  }
+}
+@keyframes alien3Animation {
+  0% {
+    opacity: 0;
+    transform: translateX(0px) rotate(0deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(0px) rotate(15deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateX(0px) rotate(15deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateX(55px) rotate(15deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateX(-55px) rotate(15deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(55px) rotate(15deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(-55px) rotate(15deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateX(55px) rotate(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-55px) rotate(15deg);
+  }
+}
+@keyframes alien4Animation {
+  0% {
+    opacity: 0;
+    transform: translateX(0px) rotate(0deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(0px) rotate(15deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateX(0px) rotate(15deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateX(-121px) rotate(15deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateX(0px) rotate(15deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(161px) rotate(15deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(0px) rotate(15deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateX(-121px) rotate(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) rotate(15deg);
+  }
+}
+@keyframes alien2Animation {
+  0% {
+    opacity: 0;
+    transform: translateX(0px) translateY(0px) rotate(349deg);
+  }
+  1% {
+    opacity: 0;
+    transform: translateX(0px) translateY(0px) rotate(349deg);
+  }
+  2% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) rotate(349deg);
+  }
+  18% {
+    opacity: 1;
+    transform: translateX(58px) translateY(51px) rotate(349deg);
+  }
+  34% {
+    opacity: 1;
+    transform: translateX(-58px) translateY(-51px) rotate(349deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(58px) translateY(51px) rotate(349deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateX(-58px) translateY(-51px) rotate(349deg);
+  }
+  82% {
+    opacity: 1;
+    transform: translateX(58px) translateY(51px) rotate(349deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-58px) translateY(-51px) rotate(349deg);
+  }
+}
+.sc-2011 .bottom-section .good {
+  left: 410px;
+  top: 757px;
+  width: 127px;
+  animation: goodAnimation 50s linear infinite;
+}
+.sc-2011 .bottom-section .scientist {
+  left: 587px;
+  top: 751px;
+  width: 170px;
+  animation: scientistAnimation 50s linear infinite;
+}
+.sc-2011 .bottom-section .bad {
+  left: 191px;
+  top: 736px;
+  width: 199px;
+  animation: badAnimation 50s linear infinite;
+}
+.sc-2011 .bottom-section .mechanic {
+  left: 848px;
+  top: 755px;
+  width: 112px;
+  animation: mechanicAnimation 50s linear infinite;
+}
+.sc-2011 .bottom-section .atom {
+  left: 736px;
+  top: 680px;
+  width: 170px;
+  animation: atomAnimation 50s linear infinite;
+}
+.sc-2011 .bottom-section .alien3 {
+  left: 93px;
+  top: 826px;
+  width: 111px;
+  animation: alien3Animation 50s linear infinite;
+}
+.sc-2011 .bottom-section .alien4 {
+  left: 499px;
+  top: 653px;
+  width: 111px;
+  animation: alien4Animation 50s linear infinite;
+}
+.sc-2011 .bottom-section .alien2 {
+  left: 1002px;
+  top: 702px;
+  width: 111px;
+  animation: alien2Animation 50s linear infinite;
 }
