@@ -22,3 +22,10 @@
     --zoom: 1.6;
   }
 }
+
+.blur {
+  filter: blur(3px);
+}
+.block-scroll {
+  overflow: hidden;
+}

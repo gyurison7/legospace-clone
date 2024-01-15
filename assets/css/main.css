@@ -90,12 +90,8 @@
   transition: all 0.3s ease-in-out;
   z-index: 2;
 }
-.sc-main .anchor-link a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.sc-main .anchor-link:hover {
+  background: url("../imgs/start2.png") no-repeat center / cover;
 }
 .sc-main .anchor-link span {
   position: absolute;
@@ -104,10 +100,7 @@
   transform: translate(-50%, -50%);
   text-transform: uppercase;
 }
-.sc-main .anchor-link a:hover {
-  background: url("../imgs/start2.png") no-repeat center / cover;
-}
-.sc-main .col-middle .img-wrapper {
+.sc-main .col-middle .atom {
   position: absolute;
   width: 1005px;
   top: 43px;
@@ -115,41 +108,7 @@
   zoom: var(--zoom);
   z-index: 1;
 }
-.sc-main .site-of-the-day a {
-  position: absolute;
-  width: 52px;
-  height: 97px;
-  top: 101px;
-  right: 0;
-  zoom: var(--zoom);
-  background: url("../imgs/siteoftheday.png") no-repeat center / cover;
-}
-.sc-main .honors {
-  position: absolute;
-  width: 560px;
-  height: 170px;
-  top: 268px;
-  right: 0;
-  zoom: var(--zoom);
-}
-.sc-main .honors a {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  right: 0;
-}
-.sc-main .description {
-  position: absolute;
-  width: 288px;
-  top: 487px;
-  left: 870px;
-  zoom: var(--zoom);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-.sc-main .col-bottom {
+.sc-main .col-middle strong {
   position: absolute;
   width: 100%;
   top: 533px;
@@ -162,8 +121,34 @@
   letter-spacing: -4px;
   z-index: 2;
 }
-.sc-main .col-bottom strong span {
+.sc-main .col-middle strong span {
   color: rgb(255, 202, 32);
+}
+.sc-main .site-of-the-day {
+  position: absolute;
+  width: 52px;
+  height: 97px;
+  top: 101px;
+  right: 0;
+  zoom: var(--zoom);
+  background: url("../imgs/siteoftheday.png") no-repeat center / cover;
+}
+.sc-main .honors {
+  position: absolute;
+  top: 268px;
+  right: 0;
+  zoom: var(--zoom);
+}
+.sc-main .description {
+  position: absolute;
+  width: 288px;
+  top: 487px;
+  left: 870px;
+  zoom: var(--zoom);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 .sc-beginning {
@@ -223,15 +208,26 @@
   left: 495px;
   width: 367px;
 }
-@keyframes spaceshipAnimation {
+@keyframes satelliteAnimation {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(10%);
+    transform: translateY(-96px);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0);
+  }
+}
+@keyframes spaceshipAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(65px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 .sc-beginning .satellite {
@@ -240,7 +236,7 @@
   top: 246px;
   width: 206px;
   zoom: var(--zoom);
-  animation: spaceshipAnimation 10s linear infinite;
+  animation: satelliteAnimation 25s linear infinite;
 }
 .sc-beginning .spaceship {
   position: absolute;
@@ -248,7 +244,7 @@
   top: -64px;
   width: 471px;
   zoom: var(--zoom);
-  animation: spaceshipAnimation 10s linear infinite;
+  animation: spaceshipAnimation 20s linear infinite;
 }
 .sc-beginning .alien1 {
   position: absolute;
@@ -271,6 +267,7 @@
   left: -184px;
   top: 470px;
   width: 1557px;
+  max-width: none;
   zoom: var(--zoom);
   z-index: 2;
 }
@@ -279,6 +276,7 @@
   left: -178px;
   top: 637px;
   width: 1557px;
+  max-width: none;
   zoom: var(--zoom);
   z-index: 5;
 }
@@ -327,31 +325,31 @@
 }
 @keyframes planetAnimation {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(15%);
+    transform: translateY(215px);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0);
   }
 }
-.sc-beginning .bottom-section .img-wrapper > * {
+.sc-beginning .bottom-section .img-wrapper img {
   position: absolute;
   zoom: var(--zoom);
   z-index: 5;
   transform: rotate(355deg);
 }
-.sc-beginning .bottom-section .spaceship2 {
-  width: 618px;
-  top: 1092px;
-  left: 245px;
-}
 .sc-beginning .bottom-section .planet {
   width: 286px;
   top: 806px;
   left: 919px;
-  animation: planetAnimation 25s linear infinite;
+  animation: planetAnimation 30s linear infinite;
+}
+.sc-beginning .bottom-section .spaceship2 {
+  width: 618px;
+  top: 1092px;
+  left: 245px;
 }
 
 .sc-lego-space {
@@ -429,15 +427,13 @@ em {
   background: url("../imgs/creator-bg.png") no-repeat center / cover;
   z-index: 3;
 }
-.sc-creator .creator-bg {
+.sc-creator .creator-planet-bg {
   position: absolute;
   zoom: var(--zoom);
-  /* left: 353px;
-  top: 63px; */
+  left: 353px;
+  top: 63px;
   width: 272px;
   z-index: 2;
-  left: 360px;
-  top: 66px;
 }
 .sc-creator .creator {
   position: absolute;
@@ -725,6 +721,16 @@ em {
   text-transform: uppercase;
   z-index: 4;
 }
+.sc-first-sets .img-wrapper::before {
+  position: absolute;
+  content: "";
+  zoom: var(--zoom);
+  width: 3558px;
+  left: -1558px;
+  top: 2062px;
+  height: 221px;
+  background: url("../imgs/table.png") no-repeat center / cover;
+}
 .sc-first-sets .lego-set {
   position: absolute;
   left: -138px;
@@ -739,6 +745,7 @@ em {
   left: 297px;
   top: 1120px;
   width: 1392px;
+  max-width: none;
   z-index: 4;
 }
 .sc-first-sets .shuttle {
@@ -750,15 +757,6 @@ em {
   height: 230px;
   background: url("../imgs/shuttle.png") no-repeat center / cover;
   z-index: 4;
-}
-.sc-first-sets .table {
-  position: absolute;
-  zoom: var(--zoom);
-  width: 3558px;
-  left: -1558px;
-  top: 2062px;
-  height: 221px;
-  background: url("../imgs/table.png") no-repeat center / cover;
 }
 .sc-first-sets [class*="pile-"] {
   position: absolute;
@@ -1203,7 +1201,7 @@ em {
   background: url("../svgs/bubble.svg") no-repeat center / cover;
   z-index: 2;
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .sc-spacesuits [class*="text-"] {
   position: absolute;
@@ -1215,7 +1213,15 @@ em {
   text-align: center;
   z-index: 3;
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.sc-spacesuits > img {
+  position: absolute;
+  zoom: var(--zoom);
+  padding-top: 200px;
+  z-index: 1;
+  transform: translateY(0);
+  transition: transform 0.2s ease-in-out;
 }
 .sc-spacesuits [class*="bubble-"].show {
   opacity: 1;
@@ -1223,12 +1229,8 @@ em {
 .sc-spacesuits [class*="text-"].show {
   opacity: 1;
 }
-.sc-spacesuits > img {
-  position: absolute;
-  zoom: var(--zoom);
-  padding-top: 200px;
-  z-index: 1;
-  transition: 0.2s ease-in-out;
+.sc-spacesuits > img.show {
+  transform: translateY(-40px);
 }
 .sc-spacesuits .bubble-scientist {
   left: 199px;
@@ -1436,12 +1438,52 @@ em {
   font-weight: 300;
   letter-spacing: -0.4px;
   text-transform: uppercase;
+  transition: opacity 0.2s ease-in-out;
   z-index: 2;
 }
-.sc-2011 .bottom-section img {
+.sc-2011 .bottom-section .img-wrapper img {
   position: absolute;
   zoom: var(--zoom);
+}
+.sc-2011 .img-wrapper .arrow {
+  left: 590px;
+  top: 814px;
+  width: 20px;
+  z-index: 2;
+  transition: opacity 0.2s ease-in-out;
+  animation: arrowAnimation 3s ease-in-out infinite;
+}
+.sc-2011 .bottom-section strong.hide,
+.sc-2011 .img-wrapper .arrow.hide {
+  opacity: 0;
+}
+.sc-2011 .img-wrapper .main-console {
+  left: -22px;
+  top: 992px;
+  width: 1244px;
+  max-width: none;
   z-index: 1;
+}
+.sc-2011 .img-wrapper .characters {
+  left: 422px;
+  top: 1016px;
+  width: 262px;
+  pointer-events: none;
+  z-index: 2;
+}
+.sc-2011 .img-wrapper .planet2 {
+  left: 936px;
+  top: 680px;
+  width: 198px;
+  z-index: 1;
+  animation: bluePlanetAnimation 60s linear infinite;
+}
+.sc-2011 .img-wrapper .planet3 {
+  left: 3px;
+  top: 502px;
+  width: 356px;
+  z-index: 1;
+  animation: greenPlanetAnimation 60s linear infinite;
 }
 @keyframes arrowAnimation {
   from {
@@ -1450,12 +1492,6 @@ em {
   to {
     transform: translateY(20px);
   }
-}
-.sc-2011 .bottom-section .arrow {
-  left: 590px;
-  top: 814px;
-  width: 20px;
-  animation: arrowAnimation 3s ease-in-out infinite;
 }
 @keyframes bluePlanetAnimation {
   0% {
@@ -1495,373 +1531,349 @@ em {
     transform: translateX(-161px) translateY(-36px);
   }
 }
-.sc-2011 .bottom-section .planet2 {
-  left: 936px;
+.sc-2011 .pick-the-characters > * {
+  position: absolute;
+  zoom: var(--zoom);
+}
+.sc-2011 .pick-the-characters button {
+  width: 55px;
+  height: 78px;
+  border-radius: 6px;
+  background-color: #fdf8f1;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.sc-2011 .pick-the-characters button:hover {
+  opacity: 1;
+}
+.sc-2011 .pick-the-characters button.show {
+  opacity: 1;
+  background-color: #88b2e0;
+}
+.sc-2011 .pick-the-characters img {
+  opacity: 0;
+}
+.sc-2011 .pick-the-characters img.show {
+  opacity: 1;
+}
+.sc-2011 .pick-the-characters .box-good {
+  left: 428px;
+  top: 1021px;
+}
+.sc-2011 .pick-the-characters .box-scientist {
+  left: 493px;
+  top: 1021px;
+}
+.sc-2011 .pick-the-characters .box-bad {
+  left: 556px;
+  top: 1021px;
+}
+.sc-2011 .pick-the-characters .box-mechanic {
+  left: 617px;
+  top: 1021px;
+}
+.sc-2011 .pick-the-characters .box-atom {
+  left: 428px;
+  top: 1106px;
+}
+.sc-2011 .pick-the-characters .box-alien3 {
+  left: 493px;
+  top: 1106px;
+}
+.sc-2011 .pick-the-characters .box-alien4 {
+  left: 556px;
+  top: 1106px;
+}
+.sc-2011 .pick-the-characters .box-alien2 {
+  left: 617px;
+  top: 1106px;
+}
+.sc-2011 .pick-the-characters .good {
+  left: 410px;
+  top: 757px;
+  width: 127px;
+  z-index: 2;
+  animation: goodAnimation 50s linear infinite;
+}
+.sc-2011 .pick-the-characters .scientist {
+  left: 587px;
+  top: 751px;
+  width: 170px;
+  z-index: 2;
+  animation: scientistAnimation 50s linear infinite;
+}
+.sc-2011 .pick-the-characters .bad {
+  left: 191px;
+  top: 736px;
+  width: 199px;
+  z-index: 2;
+  animation: badAnimation 50s linear infinite;
+}
+.sc-2011 .pick-the-characters .mechanic {
+  left: 848px;
+  top: 755px;
+  width: 112px;
+  z-index: 2;
+  animation: mechanicAnimation 50s linear infinite;
+}
+.sc-2011 .pick-the-characters .atom {
+  left: 736px;
   top: 680px;
-  width: 198px;
-  animation: bluePlanetAnimation 60s linear infinite;
+  width: 170px;
+  z-index: 2;
+  animation: atomAnimation 50s linear infinite;
 }
-.sc-2011 .bottom-section .planet3 {
-  left: 3px;
-  top: 502px;
-  width: 356px;
-  animation: greenPlanetAnimation 60s linear infinite;
+.sc-2011 .pick-the-characters .alien3 {
+  left: 93px;
+  top: 826px;
+  width: 111px;
+  z-index: 2;
+  animation: alien3Animation 50s linear infinite;
 }
-.sc-2011 .bottom-section .main-console {
-  left: -22px;
-  top: 992px;
-  width: 1244px;
-  max-width: none;
+.sc-2011 .pick-the-characters .alien4 {
+  left: 499px;
+  top: 653px;
+  width: 111px;
+  z-index: 2;
+  animation: alien4Animation 50s linear infinite;
+}
+.sc-2011 .pick-the-characters .alien2 {
+  left: 1002px;
+  top: 702px;
+  width: 111px;
+  z-index: 2;
+  animation: alien2Animation 50s linear infinite;
 }
 @keyframes goodAnimation {
   0% {
-    opacity: 0;
     transform: translateY(0px) rotate(17deg);
   }
   1% {
-    opacity: 0;
     transform: translateY(0px) rotate(17deg);
   }
   2% {
-    opacity: 1;
     transform: translateY(0px) rotate(17deg);
   }
   18% {
-    opacity: 1;
     transform: translateY(52px) rotate(17deg);
   }
   34% {
-    opacity: 1;
     transform: translateY(-52px) rotate(17deg);
   }
   50% {
-    opacity: 1;
     transform: translateY(52px) rotate(17deg);
   }
   66% {
-    opacity: 1;
     transform: translateY(-52px) rotate(17deg);
   }
   82% {
-    opacity: 1;
     transform: translateY(52px) rotate(17deg);
   }
   100% {
-    opacity: 1;
     transform: translateY(-52px) rotate(17deg);
   }
 }
 @keyframes scientistAnimation {
   0% {
-    opacity: 0;
     transform: translateY(0px) rotate(337deg);
   }
   1% {
-    opacity: 0;
     transform: translateY(0px) rotate(337deg);
   }
   2% {
-    opacity: 1;
     transform: translateY(0px) rotate(337deg);
   }
   18% {
-    opacity: 1;
     transform: translateY(-52px) rotate(337deg);
   }
   34% {
-    opacity: 1;
     transform: translateY(52px) rotate(337deg);
   }
   50% {
-    opacity: 1;
     transform: translateY(-52px) rotate(337deg);
   }
   66% {
-    opacity: 1;
     transform: translateY(52px) rotate(337deg);
   }
   82% {
-    opacity: 1;
     transform: translateY(-52px) rotate(337deg);
   }
   100% {
-    opacity: 1;
     transform: translateY(52px) rotate(337deg);
   }
 }
 @keyframes badAnimation {
   0% {
-    opacity: 0;
     transform: translateX(0px) rotate(0deg);
   }
   1% {
-    opacity: 0;
     transform: translateX(0px) rotate(15deg);
   }
   2% {
-    opacity: 1;
     transform: translateX(0px) rotate(15deg);
   }
   18% {
-    opacity: 1;
     transform: translateX(-71px) rotate(15deg);
   }
   34% {
-    opacity: 1;
     transform: translateX(71px) rotate(15deg);
   }
   50% {
-    opacity: 1;
     transform: translateX(-71px) rotate(15deg);
   }
   66% {
-    opacity: 1;
     transform: translateX(71px) rotate(15deg);
   }
   82% {
-    opacity: 1;
     transform: translateX(-71px) rotate(15deg);
   }
   100% {
-    opacity: 1;
     transform: translateX(71px) rotate(15deg);
   }
 }
 @keyframes mechanicAnimation {
   0% {
-    opacity: 0;
     transform: translateY(0px) rotate(18deg);
   }
   1% {
-    opacity: 0;
     transform: translateY(0px) rotate(18deg);
   }
   2% {
-    opacity: 1;
     transform: translateY(0px) rotate(18deg);
   }
   18% {
-    opacity: 1;
     transform: translateY(-48px) rotate(18deg);
   }
   34% {
-    opacity: 1;
     transform: translateY(48px) rotate(18deg);
   }
   50% {
-    opacity: 1;
     transform: translateY(-48px) rotate(18deg);
   }
   66% {
-    opacity: 1;
     transform: translateY(48px) rotate(18deg);
   }
   82% {
-    opacity: 1;
     transform: translateY(-48px) rotate(18deg);
   }
   100% {
-    opacity: 1;
     transform: translateY(48px) rotate(18deg);
   }
 }
 @keyframes atomAnimation {
   0% {
-    opacity: 0;
     transform: translateX(0px) translateY(0px) rotate(12deg);
   }
   1% {
-    opacity: 0;
     transform: translateX(0px) translateY(0px) rotate(12deg);
   }
   2% {
-    opacity: 1;
     transform: translateX(0px) translateY(0px) rotate(12deg);
   }
   18% {
-    opacity: 1;
     transform: translateX(-30px) translateY(-29px) rotate(12deg);
   }
   34% {
-    opacity: 1;
     transform: translateX(30px) translateY(29px) rotate(12deg);
   }
   50% {
-    opacity: 1;
     transform: translateX(-30px) translateY(-29px) rotate(12deg);
   }
   66% {
-    opacity: 1;
     transform: translateX(30px) translateY(29px) rotate(12deg);
   }
   82% {
-    opacity: 1;
     transform: translateX(-30px) translateY(-29px) rotate(12deg);
   }
   100% {
-    opacity: 1;
     transform: translateX(30px) translateY(29px) rotate(12deg);
   }
 }
 @keyframes alien3Animation {
   0% {
-    opacity: 0;
     transform: translateX(0px) rotate(0deg);
   }
   1% {
-    opacity: 0;
     transform: translateX(0px) rotate(15deg);
   }
   2% {
-    opacity: 1;
     transform: translateX(0px) rotate(15deg);
   }
   18% {
-    opacity: 1;
     transform: translateX(55px) rotate(15deg);
   }
   34% {
-    opacity: 1;
     transform: translateX(-55px) rotate(15deg);
   }
   50% {
-    opacity: 1;
     transform: translateX(55px) rotate(15deg);
   }
   66% {
-    opacity: 1;
     transform: translateX(-55px) rotate(15deg);
   }
   82% {
-    opacity: 1;
     transform: translateX(55px) rotate(15deg);
   }
   100% {
-    opacity: 1;
     transform: translateX(-55px) rotate(15deg);
   }
 }
 @keyframes alien4Animation {
   0% {
-    opacity: 0;
     transform: translateX(0px) rotate(0deg);
   }
   1% {
-    opacity: 0;
     transform: translateX(0px) rotate(15deg);
   }
   2% {
-    opacity: 1;
     transform: translateX(0px) rotate(15deg);
   }
   18% {
-    opacity: 1;
     transform: translateX(-121px) rotate(15deg);
   }
   34% {
-    opacity: 1;
     transform: translateX(0px) rotate(15deg);
   }
   50% {
-    opacity: 1;
     transform: translateX(161px) rotate(15deg);
   }
   66% {
-    opacity: 1;
     transform: translateX(0px) rotate(15deg);
   }
   82% {
-    opacity: 1;
     transform: translateX(-121px) rotate(15deg);
   }
   100% {
-    opacity: 1;
     transform: translateX(0px) rotate(15deg);
   }
 }
 @keyframes alien2Animation {
   0% {
-    opacity: 0;
     transform: translateX(0px) translateY(0px) rotate(349deg);
   }
   1% {
-    opacity: 0;
     transform: translateX(0px) translateY(0px) rotate(349deg);
   }
   2% {
-    opacity: 1;
     transform: translateX(0px) translateY(0px) rotate(349deg);
   }
   18% {
-    opacity: 1;
     transform: translateX(58px) translateY(51px) rotate(349deg);
   }
   34% {
-    opacity: 1;
     transform: translateX(-58px) translateY(-51px) rotate(349deg);
   }
   50% {
-    opacity: 1;
     transform: translateX(58px) translateY(51px) rotate(349deg);
   }
   66% {
-    opacity: 1;
     transform: translateX(-58px) translateY(-51px) rotate(349deg);
   }
   82% {
-    opacity: 1;
     transform: translateX(58px) translateY(51px) rotate(349deg);
   }
   100% {
-    opacity: 1;
     transform: translateX(-58px) translateY(-51px) rotate(349deg);
   }
-}
-.sc-2011 .bottom-section .good {
-  left: 410px;
-  top: 757px;
-  width: 127px;
-  animation: goodAnimation 50s linear infinite;
-}
-.sc-2011 .bottom-section .scientist {
-  left: 587px;
-  top: 751px;
-  width: 170px;
-  animation: scientistAnimation 50s linear infinite;
-}
-.sc-2011 .bottom-section .bad {
-  left: 191px;
-  top: 736px;
-  width: 199px;
-  animation: badAnimation 50s linear infinite;
-}
-.sc-2011 .bottom-section .mechanic {
-  left: 848px;
-  top: 755px;
-  width: 112px;
-  animation: mechanicAnimation 50s linear infinite;
-}
-.sc-2011 .bottom-section .atom {
-  left: 736px;
-  top: 680px;
-  width: 170px;
-  animation: atomAnimation 50s linear infinite;
-}
-.sc-2011 .bottom-section .alien3 {
-  left: 93px;
-  top: 826px;
-  width: 111px;
-  animation: alien3Animation 50s linear infinite;
-}
-.sc-2011 .bottom-section .alien4 {
-  left: 499px;
-  top: 653px;
-  width: 111px;
-  animation: alien4Animation 50s linear infinite;
-}
-.sc-2011 .bottom-section .alien2 {
-  left: 1002px;
-  top: 702px;
-  width: 111px;
-  animation: alien2Animation 50s linear infinite;
 }

@@ -1,3 +1,19 @@
+// header
+$("header .anchor-menu").click(function (e) {
+  e.preventDefault();
+  $(".gnb").slideToggle();
+  $("header .header-top").hide();
+  $(".container").toggleClass("blur");
+  $("body").toggleClass("block-scroll");
+});
+
+$(".gnb .close, .gnb a").click(function () {
+  $(".gnb").slideUp();
+  $("header .header-top").show();
+  $(".container").removeClass("blur");
+  $("body").removeClass("block-scroll");
+});
+
 // sc-main
 const atomMotion = gsap.timeline({
   scrollTrigger: {
@@ -9,8 +25,8 @@ const atomMotion = gsap.timeline({
   },
 });
 atomMotion
-  .to(".sc-main .img-wrapper", { y: 700 }, "a")
-  .to(".sc-main .img-wrapper", { scale: 0.25 }, "a+=0.1");
+  .to(".sc-main .atom", { y: 700 }, "a")
+  .to(".sc-main .atom", { scale: 0.25 }, "a+=0.1");
 
 // sc-beginning
 const beginningMotion = gsap.timeline({
@@ -91,28 +107,10 @@ const creatorMotion = gsap.timeline({
   },
 });
 creatorMotion
-  .to(".sc-creator .ufo2", {
-    y: 197,
-  })
-  .to(
-    ".sc-creator .ufo2",
-    {
-      x: function () {
-        return window.innerWidth;
-      },
-    },
-    "a"
-  )
-  .to(
-    ".sc-creator .ufo3",
-    {
-      x: 541,
-    },
-    "a"
-  )
-  .to(".sc-creator .ufo3", {
-    y: 150,
-  });
+  .to(".sc-creator .ufo2", { y: 197 })
+  .to(".sc-creator .ufo2", { x: 1271 }, "a")
+  .to(".sc-creator .ufo3", { x: 541 }, "a")
+  .to(".sc-creator .ufo3", { y: 150 });
 
 gsap.to(".sc-creator .spaceship3", {
   scrollTrigger: {
@@ -241,16 +239,10 @@ document.addEventListener("mousemove", function (e) {
   });
 });
 
-$(".sc-spacesuits > img").mouseenter(function () {
-  let target = $(this).attr("class");
-  $(`.text-${target}, .bubble-${target}`).addClass("show");
-  $(this).css("transform", "translateY(-10%)");
-});
-
-$(".sc-spacesuits > img").mouseleave(function () {
-  let target = $(this).attr("class");
-  $(`.text-${target}, .bubble-${target}`).removeClass("show");
-  $(this).css("transform", "translateY(0)");
+$(".sc-spacesuits > img").hover(function () {
+  const target = $(this).attr("class").split(" ")[0];
+  $(`.text-${target}, .bubble-${target}`).toggleClass("show");
+  $(this).toggleClass("show");
 });
 
 // sc-lego-value
@@ -293,6 +285,13 @@ gsap.to(".sc-2011 .boarding-line", {
   },
 });
 
+$(".sc-2011 .pick-the-characters button").click(function () {
+  const target = $(this).attr("class").split(" ")[0].substring(4);
+  $(`.${target}`).toggleClass("show");
+  $(this).toggleClass("show");
+  $(".sc-2011 .bottom-section strong, .sc-2011 .arrow").addClass("hide");
+});
+
 //footer
 gsap.to(".launch-rocket", {
   scrollTrigger: {
@@ -302,5 +301,5 @@ gsap.to(".launch-rocket", {
     scrub: true,
     // markers: true,
   },
-  y: -573,
+  y: -570,
 });
