@@ -1,3 +1,15 @@
+// sc-splash
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const splash = document.querySelector(".sc-splash");
+    splash.style.opacity = "0";
+
+    setTimeout(function () {
+      splash.style.display = "none";
+    }, 500);
+  }, 3000);
+});
+
 // header
 $("header .anchor-menu").click(function (e) {
   e.preventDefault();

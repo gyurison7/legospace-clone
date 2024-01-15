@@ -1622,7 +1622,7 @@ em {
   top: 680px;
   width: 170px;
   z-index: 2;
-  animation: atomAnimation 50s linear infinite;
+  animation: atomAnimation2 50s linear infinite;
 }
 .sc-2011 .pick-the-characters .alien3 {
   left: 93px;
@@ -1761,7 +1761,7 @@ em {
     transform: translateY(48px) rotate(18deg);
   }
 }
-@keyframes atomAnimation {
+@keyframes atomAnimation2 {
   0% {
     transform: translateX(0px) translateY(0px) rotate(12deg);
   }
