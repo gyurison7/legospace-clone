@@ -4,28 +4,48 @@
 
 header {
   position: fixed;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 112px;
   z-index: 99;
 }
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  padding-left: 2%;
+  padding-right: 3%;
+}
+header .header-top h1 {
+  width: 10%;
+}
 header .logo a {
-  position: absolute;
-  width: 115px;
-  height: 48px;
-  zoom: var(--zoom);
-  top: 8px;
-  left: 23px;
+  display: block;
+  width: 100%;
+  min-width: 115px;
   background: url("../imgs/logo.png") no-repeat center / cover;
 }
+/* 요소에 높이를 주기 위해 가상요소 사용 */
+header .logo a::before {
+  display: block;
+  content: "";
+  padding-top: 40%;
+}
 header .anchor-menu {
-  position: absolute;
-  top: 22px;
-  left: 1114px;
-  width: 46px;
-  height: 46px;
-  zoom: var(--zoom);
+  position: relative;
+  top: 4%;
+  width: 4%;
+  min-width: 46px;
   background: url("../svgs/menu-yellow.svg") no-repeat center / cover;
   transition: all 0.3s ease-in-out;
+}
+header .anchor-menu::before {
+  display: block;
+  content: "";
+  padding-top: 100%;
 }
 header .anchor-menu:hover {
   background: url("../svgs/menu-skyblue.svg") no-repeat center / cover;
@@ -37,8 +57,8 @@ header .anchor-menu:hover {
 }
 .gnb .close {
   position: absolute;
-  left: 1170px;
-  top: 11px;
+  right: 1%;
+  top: 16%;
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -54,8 +74,9 @@ header .anchor-menu:hover {
 }
 .gnb .menu-list li a {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 216px;
   height: 206px;
   border-radius: 20px;
@@ -68,13 +89,20 @@ header .anchor-menu:hover {
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  padding-bottom: 18px;
+  padding-bottom: 8%;
+  padding-top: 8%;
   transition: all 0.3s ease-in-out;
 }
 .gnb .menu-list li a:hover {
   background-color: #ffca20;
   border: 2px solid #fdf8f1;
   color: #fdf8f1;
+}
+.gnb .menu-list span {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  padding-right: 80%;
 }
 .gnb .menu-list li a::before {
   position: absolute;
@@ -133,36 +161,13 @@ header .anchor-menu:hover {
   height: 75px;
   background-image: url("../imgs/menu5-2.png");
 }
-.gnb .menu-list span {
-  position: absolute;
-  top: 56px;
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
-}
-.gnb .menu-list .menu1 span {
-  left: 55px;
-}
-.gnb .menu-list .menu2 span {
-  left: 281px;
-}
-.gnb .menu-list .menu3 span {
-  left: 507px;
-}
-.gnb .menu-list .menu4 span {
-  left: 733px;
-}
-.gnb .menu-list .menu5 span {
-  left: 959px;
-}
 
 footer {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  height: 170vh;
   /* height: 1577px; */
-  height: calc(100vw * 0.821);
-  margin-top: calc(100vw * 0.821 * -1);
-  /* margin-top: -1577px; */
+  /* height: calc(100vw * 0.821); */
   background-color: #121023;
 }
 footer::before {
@@ -174,11 +179,10 @@ footer::before {
   background: url("../imgs/space-bg2.png") no-repeat center / cover;
 }
 footer .label {
-  top: 626px;
-  left: 39px;
-  width: 226px;
+  top: 64%;
+  left: 3%;
 }
-footer .designer-area .designer {
+footer .content-area .name {
   position: absolute;
   top: 652px;
   left: 391px;
@@ -193,62 +197,50 @@ footer .designer-area .designer {
   zoom: var(--zoom);
   z-index: 1;
 }
-footer .designer-area .designer:hover {
+footer .content-area .name:hover {
   color: #fdf8f1;
 }
-footer .designer-area li {
-  font-size: 20px;
-  line-height: 31px;
+footer .content-area .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 81%;
+  left: 41%;
+  width: 38%;
+  gap: 24px;
+}
+footer .content-area .list {
+  display: flex;
+  justify-content: space-between;
+}
+footer .content-area .list li {
+  font-size: 1.6vw;
   font-weight: 300;
   letter-spacing: -0.1px;
   text-transform: uppercase;
 }
-footer .designer-area .telegram {
-  position: absolute;
-  top: 801px;
-  left: 496px;
-  width: 136px;
+footer .content-area .telegram {
   color: #88b2e0;
-  zoom: var(--zoom);
 }
-footer .designer-area .instagram {
-  position: absolute;
-  top: 801px;
-  left: 660px;
-  width: 136px;
+footer .content-area .instagram {
   color: #ffca20;
-  zoom: var(--zoom);
 }
-footer .designer-area .whatsapp {
-  position: absolute;
-  top: 801px;
-  left: 836px;
-  width: 136px;
+footer .content-area .whatsapp {
   color: #bce63c;
-  zoom: var(--zoom);
 }
-footer .designer-area p {
-  position: absolute;
-  top: 845px;
-  left: 496px;
-  width: 422px;
+footer .content-area .description {
+  position: static;
   color: #88b2e0;
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 400;
-  zoom: var(--zoom);
+  font-size: 1.2vw;
 }
-footer .designer-area .sources {
+footer .content-area .sources {
   position: absolute;
-  top: 862px;
-  left: 1069px;
-  width: 96px;
-  height: 25px;
+  top: 88%;
+  right: 3%;
   color: #88b2e0;
-  font-size: 15px;
+  font-size: 1.2vw;
   line-height: 1.55;
   font-weight: 600;
-  zoom: var(--zoom);
 }
 footer .img-wrapper::before {
   position: absolute;
@@ -259,7 +251,8 @@ footer .img-wrapper::before {
   height: 300px;
   background: url("../imgs/spaceship4.png") no-repeat center / cover;
   zoom: var(--zoom);
-  z-index: 2;
+  pointer-events: none;
+  z-index: 3;
   animation: spaceship4Animation 10s ease-in infinite;
 }
 footer .img-wrapper img {
@@ -267,13 +260,33 @@ footer .img-wrapper img {
   zoom: var(--zoom);
 }
 footer .launch-rocket {
-  width: 1984px;
+  /* width: 1984px; */
+  width: 165%;
   top: 0;
-  left: -392px;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: none;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
   will-change: transform;
+}
+footer .designer-lego {
+  left: 210px;
+  top: 609px;
+  width: 284px;
+  animation: designerAnimation 10s ease-in infinite;
+}
+footer .yellow-bubble {
+  left: 426px;
+  top: 632px;
+  width: 129px;
+}
+footer .alien4 {
+  left: 1048px;
+  top: 690px;
+  width: 121px;
+  pointer-events: none;
+  animation: alienAnimation 10s ease-in infinite;
 }
 @keyframes spaceship4Animation {
   0% {
@@ -308,21 +321,4 @@ footer .launch-rocket {
   100% {
     transform: translateY(0) rotate(8deg);
   }
-}
-footer .designer-lego {
-  left: 210px;
-  top: 609px;
-  width: 284px;
-  animation: designerAnimation 10s ease-in infinite;
-}
-footer .yellow-bubble {
-  left: 426px;
-  top: 632px;
-  width: 129px;
-}
-footer .alien4 {
-  left: 1048px;
-  top: 690px;
-  width: 121px;
-  animation: alienAnimation 10s ease-in infinite;
 }

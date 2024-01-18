@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     setTimeout(function () {
       splash.style.display = "none";
     }, 500);
-  }, 3000);
+  }, 3500);
 });
 
 // header
@@ -16,6 +16,7 @@ $("header .anchor-menu").click(function (e) {
   $(".gnb").slideToggle();
   $("header .header-top").hide();
   $(".container").toggleClass("blur");
+  $("footer").toggleClass("blur");
   $("body").toggleClass("block-scroll");
 });
 
@@ -23,42 +24,53 @@ $(".gnb .close, .gnb a").click(function () {
   $(".gnb").slideUp();
   $("header .header-top").show();
   $(".container").removeClass("blur");
+  $("footer").removeClass("blur");
   $("body").removeClass("block-scroll");
 });
 
 // sc-main
-const atomMotion = gsap.timeline({
+gsap.to(".sc-main .center-section", {
   scrollTrigger: {
     trigger: ".sc-main",
     start: "5% 0%",
-    end: "120% 0%",
+    end: "150% 0%",
     scrub: true,
     // markers: true,
   },
+  yPercent: 122,
 });
-atomMotion
-  .to(".sc-main .atom", { y: 700 }, "a")
-  .to(".sc-main .atom", { scale: 0.25 }, "a+=0.1");
+
+gsap.to(".sc-main .atom", {
+  scrollTrigger: {
+    trigger: ".sc-main",
+    start: "20% 0%",
+    end: "150% 0%",
+    scrub: true,
+    // markers: true,
+  },
+  scale: 0.25,
+});
 
 // sc-beginning
-const beginningMotion = gsap.timeline({
+const alienMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-beginning",
     start: "0% 0%",
-    end: "40% 50%",
+    end: "100% 70%",
     scrub: true,
     // markers: true,
   },
 });
-beginningMotion
+alienMotion
   .to(".sc-beginning .alien1", { x: 215 }, "a")
   .to(".sc-beginning .alien2", { x: -154 }, "a");
 
-gsap.to(".sc-beginning .ufo", {
+// sc-beginning sc-since 사이
+gsap.to(".sc-since .ufo", {
   scrollTrigger: {
     trigger: ".sc-beginning",
-    start: "10% 0%",
-    end: "50% 20%",
+    start: "20% 0%",
+    end: "85% 0%",
     scrub: true,
     invalidateOnRefresh: true,
     // markers: true,
@@ -74,8 +86,8 @@ gsap.to(counter1, {
   duration: 2,
   scrollTrigger: {
     trigger: ".sc-beginning",
-    start: "25% 0%",
-    end: "75% 100%",
+    start: "50% 0%",
+    end: "100% 0%",
     toggleActions: "play none none none",
     // markers: true,
   },
@@ -86,39 +98,44 @@ gsap.to(counter1, {
   },
 });
 
-gsap.to(".sc-beginning .spaceship2", {
+// sc-since
+gsap.to(".sc-since .spaceship2", {
   scrollTrigger: {
-    trigger: ".sc-beginning",
-    start: "100% 70%",
+    trigger: ".sc-since",
+    start: "45% 0%",
     end: "100% 0%",
     scrub: true,
+    invalidateOnRefresh: true,
     // markers: true,
   },
-  x: 904,
+  x: function () {
+    return window.innerWidth / 2;
+  },
 });
 
 // sc-creator
-gsap.from(".sc-creator .creator", {
-  scrollTrigger: {
-    trigger: ".sc-creator",
-    start: "0% 100%",
-    end: "0% 0%",
-    scrub: true,
-    // markers: true,
-  },
-  y: 125,
-});
+// gsap.from(".sc-creator .creator", {
+//   scrollTrigger: {
+//     trigger: ".sc-creator",
+//     start: "0% 100%",
+//     end: "0% 0%",
+//     scrub: true,
+//     // markers: true,
+//   },
+//   y: 125,
+// });
 
-const creatorMotion = gsap.timeline({
+// sc-creator
+const ufoMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-creator",
     start: "0% 0%",
-    end: "55% 100%",
+    end: "45% 0%",
     scrub: true,
     // markers: true,
   },
 });
-creatorMotion
+ufoMotion
   .to(".sc-creator .ufo2", { y: 197 })
   .to(".sc-creator .ufo2", { x: 1271 }, "a")
   .to(".sc-creator .ufo3", { x: 541 }, "a")
@@ -127,20 +144,20 @@ creatorMotion
 gsap.to(".sc-creator .spaceship3", {
   scrollTrigger: {
     trigger: ".sc-creator",
-    start: "35% 0%",
-    end: "100% 100%",
+    start: "50% 0%",
+    end: "130% 0%",
     scrub: true,
     // markers: true,
   },
-  y: 882,
+  yPercent: 147,
 });
 
 // sc-first-sets
 gsap.to(".sc-first-sets .shuttle", {
   scrollTrigger: {
-    trigger: ".sc-creator",
-    start: "93% 100%",
-    end: "100% 50%",
+    trigger: ".sc-first-sets",
+    start: "20% 0%",
+    end: "100% 40%",
     scrub: true,
     // markers: true,
   },
@@ -151,7 +168,7 @@ gsap.to(".sc-first-sets .shuttle", {
 const scatterMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-classic-space",
-    start: "-1% 100%",
+    start: "2% 100%",
     end: "40% 0%",
     scrub: true,
     // markers: true,
@@ -186,18 +203,18 @@ scatterMotion
   .to(".sc-first-sets .pile-g5", { x: -4, y: 942, rotate: "-49deg" }, "b");
 
 // sc-classic-space
-const spaceMotion = gsap.timeline({
+const slideMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-classic-space",
     start: "5% 0%",
-    end: "85% 100%",
+    end: "80% 100%",
     scrub: true,
     // markers: true,
   },
 });
-spaceMotion
-  .to(".sc-classic-space .top-section", { y: "90%" }, "a")
-  .to(".sc-classic-space .top-section-content", { x: "-90%" }, "a+=0.1");
+slideMotion
+  .to(".sc-classic-space .top-section", { y: "80%" }, "a")
+  .to(".sc-classic-space .classic-space-list", { x: "-90%" }, "a+=0.1");
 
 let counter2 = { counter: 0 };
 gsap.to(counter2, {
@@ -217,21 +234,21 @@ gsap.to(counter2, {
   },
 });
 
-const spaceMotion2 = gsap.timeline({
+const spaceMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-classic-space",
     start: "50% 0%",
-    end: "100% 100%",
+    end: "100% 70%",
     scrub: true,
     // markers: true,
   },
 });
-spaceMotion2
+spaceMotion
   .from(".sc-classic-space .big-blue-lego", { y: "30%" }, "a")
   .from(".sc-classic-space .cruiser", { y: "20%" }, "a");
 
 // .sc-spacesuits
-const alienMotion = gsap.timeline({
+const alienMotion2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-spacesuits",
     start: "0% 80%",
@@ -240,7 +257,7 @@ const alienMotion = gsap.timeline({
     // markers: true,
   },
 });
-alienMotion
+alienMotion2
   .to(".sc-spacesuits .alien1", { x: 335, y: -8, rotate: "15deg" }, "a")
   .to(".sc-spacesuits .alien2", { x: -234, y: -13, rotate: "-20deg" }, "a");
 
@@ -251,7 +268,7 @@ document.addEventListener("mousemove", function (e) {
   });
 });
 
-$(".sc-spacesuits > img").hover(function () {
+$(".sc-spacesuits .colors-area > div").hover(function () {
   const target = $(this).attr("class").split(" ")[0];
   $(`.text-${target}, .bubble-${target}`).toggleClass("show");
   $(this).toggleClass("show");
@@ -262,13 +279,13 @@ const photoMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-lego-value",
     start: "0% 80%",
-    end: "80% 100%",
+    end: "70% 100%",
     scrub: true,
     // markers: true,
   },
 });
 photoMotion
-  .to(".sc-lego-value .photo", { rotate: "-10deg" }, "a")
+  .to(".sc-lego-value .photo", { rotate: "-9deg" }, "a")
   .from(".sc-lego-value .attach", { x: 366 }, "a");
 
 // sc-2011
@@ -276,7 +293,7 @@ gsap.to(".sc-2011 .rocket", {
   scrollTrigger: {
     trigger: ".sc-2011",
     start: "0% 90%",
-    end: "20% 100%",
+    end: "30% 100%",
     scrub: true,
     // markers: true,
   },
@@ -286,15 +303,12 @@ gsap.to(".sc-2011 .rocket", {
 gsap.to(".sc-2011 .boarding-line", {
   scrollTrigger: {
     trigger: ".sc-2011",
-    start: "0% 55%",
-    end: "60% 100%",
+    start: "0% 50%",
+    end: "80% 100%",
     scrub: true,
-    invalidateOnRefresh: true,
     // markers: true,
   },
-  x: function () {
-    return window.innerWidth;
-  },
+  xPercent: 100,
 });
 
 $(".sc-2011 .pick-the-characters button").click(function () {
@@ -302,14 +316,26 @@ $(".sc-2011 .pick-the-characters button").click(function () {
   $(`.${target}`).toggleClass("show");
   $(this).toggleClass("show");
   $(".sc-2011 .bottom-section strong, .sc-2011 .arrow").addClass("hide");
+  // 모든 요소가 show를 안가지고 있으면 제목 다시 노출
+  let flag = false;
+  $(".pick-the-characters")
+    .children()
+    .each(function () {
+      if ($(this).hasClass("show")) {
+        flag = true;
+      }
+    });
+  if (!flag)
+    $(".sc-2011 .bottom-section strong, .sc-2011 .arrow").removeClass("hide");
 });
 
 //footer
+gsap.set(".launch-rocket", { xPercent: -50 });
 gsap.to(".launch-rocket", {
   scrollTrigger: {
     trigger: ".footer",
     start: "0% 100%",
-    end: "30% 0%",
+    end: "10% 0%",
     scrub: true,
     // markers: true,
   },
