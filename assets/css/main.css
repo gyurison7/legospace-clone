@@ -114,13 +114,13 @@
   top: 0;
   left: 0;
   pointer-events: none;
+  z-index: 1;
 }
 .sc-main .center-section .atom {
   position: absolute;
   width: 84%;
   /* width: 1005px; */
-  top: 8%;
-  /* z-index: 1; */
+  top: 7%;
 }
 .sc-main .right-section .site-of-the-day {
   position: absolute;
@@ -152,6 +152,7 @@
   font-size: 10vw;
   font-weight: 300;
   letter-spacing: -4px;
+  z-index: 1;
 }
 .sc-main .bottom-section strong span {
   color: rgb(255, 202, 32);
@@ -164,8 +165,14 @@
   /* height: calc(100vw * 1.199); */
   height: 120vh;
   max-width: 100%;
+}
+.sc-beginning::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
   background-color: #ffca20;
-  /* overflow: hidden; */
   z-index: -1;
 }
 /* 공통 label */
@@ -253,13 +260,13 @@
   left: -156px;
   top: 511px;
   width: 152px;
-  z-index: 1;
+  z-index: 2;
 }
 .sc-beginning .alien2 {
   right: -117px;
   top: 510px;
   width: 152px;
-  z-index: 1;
+  z-index: 2;
 }
 .sc-beginning .block-bottom {
   width: 130%;
@@ -267,6 +274,21 @@
   left: 50%;
   transform: translateX(-50%);
   max-width: none;
+  z-index: 1;
+}
+.sc-beginning .block-top {
+  width: 130%;
+  bottom: -110px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: none;
+  z-index: 1;
+}
+.sc-beginning .ufo {
+  left: 1282px;
+  top: 539px;
+  width: 479px;
+  z-index: 2;
 }
 
 /* blue-bg-group
@@ -318,20 +340,7 @@ sc-first-sets: 150vh
   position: absolute;
   zoom: var(--zoom);
 }
-.sc-since .block-top {
-  top: -50px;
-  width: 130%;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: none;
-  z-index: 1;
-}
-.sc-since .ufo {
-  left: 1282px;
-  top: -145px;
-  width: 479px;
-  z-index: 2;
-}
+
 .sc-since .spaceship2 {
   width: 618px;
   top: 396px;

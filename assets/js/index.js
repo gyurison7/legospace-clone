@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     setTimeout(function () {
       splash.style.display = "none";
     }, 500);
-  }, 3500);
+  }, 3000);
 });
 
 // header
@@ -65,8 +65,7 @@ alienMotion
   .to(".sc-beginning .alien1", { x: 215 }, "a")
   .to(".sc-beginning .alien2", { x: -154 }, "a");
 
-// sc-beginning sc-since 사이
-gsap.to(".sc-since .ufo", {
+gsap.to(".sc-beginning .ufo", {
   scrollTrigger: {
     trigger: ".sc-beginning",
     start: "20% 0%",
