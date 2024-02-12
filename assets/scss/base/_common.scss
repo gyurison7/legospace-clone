@@ -7,20 +7,11 @@
   margin: -1px;
 }
 
-@media (min-width: 1366px) {
-  :root {
-    --zoom: 1.138;
-  }
+.tt {
+  font-family: "TTInterfaces", Arial, sans-serif;
 }
-@media (min-width: 1536px) {
-  :root {
-    --zoom: 1.28;
-  }
-}
-@media (min-width: 1920px) {
-  :root {
-    --zoom: 1.6;
-  }
+.inter {
+  font-family: "InterMedium", Arial, sans-serif;
 }
 
 .blur {

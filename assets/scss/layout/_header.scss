@@ -1,0 +1,135 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 13vh;
+  max-width: 100%;
+  z-index: 99;
+}
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 2rem;
+  padding-right: 3rem;
+}
+header .logo a {
+  display: block;
+  width: 9.6vw;
+  height: 3.8vw;
+  min-width: 115px;
+  min-height: 48px;
+  background: url("../imgs/logo.png") no-repeat center / cover;
+}
+header .anchor-menu {
+  width: 3.8vw;
+  height: 3.8vw;
+  min-width: 48px;
+  min-height: 48px;
+  background: url("../svgs/menu-yellow.svg") no-repeat center / cover;
+  transition: 0.3s ease-in-out;
+}
+header .anchor-menu:hover {
+  background-image: url("../svgs/menu-skyblue.svg");
+}
+
+.gnb {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.gnb .menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 24vw;
+  padding: 4rem;
+  gap: 1rem;
+  background-color: #d3edfc;
+}
+.gnb .menu-list li {
+  flex: 1;
+  height: 100%;
+}
+.gnb .menu-list li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #b8d7f3;
+  border: 1px solid #193261;
+  color: #193261;
+  transition: all 0.3s ease-in-out;
+}
+.gnb .menu-list li a:hover {
+  background-color: #ffca20;
+  border: 2px solid #fdf8f1;
+  color: #fdf8f1;
+}
+.gnb .menu-list .inter {
+  width: 100%;
+  font-size: 2vw;
+}
+.gnb .menu-list span {
+  font-size: 1.3vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.gnb .menu-list li a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
+  padding: 0 1rem;
+  object-fit: cover;
+}
+.gnb .menu-list .menu5 a img {
+  width: 68%;
+  object-fit: cover;
+}
+.gnb .menu-list li a .hover-img {
+  visibility: hidden;
+}
+.gnb .menu-list .menu1 a .hover-img {
+  width: 44%;
+}
+.gnb .menu-list .menu2 a .hover-img {
+  width: 40%;
+}
+.gnb .menu-list .menu3 a .hover-img {
+  width: 61%;
+}
+.gnb .menu-list .menu4 a .hover-img {
+  width: 56%;
+}
+.gnb .menu-list .menu5 a .hover-img {
+  width: 68%;
+}
+.gnb .menu-list li a:hover .menu-img {
+  visibility: hidden;
+}
+.gnb .menu-list li a:hover .hover-img {
+  visibility: visible;
+}
+.gnb .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 25px;
+  height: 25px;
+}
+.gnb .close img {
+  width: 100%;
+  height: 100%;
+}

@@ -1,35 +1,33 @@
-// sc-splash
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    const splash = document.querySelector(".sc-splash");
-    splash.style.opacity = "0";
-
-    setTimeout(function () {
-      splash.style.display = "none";
-    }, 500);
-  }, 3000);
-});
-
 // header
 $("header .anchor-menu").click(function (e) {
   e.preventDefault();
   $(".gnb").slideToggle();
-  $("header .header-top").hide();
-  $(".container").toggleClass("blur");
-  $("footer").toggleClass("blur");
+  $(".whole-wrapper").toggleClass("blur");
   $("body").toggleClass("block-scroll");
 });
 
-$(".gnb .close, .gnb a").click(function () {
+function gnbClose() {
   $(".gnb").slideUp();
-  $("header .header-top").show();
-  $(".container").removeClass("blur");
-  $("footer").removeClass("blur");
+  $(".whole-wrapper").removeClass("blur");
   $("body").removeClass("block-scroll");
+}
+
+$(".gnb .close, .gnb a").click(function () {
+  gnbClose();
+});
+
+$(document).click(function (e) {
+  if (
+    $(".whole-wrapper").hasClass("blur") &&
+    $("body").hasClass("block-scroll") &&
+    !$(e.target).closest(".gnb, .anchor-menu").length
+  ) {
+    gnbClose();
+  }
 });
 
 // sc-main
-gsap.to(".sc-main .center-section", {
+gsap.to(".sc-main .atom", {
   scrollTrigger: {
     trigger: ".sc-main",
     start: "5% 0%",
@@ -37,7 +35,7 @@ gsap.to(".sc-main .center-section", {
     scrub: true,
     // markers: true,
   },
-  yPercent: 122,
+  yPercent: 67,
 });
 
 gsap.to(".sc-main .atom", {
@@ -65,11 +63,12 @@ alienMotion
   .to(".sc-beginning .alien1", { x: 215 }, "a")
   .to(".sc-beginning .alien2", { x: -154 }, "a");
 
-gsap.to(".sc-beginning .ufo", {
+// sc-beginning ~ sc-since
+gsap.to(".sc-since .ufo", {
   scrollTrigger: {
     trigger: ".sc-beginning",
     start: "20% 0%",
-    end: "85% 0%",
+    end: "80% 0%",
     scrub: true,
     invalidateOnRefresh: true,
     // markers: true,
@@ -87,17 +86,13 @@ gsap.to(counter1, {
     trigger: ".sc-beginning",
     start: "50% 0%",
     end: "100% 0%",
-    toggleActions: "play none none none",
     // markers: true,
   },
   onUpdate: () => {
-    document.getElementById("year-1978").innerHTML = Math.round(
-      counter1.counter
-    );
+    document.getElementById("year-1978").innerHTML = Math.round(counter1.counter);
   },
 });
 
-// sc-since
 gsap.to(".sc-since .spaceship2", {
   scrollTrigger: {
     trigger: ".sc-since",
@@ -113,43 +108,46 @@ gsap.to(".sc-since .spaceship2", {
 });
 
 // sc-creator
-// gsap.from(".sc-creator .creator", {
-//   scrollTrigger: {
-//     trigger: ".sc-creator",
-//     start: "0% 100%",
-//     end: "0% 0%",
-//     scrub: true,
-//     // markers: true,
-//   },
-//   y: 125,
-// });
-
-// sc-creator
 const ufoMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-creator",
     start: "0% 0%",
-    end: "45% 0%",
+    end: "100% 100%",
     scrub: true,
+    invalidateOnRefresh: true,
     // markers: true,
   },
 });
 ufoMotion
-  .to(".sc-creator .ufo2", { y: 197 })
-  .to(".sc-creator .ufo2", { x: 1271 }, "a")
-  .to(".sc-creator .ufo3", { x: 541 }, "a")
-  .to(".sc-creator .ufo3", { y: 150 });
+  .to(".sc-creator .ufo2", { yPercent: 50 })
+  .to(".sc-creator .ufo2", { x: window.innerWidth, xPercent: 50 }, "a")
+  .to(".sc-creator .ufo3", { xPercent: 100 }, "a")
+  .to(".sc-creator .ufo3", { yPercent: 40 });
 
-gsap.to(".sc-creator .spaceship3", {
-  scrollTrigger: {
-    trigger: ".sc-creator",
-    start: "50% 0%",
-    end: "130% 0%",
-    scrub: true,
-    // markers: true,
-  },
-  yPercent: 147,
-});
+let animation;
+function updateAnimation() {
+  if (animation) {
+    animation.scrollTrigger.kill();
+    animation.kill();
+  }
+
+  let yValue = window.innerWidth > 1536 ? 1521 : 1116;
+
+  animation = gsap.to(".sc-creator .spaceship3", {
+    scrollTrigger: {
+      trigger: ".sc-creator",
+      start: "50% 0%",
+      end: "130% 0%",
+      scrub: true,
+      invalidateOnRefresh: true,
+    },
+    y: yValue,
+  });
+}
+
+window.addEventListener("resize", updateAnimation);
+
+updateAnimation();
 
 // sc-first-sets
 gsap.to(".sc-first-sets .shuttle", {
@@ -167,53 +165,51 @@ gsap.to(".sc-first-sets .shuttle", {
 const scatterMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-classic-space",
-    start: "2% 100%",
+    start: "0% 100%",
     end: "40% 0%",
     scrub: true,
     // markers: true,
   },
 });
 scatterMotion
-  .to(".sc-first-sets .pile-y1", { x: -851, y: 275 }, "a")
-  .to(".sc-first-sets .pile-y2", { x: -761, y: 103 }, "a")
-  .to(".sc-first-sets .pile-y3", { x: -457, y: 192, rotate: "-29deg" }, "a")
-  .to(".sc-first-sets .pile-y4", { x: -91, y: 171 }, "a")
-  .to(".sc-first-sets .pile-dg1", { x: -714, y: 137 }, "a")
-  .to(".sc-first-sets .pile-dg2", { x: -127, y: 256 }, "a")
-  .to(".sc-first-sets .pile-dg3", { x: -144, y: 182 }, "a")
-  .to(".sc-first-sets .pile-dg4", { x: -23, y: 257 }, "a")
-  .to(".sc-first-sets .pile-g1", { x: -591, y: 198 }, "a")
-  .to(".sc-first-sets .pile-g2", { x: -307, y: 190 }, "a")
-  .to(".sc-first-sets .pile-g3", { x: -178, y: 107 }, "a")
-  .to(".sc-first-sets .pile-g4", { x: -67, y: 177 }, "a")
-  .to(".sc-first-sets .pile-g5", { x: 52, y: 226 }, "a")
-  .to(".sc-first-sets .pile-y1", { y: 814 }, "b")
-  .to(".sc-first-sets .pile-y2", { y: 739, rotate: "75deg" }, "b")
-  .to(".sc-first-sets .pile-y3", { y: 727, rotate: "60deg" }, "b")
-  .to(".sc-first-sets .pile-y4", { x: -6, y: 750, rotate: "-35deg" }, "b")
-  .to(".sc-first-sets .pile-dg1", { x: -67, y: 469 }, "b")
-  .to(".sc-first-sets .pile-dg2", { y: 644 }, "b")
-  .to(".sc-first-sets .pile-dg3", { x: -5, y: 818 }, "b")
-  .to(".sc-first-sets .pile-dg4", { y: 484 }, "b")
-  .to(".sc-first-sets .pile-g1", { y: 818 }, "b")
-  .to(".sc-first-sets .pile-g2", { y: 487 }, "b")
-  .to(".sc-first-sets .pile-g3", { x: -9, y: 692 }, "b")
-  .to(".sc-first-sets .pile-g4", { x: -6, y: 554 }, "b")
-  .to(".sc-first-sets .pile-g5", { x: -4, y: 942, rotate: "-49deg" }, "b");
+  .to(".sc-first-sets .pile-y1", { x: -1051, y: 375 }, "a")
+  .to(".sc-first-sets .pile-y2", { x: -961, y: 203 }, "a")
+  .to(".sc-first-sets .pile-y3", { x: -657, y: 292, rotate: "-29deg" }, "a")
+  .to(".sc-first-sets .pile-y4", { x: -91, y: 271 }, "a")
+  .to(".sc-first-sets .pile-dg1", { x: -914, y: 237 }, "a")
+  .to(".sc-first-sets .pile-dg2", { x: -127, y: 356 }, "a")
+  .to(".sc-first-sets .pile-dg3", { x: -144, y: 282 }, "a")
+  .to(".sc-first-sets .pile-dg4", { x: -23, y: 357 }, "a")
+  .to(".sc-first-sets .pile-g1", { x: -691, y: 298 }, "a")
+  .to(".sc-first-sets .pile-g2", { x: -307, y: 290 }, "a")
+  .to(".sc-first-sets .pile-g3", { x: -178, y: 207 }, "a")
+  .to(".sc-first-sets .pile-g4", { x: -67, y: 277 }, "a")
+  .to(".sc-first-sets .pile-g5", { x: 52, y: 326 }, "a")
+  .to(".sc-first-sets .pile-y1", { y: 1014 }, "b")
+  .to(".sc-first-sets .pile-y2", { y: 939, rotate: "75deg" }, "b")
+  .to(".sc-first-sets .pile-y3", { y: 927, rotate: "60deg" }, "b")
+  .to(".sc-first-sets .pile-y4", { x: -6, y: 950, rotate: "-35deg" }, "b")
+  .to(".sc-first-sets .pile-dg1", { x: -67, y: 669 }, "b")
+  .to(".sc-first-sets .pile-dg2", { y: 844 }, "b")
+  .to(".sc-first-sets .pile-dg3", { x: -5, y: 1018 }, "b")
+  .to(".sc-first-sets .pile-dg4", { y: 584 }, "b")
+  .to(".sc-first-sets .pile-g1", { y: 1018 }, "b")
+  .to(".sc-first-sets .pile-g2", { y: 687 }, "b")
+  .to(".sc-first-sets .pile-g3", { x: -9, y: 892 }, "b")
+  .to(".sc-first-sets .pile-g4", { x: -6, y: 754 }, "b")
+  .to(".sc-first-sets .pile-g5", { x: -4, y: 1142, rotate: "-49deg" }, "b");
 
 // sc-classic-space
 const slideMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-classic-space",
-    start: "5% 0%",
-    end: "80% 100%",
+    start: "10% 0%",
+    end: "70% 100%",
     scrub: true,
     // markers: true,
   },
 });
-slideMotion
-  .to(".sc-classic-space .top-section", { y: "80%" }, "a")
-  .to(".sc-classic-space .classic-space-list", { x: "-90%" }, "a+=0.1");
+slideMotion.to(".sc-classic-space .classic-space-list", { xPercent: -100 });
 
 let counter2 = { counter: 0 };
 gsap.to(counter2, {
@@ -223,35 +219,32 @@ gsap.to(counter2, {
     trigger: ".sc-classic-space",
     start: "40% 0%",
     end: "70% 100%",
-    toggleActions: "play none none none",
     // markers: true,
   },
   onUpdate: () => {
-    document.getElementById("year-1987").innerHTML = Math.round(
-      counter2.counter
-    );
+    document.getElementById("year-1987").innerHTML = Math.round(counter2.counter);
   },
 });
 
 const spaceMotion = gsap.timeline({
   scrollTrigger: {
-    trigger: ".sc-classic-space",
-    start: "50% 0%",
-    end: "100% 70%",
+    trigger: ".sc-classic-space .bottom-section",
+    start: "0% 20%",
+    end: "100% 100%",
     scrub: true,
     // markers: true,
   },
 });
 spaceMotion
-  .from(".sc-classic-space .big-blue-lego", { y: "30%" }, "a")
-  .from(".sc-classic-space .cruiser", { y: "20%" }, "a");
+  .from(".sc-classic-space .big-blue-lego", { y: 180 }, "a")
+  .from(".sc-classic-space .cruiser", { y: 287 }, "a");
 
 // .sc-spacesuits
 const alienMotion2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-spacesuits",
     start: "0% 80%",
-    end: "40% 100%",
+    end: "50% 100%",
     scrub: true,
     // markers: true,
   },
@@ -262,29 +255,26 @@ alienMotion2
 
 document.addEventListener("mousemove", function (e) {
   gsap.to(".follow-ufo", {
-    x: e.clientX - 900,
-    duration: 0.3,
+    x: e.clientX - $(".follow-ufo").innerWidth() / 2,
   });
 });
 
-$(".sc-spacesuits .colors-area > div").hover(function () {
-  const target = $(this).attr("class").split(" ")[0];
-  $(`.text-${target}, .bubble-${target}`).toggleClass("show");
-  $(this).toggleClass("show");
+$(".sc-spacesuits .suit-list li").hover(function () {
+  $(this).toggleClass("on");
 });
 
 // sc-lego-value
 const photoMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-lego-value",
-    start: "0% 80%",
+    start: "0% 70%",
     end: "70% 100%",
     scrub: true,
     // markers: true,
   },
 });
 photoMotion
-  .to(".sc-lego-value .photo", { rotate: "-9deg" }, "a")
+  .to(".sc-lego-value .photo", { rotate: "-10deg" }, "a")
   .from(".sc-lego-value .attach", { x: 366 }, "a");
 
 // sc-2011
@@ -292,7 +282,7 @@ gsap.to(".sc-2011 .rocket", {
   scrollTrigger: {
     trigger: ".sc-2011",
     start: "0% 90%",
-    end: "30% 100%",
+    end: "50% 100%",
     scrub: true,
     // markers: true,
   },
@@ -302,8 +292,8 @@ gsap.to(".sc-2011 .rocket", {
 gsap.to(".sc-2011 .boarding-line", {
   scrollTrigger: {
     trigger: ".sc-2011",
-    start: "0% 50%",
-    end: "80% 100%",
+    start: "0% 40%",
+    end: "100% 0%",
     scrub: true,
     // markers: true,
   },
@@ -314,7 +304,9 @@ $(".sc-2011 .pick-the-characters button").click(function () {
   const target = $(this).attr("class").split(" ")[0].substring(4);
   $(`.${target}`).toggleClass("show");
   $(this).toggleClass("show");
-  $(".sc-2011 .bottom-section strong, .sc-2011 .arrow").addClass("hide");
+
+  $(".sc-2011 .strong-wrapper").addClass("hide");
+
   // 모든 요소가 show를 안가지고 있으면 제목 다시 노출
   let flag = false;
   $(".pick-the-characters")
@@ -324,12 +316,10 @@ $(".sc-2011 .pick-the-characters button").click(function () {
         flag = true;
       }
     });
-  if (!flag)
-    $(".sc-2011 .bottom-section strong, .sc-2011 .arrow").removeClass("hide");
+  if (!flag) $(".sc-2011 .strong-wrapper").removeClass("hide");
 });
 
 //footer
-gsap.set(".launch-rocket", { xPercent: -50 });
 gsap.to(".launch-rocket", {
   scrollTrigger: {
     trigger: ".footer",
@@ -338,5 +328,5 @@ gsap.to(".launch-rocket", {
     scrub: true,
     // markers: true,
   },
-  y: -570,
+  y: -666,
 });

@@ -1,0 +1,39 @@
+@mixin desktop() {
+  @media (min-width: 1537px) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media (max-width: 1536px) {
+    @content;
+  }
+}
+
+@mixin responsive-font-size($condition, $size) {
+  @media (#{$condition}) {
+    :root {
+      font-size: $size;
+    }
+  }
+}
+
+@include responsive-font-size("(min-width: 1537px)", 18px);
+@include responsive-font-size("(max-width: 1536px)", 14px);
+@include responsive-font-size("(max-width: 1366px)", 13px);
+@include responsive-font-size("(max-width: 1280px)", 12px);
+
+// @media (min-width: 1366px) {
+//   :root {
+//     --zoom: 1.138;
+//   }
+// }
+// @media (min-width: 1536px) {
+//   :root {
+//     --zoom: 1.28;
+//   }
+// }
+// @media (min-width: 1920px) {
+//   :root {
+//     --zoom: 1.6;
+//   }
+// }
