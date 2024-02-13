@@ -76,6 +76,7 @@ gsap.to(".sc-since .ufo", {
   x: function () {
     return -window.innerWidth / 2;
   },
+  xPercent: -40,
 });
 
 const counter1 = { counter: 0 };
@@ -108,32 +109,39 @@ gsap.to(".sc-since .spaceship2", {
 });
 
 // sc-creator
-const ufoMotion = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".sc-creator",
-    start: "0% 0%",
-    end: "100% 100%",
-    scrub: true,
-    invalidateOnRefresh: true,
-    // markers: true,
-  },
-});
-ufoMotion
-  .to(".sc-creator .ufo2", { yPercent: 50 })
-  .to(".sc-creator .ufo2", { x: window.innerWidth, xPercent: 50 }, "a")
-  .to(".sc-creator .ufo3", { xPercent: 100 }, "a")
-  .to(".sc-creator .ufo3", { yPercent: 40 });
-
-let animation;
+let ufoMotion;
+let spaceshipMotion;
 function updateAnimation() {
-  if (animation) {
-    animation.scrollTrigger.kill();
-    animation.kill();
+  if (ufoMotion) {
+    ufoMotion.scrollTrigger.kill(); // 기존의 ScrollTrigger 인스턴스를 제거
+    ufoMotion.kill(); // 기존의 GSAP 애니메이션 인스턴스를 제거
+  }
+  if (spaceshipMotion) {
+    spaceshipMotion.scrollTrigger.kill();
+    spaceshipMotion.kill();
   }
 
-  let yValue = window.innerWidth > 1536 ? 1521 : 1116;
+  const xValue = window.innerWidth;
 
-  animation = gsap.to(".sc-creator .spaceship3", {
+  ufoMotion = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".sc-creator",
+      start: "0% 0%",
+      end: "100% 100%",
+      scrub: true,
+      invalidateOnRefresh: true,
+      // markers: true,
+    },
+  });
+  ufoMotion
+    .to(".sc-creator .ufo2", { yPercent: 50 }, "a")
+    .to(".sc-creator .ufo2", { x: xValue }, "b")
+    .to(".sc-creator .ufo3", { xPercent: 100 }, "b")
+    .to(".sc-creator .ufo3", { yPercent: 40 }, "c");
+
+  const yValue = window.innerWidth > 1536 ? 1521 : window.innerWidth > 1366 ? 1116 : 1227;
+
+  spaceshipMotion = gsap.to(".sc-creator .spaceship3", {
     scrollTrigger: {
       trigger: ".sc-creator",
       start: "50% 0%",
@@ -328,5 +336,5 @@ gsap.to(".launch-rocket", {
     scrub: true,
     // markers: true,
   },
-  y: -666,
+  y: -900,
 });

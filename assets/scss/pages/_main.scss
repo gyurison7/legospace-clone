@@ -70,6 +70,10 @@
     width: 260px;
     height: 64px;
   }
+  @include laptop-small {
+    width: 231px;
+    height: 57px;
+  }
 }
 .sc-main .left-section .anchor-link:hover {
   background: url("../imgs/start2.png") no-repeat center / cover;
@@ -104,6 +108,9 @@
   object-fit: cover;
   @include laptop {
     width: 1286px;
+  }
+  @include laptop-small {
+    width: 1221px;
   }
 }
 .sc-main .right-section {
@@ -237,16 +244,26 @@
     top: 285px;
     width: 264px;
   }
+  @include laptop-small {
+    left: -49px;
+    top: 253px;
+    width: 235px;
+  }
 }
 .sc-beginning .spaceship {
-  left: 1426px;
+  right: -260px;
   top: -102px;
   width: 754px;
   animation: spaceshipAnimation 20s linear infinite;
   @include laptop {
-    left: 1140px;
+    right: -208px;
     top: -82px;
     width: 603px;
+  }
+  @include laptop-small {
+    right: -185px;
+    top: -73px;
+    width: 536px;
   }
 }
 .sc-beginning .alien1 {
@@ -259,6 +276,11 @@
     bottom: -7px;
     width: 195px;
   }
+  @include laptop-small {
+    left: -124px;
+    bottom: -6px;
+    width: 173px;
+  }
 }
 .sc-beginning .alien2 {
   right: -96px;
@@ -269,6 +291,11 @@
     right: -105px;
     bottom: -23px;
     width: 195px;
+  }
+  @include laptop-small {
+    right: -93px;
+    bottom: -20px;
+    width: 173px;
   }
 }
 .sc-beginning .block-bottom {
@@ -281,8 +308,7 @@
 }
 
 /* blue-bg-group
-  sc-creator: 245vh
-  sc-first-sets: 150vh
+  sc-creator, sc-first-sets
    */
 .sc-since {
   position: relative;
@@ -338,28 +364,41 @@
   @include laptop {
     top: -70px;
   }
+  @include laptop-small {
+    top: -62px;
+  }
 }
 .sc-since .ufo {
-  left: 1541px;
+  right: -700px;
   top: -265px;
   width: 766px;
   z-index: 2;
   @include laptop {
-    left: 1241px;
+    right: -600px;
     top: -214px;
     width: 613px;
+  }
+  @include laptop-small {
+    right: -500px;
+    top: -190px;
+    width: 545px;
   }
 }
 .sc-since .spaceship2 {
   width: 989px;
-  top: 634px;
+  top: 644px;
   left: 392px;
   transform: rotate(-5deg);
   z-index: 2;
   @include laptop {
     width: 791px;
-    top: 507px;
+    top: 517px;
     left: 314px;
+  }
+  @include laptop-small {
+    width: 703px;
+    top: 461px;
+    left: 279px;
   }
 }
 .sc-since .planet {
@@ -371,6 +410,10 @@
   @include laptop {
     width: 366px;
     top: 149px;
+  }
+  @include laptop-small {
+    width: 325px;
+    top: 132px;
   }
 }
 @keyframes planetAnimation {
@@ -466,6 +509,12 @@ em {
     width: 348px;
     height: 348px;
   }
+  @include laptop-small {
+    left: 402px;
+    top: 49px;
+    width: 309px;
+    height: 309px;
+  }
 }
 .sc-creator .creator {
   position: absolute;
@@ -473,13 +522,18 @@ em {
   height: 374px;
   left: 584px;
   top: 126px;
-  background: url("../imgs/creator.png") no-repeat center / cover;
   transform: rotate(-9deg);
   @include laptop {
     width: 221px;
     height: 300px;
     left: 467px;
     top: 101px;
+  }
+  @include laptop-small {
+    width: 196px;
+    height: 267px;
+    left: 415px;
+    top: 90px;
   }
 }
 .sc-creator .top-section .img-wrapper img {
@@ -494,6 +548,10 @@ em {
     top: 216px;
     width: 563px;
   }
+  @include laptop-small {
+    left: -69px;
+    width: 501px;
+  }
 }
 .sc-creator .top-section .ufo3 {
   width: 933px;
@@ -506,8 +564,11 @@ em {
     top: 322px;
     left: -844px;
   }
+  @include laptop-small {
+    width: 663px;
+    left: -750px;
+  }
 }
-
 .sc-creator .bottom-section {
   position: relative;
   height: 150vh;
@@ -539,6 +600,10 @@ em {
       width: 174px;
       height: 174px;
     }
+    @include laptop-small {
+      width: 155px;
+      height: 155px;
+    }
   }
   .circle-yellow {
     left: 275px;
@@ -546,6 +611,10 @@ em {
     @include laptop {
       left: 220px;
       top: 520px;
+    }
+    @include laptop-small {
+      left: 196px;
+      top: 462px;
     }
   }
   .circle-gray {
@@ -555,6 +624,10 @@ em {
       left: 536px;
       top: 230px;
     }
+    @include laptop-small {
+      left: 477px;
+      top: 204px;
+    }
   }
   .circle-blue {
     right: 70px;
@@ -562,6 +635,10 @@ em {
     @include laptop {
       right: 56px;
       top: 558px;
+    }
+    @include laptop-small {
+      right: 50px;
+      top: 496px;
     }
   }
   span {
@@ -574,6 +651,9 @@ em {
     font-weight: 400;
     @include laptop {
       top: -36px;
+    }
+    @include laptop-small {
+      top: -32px;
     }
   }
   img {
@@ -588,11 +668,17 @@ em {
     @include laptop {
       width: 138px;
     }
+    @include laptop-small {
+      width: 123px;
+    }
   }
   .blue-parts {
     width: 219px;
     @include laptop {
       width: 175px;
+    }
+    @include laptop-small {
+      width: 156px;
     }
   }
 }
@@ -700,6 +786,11 @@ em {
       top: 643px;
       width: 200px;
     }
+    @include laptop-small {
+      left: 385px;
+      top: 572px;
+      width: 178px;
+    }
   }
   .white-lego {
     left: 912px;
@@ -712,17 +803,27 @@ em {
       top: 513px;
       width: 127px;
     }
+    @include laptop-small {
+      left: 649px;
+      top: 456px;
+      width: 113px;
+    }
   }
   .blue-lego {
-    left: 1278px;
+    right: 484px;
     top: 462px;
     width: 158px;
     z-index: 6;
     animation: blueLegoAnimation 40s ease-in-out infinite;
     @include laptop {
-      left: 1023px;
+      right: 387px;
       top: 369px;
       width: 127px;
+    }
+    @include laptop-small {
+      right: 344px;
+      top: 328px;
+      width: 113px;
     }
   }
   .planet2 {
@@ -735,6 +836,11 @@ em {
       top: 603px;
       width: 254px;
     }
+    @include laptop-small {
+      left: -134px;
+      top: 536px;
+      width: 226px;
+    }
   }
   .spaceship3 {
     left: 440px;
@@ -745,6 +851,11 @@ em {
       left: 352px;
       top: 338px;
       width: 870px;
+    }
+    @include laptop-small {
+      left: 313px;
+      top: 301px;
+      width: 773px;
     }
   }
 }
@@ -793,6 +904,9 @@ em {
     @include laptop {
       height: 283px;
     }
+    @include laptop-small {
+      height: 252px;
+    }
   }
   .lego-set {
     position: absolute;
@@ -804,6 +918,11 @@ em {
       left: -177px;
       bottom: 123px;
       width: 780px;
+    }
+    @include laptop-small {
+      left: -157px;
+      bottom: 109px;
+      width: 693px;
     }
   }
   .boy {
@@ -818,6 +937,11 @@ em {
       bottom: -305px;
       width: 1782px;
     }
+    @include laptop-small {
+      right: -557px;
+      bottom: -271px;
+      width: 1584px;
+    }
   }
   .lego-block-pile div {
     position: absolute;
@@ -831,12 +955,18 @@ em {
     right: -320px;
     bottom: 186px;
     background-image: url("../imgs/shuttle.png");
-    z-index: 4;
+    z-index: 5;
     @include laptop {
       width: 295px;
       height: 295px;
       right: -270px;
       bottom: 95px;
+    }
+    @include laptop-small {
+      width: 262px;
+      height: 262px;
+      right: -240px;
+      bottom: 84px;
     }
   }
   .pile-y1 {
@@ -853,6 +983,12 @@ em {
       right: 265px;
       height: 188px;
     }
+    @include laptop-small {
+      width: 211px;
+      bottom: 73px;
+      right: 236px;
+      height: 167px;
+    }
   }
   .pile-y2 {
     width: 296px;
@@ -867,6 +1003,12 @@ em {
       bottom: 46px;
       right: 242px;
       height: 188px;
+    }
+    @include laptop-small {
+      width: 211px;
+      bottom: 41px;
+      right: 215px;
+      height: 167px;
     }
   }
   .pile-y3 {
@@ -883,6 +1025,12 @@ em {
       right: 155px;
       height: 188px;
     }
+    @include laptop-small {
+      width: 211px;
+      bottom: 121px;
+      right: 138px;
+      height: 167px;
+    }
   }
   .pile-y4 {
     width: 296px;
@@ -897,6 +1045,12 @@ em {
       bottom: 60px;
       right: 60px;
       height: 188px;
+    }
+    @include laptop-small {
+      width: 211px;
+      bottom: 53px;
+      right: 53px;
+      height: 167px;
     }
   }
   .pile-dg1 {
@@ -913,6 +1067,12 @@ em {
       right: 280px;
       height: 128px;
     }
+    @include laptop-small {
+      width: 97px;
+      bottom: 41px;
+      right: 249px;
+      height: 114px;
+    }
   }
   .pile-dg2 {
     width: 117px;
@@ -927,6 +1087,12 @@ em {
       bottom: 144px;
       right: 297px;
       height: 97px;
+    }
+    @include laptop-small {
+      width: 83px;
+      bottom: 128px;
+      right: 264px;
+      height: 86px;
     }
   }
   .pile-dg3 {
@@ -943,6 +1109,12 @@ em {
       right: 204px;
       height: 97px;
     }
+    @include laptop-small {
+      width: 83px;
+      bottom: 134px;
+      right: 181px;
+      height: 86px;
+    }
   }
   .pile-dg4 {
     width: 117px;
@@ -957,6 +1129,12 @@ em {
       bottom: 176px;
       right: 120px;
       height: 97px;
+    }
+    @include laptop-small {
+      width: 83px;
+      bottom: 156px;
+      right: 107px;
+      height: 86px;
     }
   }
   .pile-g1 {
@@ -973,6 +1151,12 @@ em {
       right: 378px;
       height: 96px;
     }
+    @include laptop-small {
+      width: 82px;
+      bottom: 125px;
+      right: 336px;
+      height: 85px;
+    }
   }
   .pile-g2 {
     width: 101px;
@@ -987,6 +1171,12 @@ em {
       bottom: 160px;
       right: 297px;
       height: 85px;
+    }
+    @include laptop-small {
+      width: 72px;
+      bottom: 142px;
+      right: 264px;
+      height: 76px;
     }
   }
   .pile-g3 {
@@ -1003,6 +1193,12 @@ em {
       right: 271px;
       height: 85px;
     }
+    @include laptop-small {
+      width: 72px;
+      bottom: 96px;
+      right: 241px;
+      height: 76px;
+    }
   }
   .pile-g4 {
     width: 101px;
@@ -1018,6 +1214,12 @@ em {
       right: 158px;
       height: 85px;
     }
+    @include laptop-small {
+      width: 72px;
+      bottom: 78px;
+      right: 140px;
+      height: 76px;
+    }
   }
   .pile-g5 {
     width: 115px;
@@ -1032,6 +1234,12 @@ em {
       bottom: 85px;
       right: 242px;
       height: 96px;
+    }
+    @include laptop-small {
+      width: 82px;
+      bottom: 76px;
+      right: 215px;
+      height: 85px;
     }
   }
 }
@@ -1094,11 +1302,17 @@ em {
     @include laptop {
       width: 474px;
     }
+    @include laptop-small {
+      width: 421px;
+    }
   }
   .classic-space-item2 img {
     width: 554px;
     @include laptop {
       width: 443px;
+    }
+    @include laptop-small {
+      width: 394px;
     }
   }
   .classic-space-item3 img {
@@ -1106,17 +1320,26 @@ em {
     @include laptop {
       width: 492px;
     }
+    @include laptop-small {
+      width: 437px;
+    }
   }
   .classic-space-item4 img {
     width: 592px;
     @include laptop {
       width: 474px;
     }
+    @include laptop-small {
+      width: 421px;
+    }
   }
   .classic-space-item5 img {
     width: 552px;
     @include laptop {
       width: 442px;
+    }
+    @include laptop-small {
+      width: 393px;
     }
   }
 }
@@ -1190,6 +1413,11 @@ em {
         bottom: 60px;
         width: 305px;
       }
+      @include laptop-small {
+        left: 92px;
+        bottom: 53px;
+        width: 271px;
+      }
     }
     .cruiser {
       width: 1373px;
@@ -1199,6 +1427,11 @@ em {
         width: 1098px;
         bottom: 50px;
         right: -342px;
+      }
+      @include laptop-small {
+        width: 976px;
+        bottom: 44px;
+        right: -304px;
       }
     }
     .yellow-block {
@@ -1213,10 +1446,8 @@ em {
 }
 
 /* blue-bg-group-2 
-  sc-spacesuits: 160vh
-  sc-lego-value: 140vh
-  sc-2011: 240vh
-  */
+  sc-spacesuits, sc-lego-value, sc-2011
+*/
 .sc-spacesuits {
   display: flex;
   flex-direction: column;
@@ -1230,7 +1461,7 @@ em {
   top: 0;
   left: 0;
   width: 100%;
-  height: 540vh;
+  height: 520vh;
   background: url("../imgs/space-bg3.png") repeat-y center / cover;
   z-index: 1;
 }
@@ -1238,9 +1469,15 @@ em {
   display: flex;
   width: 100%;
   position: relative;
-  padding-top: 37.5rem;
+  padding-top: 40rem;
   padding-left: 3.5rem;
   z-index: 4;
+  @include laptop {
+    padding-top: 37rem;
+  }
+  @include laptop-small {
+    padding-top: 36rem;
+  }
 }
 .sc-spacesuits .title {
   position: absolute;
@@ -1263,6 +1500,11 @@ em {
       top: 20px;
       width: 131px;
     }
+    @include laptop-small {
+      left: -121px;
+      top: 18px;
+      width: 116px;
+    }
   }
   .alien2 {
     right: 49px;
@@ -1273,6 +1515,11 @@ em {
       top: 18px;
       right: -13px;
       width: 137px;
+    }
+    @include laptop-small {
+      top: 16px;
+      right: -31px;
+      width: 122px;
     }
   }
   .yellow-white-block {
@@ -1285,6 +1532,9 @@ em {
     @include laptop {
       top: -50px;
     }
+    @include laptop-small {
+      top: -44px;
+    }
   }
   .follow-ufo {
     left: 0;
@@ -1295,6 +1545,10 @@ em {
     @include laptop {
       top: -22px;
       width: 576px;
+    }
+    @include laptop-small {
+      top: -10px;
+      width: 512px;
     }
   }
   .ground {
@@ -1311,7 +1565,11 @@ em {
     display: flex;
     width: 100%;
     padding: 0 1.8rem;
+    padding-top: 1rem;
     margin-bottom: 5rem;
+    @include laptop {
+      padding-top: 0;
+    }
     li {
       position: relative;
       flex: 1;
@@ -1325,48 +1583,65 @@ em {
       }
       .scientist {
         width: 405px;
-        top: 3px;
+        top: 0;
         @include laptop {
           width: 324px;
           top: 3px;
         }
+        @include laptop-small {
+          width: 288px;
+        }
       }
       .bad {
         width: 453px;
-        top: -13px;
+        top: -18px;
         left: -52px;
         @include laptop {
           width: 362px;
           top: -13px;
-          left: -52px;
+        }
+        @include laptop-small {
+          width: 322px;
+          top: -12px;
+          left: -46px;
         }
       }
       .good {
         width: 290px;
-        top: -15px;
+        top: -21px;
         left: -59px;
         @include laptop {
           width: 232px;
           top: -15px;
-          left: -59px;
+        }
+        @include laptop-small {
+          width: 206px;
+          top: -13px;
+          left: -52px;
         }
       }
       .mechanic {
         width: 262px;
-        top: -61px;
+        top: -78px;
         @include laptop {
           width: 210px;
           top: -61px;
         }
+        @include laptop-small {
+          width: 187px;
+          top: -54px;
+        }
       }
       .soldier {
         width: 419px;
-        top: -5px;
+        top: -8px;
         left: -3px;
         @include laptop {
           width: 335px;
           top: -5px;
-          left: -3px;
+        }
+        @include laptop-small {
+          width: 298px;
         }
       }
       &.on img {
@@ -1390,11 +1665,20 @@ em {
           width: 165px;
           height: 95px;
         }
+        @include laptop-small {
+          top: 98px;
+          left: 202px;
+          width: 147px;
+          height: 84px;
+        }
       }
       & .bubble-bad {
         left: 254px;
         @include laptop {
           left: 191px;
+        }
+        @include laptop-small {
+          left: 170px;
         }
       }
       & .bubble-good {
@@ -1402,17 +1686,26 @@ em {
         @include laptop {
           left: 115px;
         }
+        @include laptop-small {
+          left: 102px;
+        }
       }
       & .bubble-mechanic {
         left: 203px;
         @include laptop {
           left: 163px;
         }
+        @include laptop-small {
+          left: 145px;
+        }
       }
       & .bubble-soldier {
         left: 230px;
         @include laptop {
           left: 183px;
+        }
+        @include laptop-small {
+          left: 163px;
         }
       }
       &.on [class*="bubble-"] {
@@ -1421,12 +1714,9 @@ em {
       & div span {
         color: #0e1730;
         font-size: 1.2vw;
-        line-height: 97px;
+        line-height: 4.21;
         font-weight: 400;
         text-align: center;
-        @include laptop {
-          line-height: 77px;
-        }
       }
     }
   }
@@ -1437,10 +1727,14 @@ em {
   height: 140vh;
   max-width: 100%;
   background-color: #16244a;
+  @include laptop-small {
+    height: 125vh;
+  }
 }
 .sc-lego-value .title {
   position: relative;
   left: 22rem;
+  top: 1rem;
   z-index: 1;
 }
 .sc-lego-value .description {
@@ -1461,6 +1755,11 @@ em {
       top: 206px;
       width: 998px;
     }
+    @include laptop-small {
+      left: 273px;
+      top: 183px;
+      width: 887px;
+    }
   }
   .attach {
     position: absolute;
@@ -1472,6 +1771,11 @@ em {
       right: 271px;
       top: 160px;
       width: 270px;
+    }
+    @include laptop-small {
+      right: 241px;
+      top: 142px;
+      width: 240px;
     }
   }
 }
@@ -1494,13 +1798,13 @@ em {
 .sc-2011 .content-area .label {
   grid-row: 1/2;
   grid-column: 1 / span 2;
-  align-self: center;
+  align-self: self-start;
   padding-left: 3.5rem;
 }
 .sc-2011 .content-area .title {
   grid-row: 1/2;
   grid-column: 3 / span 3;
-  align-self: center;
+  align-self: self-start;
 }
 .sc-2011 .content-area .description {
   grid-row: 2/3;
@@ -1522,6 +1826,12 @@ em {
       top: -350px;
       right: -620px;
     }
+    @include laptop-small {
+      width: 651px;
+      height: 913px;
+      top: -311px;
+      right: -551px;
+    }
   }
   .boarding-wrapper {
     height: 100%;
@@ -1541,6 +1851,11 @@ em {
         top: 53px;
         width: 157px;
       }
+      @include laptop-small {
+        left: 515px;
+        top: 47px;
+        width: 140px;
+      }
     }
     .good {
       left: 438px;
@@ -1550,6 +1865,11 @@ em {
         left: 351px;
         top: 89px;
         width: 173px;
+      }
+      @include laptop-small {
+        left: 312px;
+        top: 79px;
+        width: 154px;
       }
     }
     .bad {
@@ -1561,6 +1881,11 @@ em {
         top: 90px;
         width: 271px;
       }
+      @include laptop-small {
+        left: 74px;
+        top: 80px;
+        width: 241px;
+      }
     }
     .scientist {
       left: -152px;
@@ -1570,6 +1895,11 @@ em {
         left: -122px;
         top: 101px;
         width: 242px;
+      }
+      @include laptop-small {
+        left: -108px;
+        top: 90px;
+        width: 215px;
       }
     }
     .atom {
@@ -1581,6 +1911,11 @@ em {
         top: 95px;
         width: 256px;
       }
+      @include laptop-small {
+        left: -318px;
+        top: 84px;
+        width: 228px;
+      }
     }
     .alien2 {
       left: -702px;
@@ -1590,6 +1925,11 @@ em {
         left: -562px;
         top: 104px;
         width: 192px;
+      }
+      @include laptop-small {
+        left: -500px;
+        top: 92px;
+        width: 171px;
       }
     }
     .alien3 {
@@ -1601,6 +1941,11 @@ em {
         top: 103px;
         width: 172px;
       }
+      @include laptop-small {
+        left: -707px;
+        top: 92px;
+        width: 153px;
+      }
     }
     .alien4 {
       left: -1299px;
@@ -1610,6 +1955,11 @@ em {
         left: -1039px;
         top: 99px;
         width: 179px;
+      }
+      @include laptop-small {
+        left: -924px;
+        top: 88px;
+        width: 159px;
       }
     }
   }
@@ -1621,14 +1971,17 @@ em {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  height: 140vh;
+  height: 150vh;
+  @include laptop-small {
+    height: 140vh;
+  }
 }
 .sc-2011 .bottom-section .strong-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 16.3rem;
-  z-index: 1;
+  z-index: 2;
 }
 .sc-2011 .bottom-section strong {
   color: #ffca20;
@@ -1646,6 +1999,9 @@ em {
   animation: arrowAnimation 3s ease-in-out infinite;
   @include laptop {
     width: 26px;
+  }
+  @include laptop-small {
+    width: 23px;
   }
 }
 .sc-2011 .bottom-section .strong-wrapper.hide {
@@ -1665,6 +2021,11 @@ em {
     top: 142px;
     width: 253px;
   }
+  @include laptop-small {
+    right: 76px;
+    top: 126px;
+    width: 225px;
+  }
 }
 .sc-2011 .img-wrapper .planet3 {
   left: 5px;
@@ -1676,6 +2037,11 @@ em {
     left: 4px;
     top: -86px;
     width: 456px;
+  }
+  @include laptop-small {
+    left: 4px;
+    top: -76px;
+    width: 405px;
   }
 }
 @keyframes arrowAnimation {
@@ -1734,6 +2100,9 @@ em {
     @include laptop {
       height: 476px;
     }
+    @include laptop-small {
+      height: 423px;
+    }
     .btn-wrapper {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -1747,6 +2116,11 @@ em {
         bottom: 230px;
         gap: 10px;
       }
+      @include laptop-small {
+        left: 489px;
+        bottom: 204px;
+        gap: 9px;
+      }
       button {
         width: 88px;
         height: 125px;
@@ -1758,6 +2132,10 @@ em {
         @include laptop {
           width: 70px;
           height: 100px;
+        }
+        @include laptop-small {
+          width: 62px;
+          height: 89px;
         }
         &:hover {
           opacity: 1;
@@ -1788,6 +2166,11 @@ em {
         bottom: 232px;
         width: 335px;
       }
+      @include laptop-small {
+        left: 480px;
+        bottom: 206px;
+        width: 298px;
+      }
     }
     .good {
       left: 656px;
@@ -1798,6 +2181,11 @@ em {
         left: 525px;
         top: -299px;
         width: 163px;
+      }
+      @include laptop-small {
+        left: 467px;
+        top: -266px;
+        width: 145px;
       }
     }
     .scientist {
@@ -1810,6 +2198,11 @@ em {
         top: -307px;
         width: 218px;
       }
+      @include laptop-small {
+        left: 668px;
+        top: -273px;
+        width: 194px;
+      }
     }
     .bad {
       left: 306px;
@@ -1820,6 +2213,11 @@ em {
         left: 244px;
         top: -326px;
         width: 255px;
+      }
+      @include laptop-small {
+        left: 217px;
+        top: -290px;
+        width: 227px;
       }
     }
     .mechanic {
@@ -1832,6 +2230,11 @@ em {
         top: -302px;
         width: 143px;
       }
+      @include laptop-small {
+        left: 965px;
+        top: -268px;
+        width: 127px;
+      }
     }
     .atom {
       left: 1178px;
@@ -1842,6 +2245,11 @@ em {
         left: 942px;
         top: -398px;
         width: 218px;
+      }
+      @include laptop-small {
+        left: 837px;
+        top: -354px;
+        width: 194px;
       }
     }
     .alien3 {
@@ -1854,6 +2262,11 @@ em {
         top: -211px;
         width: 142px;
       }
+      @include laptop-small {
+        left: 106px;
+        top: -188px;
+        width: 126px;
+      }
     }
     .alien4 {
       left: 798px;
@@ -1865,6 +2278,11 @@ em {
         top: -432px;
         width: 142px;
       }
+      @include laptop-small {
+        left: 568px;
+        top: -384px;
+        width: 126px;
+      }
     }
     .alien2 {
       left: 1603px;
@@ -1875,6 +2293,11 @@ em {
         left: 1283px;
         top: -370px;
         width: 142px;
+      }
+      @include laptop-small {
+        left: 1141px;
+        top: -329px;
+        width: 126px;
       }
     }
   }
