@@ -109,53 +109,42 @@ gsap.to(".sc-since .spaceship2", {
 });
 
 // sc-creator
-let ufoMotion;
-let spaceshipMotion;
-function updateAnimation() {
-  if (ufoMotion) {
-    ufoMotion.scrollTrigger.kill(); // 기존의 ScrollTrigger 인스턴스를 제거
-    ufoMotion.kill(); // 기존의 GSAP 애니메이션 인스턴스를 제거
-  }
-  if (spaceshipMotion) {
-    spaceshipMotion.scrollTrigger.kill();
-    spaceshipMotion.kill();
-  }
-
-  const xValue = window.innerWidth;
-
-  ufoMotion = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".sc-creator",
-      start: "0% 0%",
-      end: "100% 100%",
-      scrub: true,
-      invalidateOnRefresh: true,
-      // markers: true,
+const ufoMotion = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sc-creator",
+    start: "0% 0%",
+    end: "100% 100%",
+    scrub: true,
+    invalidateOnRefresh: true,
+    // markers: true,
+  },
+});
+ufoMotion
+  .to(".sc-creator .ufo2", { yPercent: 50 }, "a")
+  .to(
+    ".sc-creator .ufo2",
+    {
+      x: () => {
+        return window.innerWidth;
+      },
     },
-  });
-  ufoMotion
-    .to(".sc-creator .ufo2", { yPercent: 50 }, "a")
-    .to(".sc-creator .ufo2", { x: xValue }, "b")
-    .to(".sc-creator .ufo3", { xPercent: 100 }, "b")
-    .to(".sc-creator .ufo3", { yPercent: 40 }, "c");
+    "b"
+  )
+  .to(".sc-creator .ufo3", { xPercent: 100 }, "b")
+  .to(".sc-creator .ufo3", { yPercent: 40 }, "c");
 
-  const yValue = window.innerWidth > 1536 ? 1521 : window.innerWidth > 1366 ? 1116 : 1227;
-
-  spaceshipMotion = gsap.to(".sc-creator .spaceship3", {
-    scrollTrigger: {
-      trigger: ".sc-creator",
-      start: "50% 0%",
-      end: "130% 0%",
-      scrub: true,
-      invalidateOnRefresh: true,
-    },
-    y: yValue,
-  });
-}
-
-window.addEventListener("resize", updateAnimation);
-
-updateAnimation();
+const spaceshipMotion = gsap.to(".sc-creator .spaceship3", {
+  scrollTrigger: {
+    trigger: ".sc-creator",
+    start: "50% 0%",
+    end: "130% 0%",
+    scrub: true,
+    invalidateOnRefresh: true,
+  },
+  y: function () {
+    return window.innerWidth > 1536 ? 1521 : window.innerWidth > 1366 ? 1116 : 1227;
+  },
+});
 
 // sc-first-sets
 gsap.to(".sc-first-sets .shuttle", {
