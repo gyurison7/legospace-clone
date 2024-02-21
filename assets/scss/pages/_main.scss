@@ -1,3 +1,28 @@
+.label {
+  color: $yellow;
+  font-size: 1.3vw;
+  line-height: 1.3;
+  font-weight: 400;
+}
+.sub-title,
+.title {
+  color: $white;
+  font-size: 2.5vw;
+  line-height: 1.26;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+}
+.description {
+  font-size: 1.3vw;
+  line-height: 1.3;
+  font-weight: 400;
+  color: $white;
+}
+em {
+  color: $yellow;
+}
+
 .container {
   width: 100vw;
 }
@@ -9,147 +34,144 @@
   width: 100vw;
   max-width: 100%;
   min-height: 720px;
-  color: #fdf8f1;
+  color: $white;
   text-transform: uppercase;
   background-image: radial-gradient(
     circle at center,
     rgba(190, 190, 190, 1) 0%,
     rgba(106, 105, 105, 1) 100%
   );
-}
-.sc-main .top-section {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-.sc-main .top-section .left-section {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  width: 50%;
-  height: 100%;
-  padding-left: 3.5rem;
-}
-.sc-main .left-section .award-list {
-  grid-row: 2 / 3;
-  grid-column: 1 / span 4;
-  align-self: self-end;
-  display: flex;
-  justify-content: space-between;
-  width: 27vw;
-  gap: 10px;
-}
-.sc-main .left-section .award-list li {
-  flex: 1;
-  min-width: 73px;
-}
-.sc-main .left-section .text-wrapper {
-  grid-row: 5 / 6;
-  grid-column: 1 / span 3;
-  align-self: self-end;
-}
-.sc-main .left-section .text-wrapper p:first-child {
-  font-size: 1.3vw;
-  padding-bottom: 0.4rem;
-}
-.sc-main .left-section .text-wrapper p:last-child {
-  font-size: 0.84vw;
-  padding-bottom: 2rem;
-}
-.sc-main .left-section .anchor-link {
-  grid-row: 6 / 7;
-  grid-column: 1 / span 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 325px;
-  height: 80px;
-  background: url("../imgs/start1.png") no-repeat center / cover;
-  transition: all 0.3s ease-in-out;
-  @include laptop {
-    width: 260px;
-    height: 64px;
+  .top-section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    .left-section {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      width: 50%;
+      height: 100%;
+      padding-left: 3.5rem;
+      .award-list {
+        grid-row: 2 / 3;
+        grid-column: 1 / span 4;
+        align-self: self-end;
+        display: flex;
+        justify-content: space-between;
+        width: 27vw;
+        gap: 10px;
+        li {
+          flex: 1;
+          min-width: 73px;
+        }
+      }
+      .text-wrapper {
+        grid-row: 5 / 6;
+        grid-column: 1 / span 3;
+        align-self: self-end;
+        p:first-child {
+          font-size: 1.3vw;
+          padding-bottom: 0.4rem;
+        }
+        p:last-child {
+          font-size: 0.84vw;
+          padding-bottom: 2rem;
+        }
+      }
+      .anchor-link {
+        grid-row: 6 / 7;
+        grid-column: 1 / span 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 325px;
+        height: 80px;
+        background: url("../imgs/start1.png") no-repeat center / cover;
+        transition: all 0.3s ease-in-out;
+        @include laptop {
+          width: 260px;
+          height: 64px;
+        }
+        @include laptop-small {
+          width: 231px;
+          height: 57px;
+        }
+        &:hover {
+          background: url("../imgs/start2.png") no-repeat center / cover;
+        }
+        span {
+          font-size: 1.3vw;
+        }
+      }
+    }
+    .center-section {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      pointer-events: none;
+      z-index: 1;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 956px;
+        height: 956px;
+        filter: blur(50px);
+        border-radius: 50%;
+        background-image: radial-gradient(
+          circle at center,
+          rgba(231, 231, 231, 1) 0%,
+          rgba(231, 231, 231, 0) 100%
+        );
+      }
+      .atom {
+        margin-top: 2.4rem;
+        width: 1650px;
+        object-fit: cover;
+        @include laptop {
+          width: 1286px;
+        }
+        @include laptop-small {
+          width: 1221px;
+        }
+      }
+    }
+    .right-section {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      width: 50%;
+      height: 100%;
+      .site-of-the-day {
+        grid-row: 2 / 3;
+        grid-column: span 1 / -1;
+        justify-self: self-end;
+      }
+      .honors {
+        grid-row: 4 / 6;
+        grid-column: span 1 / -1;
+        justify-self: self-end;
+      }
+      .desc {
+        grid-row: 6 / 7;
+        grid-column: span 3 / -1;
+        font-size: 1.3vw;
+      }
+    }
   }
-  @include laptop-small {
-    width: 231px;
-    height: 57px;
+  .bottom-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 26vh;
+    z-index: 1;
+    strong {
+      font-size: 10.1vw;
+      font-weight: 300;
+      letter-spacing: -4px;
+    }
   }
-}
-.sc-main .left-section .anchor-link:hover {
-  background: url("../imgs/start2.png") no-repeat center / cover;
-}
-.sc-main .left-section .anchor-link span {
-  font-size: 1.3vw;
-}
-.sc-main .center-section {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-.sc-main .center-section::before {
-  position: absolute;
-  content: "";
-  width: 956px;
-  height: 956px;
-  filter: blur(50px);
-  border-radius: 50%;
-  background-image: radial-gradient(
-    circle at center,
-    rgba(231, 231, 231, 1) 0%,
-    rgba(231, 231, 231, 0) 100%
-  );
-}
-.sc-main .center-section .atom {
-  margin-top: 2.4rem;
-  width: 1650px;
-  object-fit: cover;
-  @include laptop {
-    width: 1286px;
-  }
-  @include laptop-small {
-    width: 1221px;
-  }
-}
-.sc-main .right-section {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  width: 50%;
-  height: 100%;
-}
-.sc-main .right-section .site-of-the-day {
-  grid-row: 2 / 3;
-  grid-column: span 1 / -1;
-  justify-self: self-end;
-}
-.sc-main .right-section .honors {
-  grid-row: 4 / 6;
-  grid-column: span 1 / -1;
-  justify-self: self-end;
-}
-.sc-main .right-section .desc {
-  grid-row: 6 / 7;
-  grid-column: span 3 / -1;
-  font-size: 1.3vw;
-}
-.sc-main .bottom-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 26vh;
-  z-index: 1;
-}
-.sc-main .bottom-section strong {
-  font-size: 10.1vw;
-  font-weight: 300;
-  letter-spacing: -4px;
-}
-.sc-main .bottom-section strong em {
-  color: rgb(255, 202, 32);
 }
 
 .sc-beginning {
@@ -158,56 +180,109 @@
   grid-template-rows: repeat(6, 1fr);
   position: relative;
   max-width: 100%;
-}
-.sc-beginning::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #ffca20;
-  z-index: -1;
-}
-.sc-beginning .label {
-  grid-row: 2 / 3;
-  grid-column: 1;
-  padding-left: 3.5rem;
-  color: #193261;
-}
-.sc-beginning .title {
-  grid-row: 2 / 3;
-  grid-column: 3 / span 8;
-  color: #193261;
-}
-.sc-beginning .description {
-  grid-row: 3/ 4;
-  grid-column: 5 / span 3;
-  padding-top: 1rem;
-  padding-left: 1.7rem;
-  color: #193261;
-}
-/* 공통 label */
-.label {
-  color: #ffca20;
-  font-size: 1.3vw;
-  line-height: 1.3;
-  font-weight: 400;
-}
-/* 공통 title */
-.sub-title,
-.title {
-  color: #fdf8f1;
-  font-size: 2.5vw;
-  line-height: 1.26;
-  font-weight: 300;
-  letter-spacing: -0.4px;
-  text-transform: uppercase;
-}
-/* 공통 description */
-.description {
-  font-size: 1.3vw;
-  line-height: 1.3;
-  font-weight: 400;
-  color: #fdf8f1;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $yellow;
+    z-index: -1;
+  }
+  .label {
+    grid-row: 2 / 3;
+    grid-column: 1;
+    padding-left: 3.5rem;
+    color: $navy;
+  }
+  .title {
+    grid-row: 2 / 3;
+    grid-column: 3 / span 8;
+    color: $navy;
+  }
+  .description {
+    grid-row: 3/ 4;
+    grid-column: 5 / span 3;
+    padding-top: 1rem;
+    padding-left: 1.7rem;
+    color: $navy;
+  }
+  .img-wrapper {
+    img {
+      position: absolute;
+    }
+    .satellite {
+      left: -69px;
+      top: 364px;
+      width: 330px;
+      animation: satelliteAnimation 25s linear infinite;
+      @include laptop {
+        left: -55px;
+        top: 285px;
+        width: 264px;
+      }
+      @include laptop-small {
+        left: -49px;
+        top: 253px;
+        width: 235px;
+      }
+    }
+    .spaceship {
+      right: -260px;
+      top: -102px;
+      width: 754px;
+      animation: spaceshipAnimation 20s linear infinite;
+      @include laptop {
+        right: -208px;
+        top: -82px;
+        width: 603px;
+      }
+      @include laptop-small {
+        right: -185px;
+        top: -73px;
+        width: 536px;
+      }
+    }
+    .alien1 {
+      left: -125px;
+      bottom: -17px;
+      width: 243px;
+      z-index: 2;
+      @include laptop {
+        left: -140px;
+        bottom: -7px;
+        width: 195px;
+      }
+      @include laptop-small {
+        left: -124px;
+        bottom: -6px;
+        width: 173px;
+      }
+    }
+    .alien2 {
+      right: -96px;
+      bottom: -36px;
+      width: 243px;
+      z-index: 2;
+      @include laptop {
+        right: -105px;
+        bottom: -23px;
+        width: 195px;
+      }
+      @include laptop-small {
+        right: -93px;
+        bottom: -20px;
+        width: 173px;
+      }
+    }
+    .block-bottom {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 130%;
+      max-width: none;
+      z-index: 1;
+    }
+  }
 }
 @keyframes satelliteAnimation {
   0% {
@@ -231,189 +306,116 @@
     transform: translateY(0);
   }
 }
-.sc-beginning .img-wrapper img {
-  position: absolute;
-}
-.sc-beginning .satellite {
-  left: -69px;
-  top: 364px;
-  width: 330px;
-  animation: satelliteAnimation 25s linear infinite;
-  @include laptop {
-    left: -55px;
-    top: 285px;
-    width: 264px;
-  }
-  @include laptop-small {
-    left: -49px;
-    top: 253px;
-    width: 235px;
-  }
-}
-.sc-beginning .spaceship {
-  right: -260px;
-  top: -102px;
-  width: 754px;
-  animation: spaceshipAnimation 20s linear infinite;
-  @include laptop {
-    right: -208px;
-    top: -82px;
-    width: 603px;
-  }
-  @include laptop-small {
-    right: -185px;
-    top: -73px;
-    width: 536px;
-  }
-}
-.sc-beginning .alien1 {
-  left: -125px;
-  bottom: -17px;
-  width: 243px;
-  z-index: 2;
-  @include laptop {
-    left: -140px;
-    bottom: -7px;
-    width: 195px;
-  }
-  @include laptop-small {
-    left: -124px;
-    bottom: -6px;
-    width: 173px;
-  }
-}
-.sc-beginning .alien2 {
-  right: -96px;
-  bottom: -36px;
-  width: 243px;
-  z-index: 2;
-  @include laptop {
-    right: -105px;
-    bottom: -23px;
-    width: 195px;
-  }
-  @include laptop-small {
-    right: -93px;
-    bottom: -20px;
-    width: 173px;
-  }
-}
-.sc-beginning .block-bottom {
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 130%;
-  max-width: none;
-  z-index: 1;
-}
 
 /* blue-bg-group
-  sc-creator, sc-first-sets
-   */
+  sc-since, sc-creator, sc-first-sets
+*/
 .sc-since {
   position: relative;
-}
-.sc-since::before {
-  position: absolute;
-  width: 100%;
-  height: 535vh;
-  top: 0;
-  left: 0;
-  content: "";
-  background-color: #0e1730;
-}
-.sc-since::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100vw;
-  height: 530vh;
-  background: url("../imgs/space-bg3.png") repeat-y center / cover;
-}
-.sc-since .content-area {
-  display: flex;
-  flex-direction: column;
-  height: 140vh;
-}
-.sc-since .content-area * {
-  font-weight: 300;
-  letter-spacing: -0.4px;
-  text-transform: uppercase;
-  z-index: 1;
-}
-.sc-since .content-area #year-1978 {
-  padding-top: 17.4rem;
-  padding-left: 3.5rem;
-  color: #ffca20;
-  font-size: 8.8vw;
-}
-.sc-since .content-area .title {
-  padding-left: 22rem;
-}
-.sc-since .img-wrapper img {
-  position: absolute;
-}
-.sc-since .block-top {
-  left: 50%;
-  transform: translateX(-50%);
-  top: -80px;
-  width: 130%;
-  max-width: none;
-  z-index: 2;
-  @include laptop {
-    top: -70px;
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 535vh;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: #0e1730;
   }
-  @include laptop-small {
-    top: -62px;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100vw;
+    height: 530vh;
+    background: url("../imgs/space-bg3.png") repeat-y center / cover;
   }
-}
-.sc-since .ufo {
-  right: -700px;
-  top: -265px;
-  width: 766px;
-  z-index: 2;
-  @include laptop {
-    right: -600px;
-    top: -214px;
-    width: 613px;
+  .content-area {
+    display: flex;
+    flex-direction: column;
+    height: 140vh;
+    * {
+      font-weight: 300;
+      letter-spacing: -0.4px;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+    #year-1978 {
+      padding-top: 17.4rem;
+      padding-left: 3.5rem;
+      color: $yellow;
+      font-size: 8.8vw;
+    }
+    .title {
+      padding-left: 22rem;
+    }
   }
-  @include laptop-small {
-    right: -500px;
-    top: -190px;
-    width: 545px;
-  }
-}
-.sc-since .spaceship2 {
-  width: 989px;
-  top: 644px;
-  left: 392px;
-  transform: rotate(-5deg);
-  z-index: 2;
-  @include laptop {
-    width: 791px;
-    top: 517px;
-    left: 314px;
-  }
-  @include laptop-small {
-    width: 703px;
-    top: 461px;
-    left: 279px;
-  }
-}
-.sc-since .planet {
-  width: 458px;
-  top: 212px;
-  right: 0;
-  animation: planetAnimation 30s linear infinite;
-  z-index: 1;
-  @include laptop {
-    width: 366px;
-    top: 149px;
-  }
-  @include laptop-small {
-    width: 325px;
-    top: 132px;
+  .img-wrapper {
+    img {
+      position: absolute;
+    }
+    .block-top {
+      left: 50%;
+      transform: translateX(-50%);
+      top: -80px;
+      width: 130%;
+      max-width: none;
+      z-index: 2;
+      @include laptop {
+        top: -70px;
+      }
+      @include laptop-small {
+        top: -62px;
+      }
+    }
+    .ufo {
+      right: -700px;
+      top: -265px;
+      width: 766px;
+      z-index: 2;
+      @include laptop {
+        right: -600px;
+        top: -214px;
+        width: 613px;
+      }
+      @include laptop-small {
+        right: -500px;
+        top: -190px;
+        width: 545px;
+      }
+    }
+    .spaceship2 {
+      width: 989px;
+      top: 644px;
+      left: 392px;
+      transform: rotate(-5deg);
+      z-index: 2;
+      @include laptop {
+        width: 791px;
+        top: 517px;
+        left: 314px;
+      }
+      @include laptop-small {
+        width: 703px;
+        top: 461px;
+        left: 279px;
+      }
+    }
+    .planet {
+      width: 458px;
+      top: 212px;
+      right: 0;
+      animation: planetAnimation 30s linear infinite;
+      z-index: 1;
+      @include laptop {
+        width: 366px;
+        top: 149px;
+      }
+      @include laptop-small {
+        width: 325px;
+        top: 132px;
+      }
+    }
   }
 }
 @keyframes planetAnimation {
@@ -429,256 +431,344 @@
 .sc-creator {
   position: relative;
   max-width: 100%;
-}
-.sc-creator .top-section {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  position: relative;
-  height: 100vh;
-}
-.sc-creator .label {
-  grid-row: 1 / 2;
-  grid-column: 1 / span 2;
-  padding-left: 3.5rem;
-  align-self: center;
-  margin-top: -1rem;
-}
-.sc-creator .title {
-  grid-row: 1 / 4;
-  grid-column: 1 / span 10;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  z-index: 1;
-}
-/* 공통 */
-em {
-  color: rgb(255, 202, 32);
-}
-.sc-creator .title em {
-  grid-row: 1/3;
-  grid-column: 5 / span 3;
-  align-self: center;
-  padding-left: 8rem;
-}
-.sc-creator .title span:nth-of-type(1) {
-  grid-row: 1/3;
-  grid-column: span 4 / -1;
-  align-self: center;
-  justify-self: flex-end;
-  padding-right: 1rem;
-}
-.sc-creator .title span:nth-child(3) {
-  grid-row: 3 / 5;
-  grid-column: 1 / span 3;
-  font-size: 8.8vw;
-  padding-left: 3.5rem;
-}
-.sc-creator .title span:nth-child(4) {
-  grid-row: 3/5;
-  grid-column: span 5 / -1;
-  font-size: 8.8vw;
-  justify-self: flex-end;
-  padding-right: 1rem;
-}
-.sc-creator .title span:last-child {
-  grid-row: 5/7;
-  grid-column: span 5 / -2;
-  font-size: 8.8vw;
-  padding-top: 1rem;
-  padding-left: 1rem;
-}
-.sc-creator .top-section .description {
-  grid-row: 4 /5;
-  grid-column: 5 / span 3;
-  align-self: center;
-  padding-left: 1.6rem;
-}
-.sc-creator .creator-area::before {
-  position: absolute;
-  content: "";
-  left: 565px;
-  top: 69px;
-  width: 435px;
-  height: 435px;
-  background: url("../svgs/creator-planet-bg.svg") no-repeat center / cover;
-  @include laptop {
-    left: 452px;
-    top: 55px;
-    width: 348px;
-    height: 348px;
-  }
-  @include laptop-small {
-    left: 402px;
-    top: 49px;
-    width: 309px;
-    height: 309px;
-  }
-}
-.sc-creator .creator {
-  position: absolute;
-  width: 277px;
-  height: 374px;
-  left: 584px;
-  top: 126px;
-  transform: rotate(-9deg);
-  @include laptop {
-    width: 221px;
-    height: 300px;
-    left: 467px;
-    top: 101px;
-  }
-  @include laptop-small {
-    width: 196px;
-    height: 267px;
-    left: 415px;
-    top: 90px;
-  }
-}
-.sc-creator .top-section .img-wrapper img {
-  position: absolute;
-}
-.sc-creator .top-section .ufo2 {
-  left: -98px;
-  top: 280px;
-  width: 704px;
-  @include laptop {
-    left: -78px;
-    top: 216px;
-    width: 563px;
-  }
-  @include laptop-small {
-    left: -69px;
-    width: 501px;
-  }
-}
-.sc-creator .top-section .ufo3 {
-  width: 933px;
-  top: 362px;
-  left: -992px;
-  transform: rotate(334deg);
-  z-index: 6;
-  @include laptop {
-    width: 746px;
-    top: 322px;
-    left: -844px;
-  }
-  @include laptop-small {
-    width: 663px;
-    left: -750px;
+  .top-section {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    position: relative;
+    height: 100vh;
+    .label {
+      grid-row: 1 / 2;
+      grid-column: 1 / span 2;
+      padding-left: 3.5rem;
+      align-self: center;
+      margin-top: -1rem;
+    }
+    .title {
+      grid-row: 1 / 4;
+      grid-column: 1 / span 10;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      z-index: 1;
+      em {
+        grid-row: 1/3;
+        grid-column: 5 / span 3;
+        align-self: center;
+        padding-left: 8rem;
+      }
+      span:nth-of-type(1) {
+        grid-row: 1/3;
+        grid-column: span 4 / -1;
+        align-self: center;
+        justify-self: flex-end;
+        padding-right: 1rem;
+      }
+      span:nth-child(3) {
+        grid-row: 3 / 5;
+        grid-column: 1 / span 3;
+        font-size: 8.8vw;
+        padding-left: 3.5rem;
+      }
+      span:nth-child(4) {
+        grid-row: 3/5;
+        grid-column: span 5 / -1;
+        font-size: 8.8vw;
+        justify-self: flex-end;
+        padding-right: 1rem;
+      }
+      span:last-child {
+        grid-row: 5/7;
+        grid-column: span 5 / -2;
+        font-size: 8.8vw;
+        padding-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+    .description {
+      grid-row: 4 /5;
+      grid-column: 5 / span 3;
+      align-self: center;
+      padding-left: 1.6rem;
+    }
+    .creator-area {
+      &::before {
+        position: absolute;
+        content: "";
+        left: 565px;
+        top: 69px;
+        width: 435px;
+        height: 435px;
+        background: url("../svgs/creator-planet-bg.svg") no-repeat center / cover;
+        @include laptop {
+          left: 452px;
+          top: 55px;
+          width: 348px;
+          height: 348px;
+        }
+        @include laptop-small {
+          left: 402px;
+          top: 49px;
+          width: 309px;
+          height: 309px;
+        }
+      }
+      .creator {
+        position: absolute;
+        width: 277px;
+        height: 374px;
+        left: 584px;
+        top: 126px;
+        transform: rotate(-9deg);
+        @include laptop {
+          width: 221px;
+          height: 300px;
+          left: 467px;
+          top: 101px;
+        }
+        @include laptop-small {
+          width: 196px;
+          height: 267px;
+          left: 415px;
+          top: 90px;
+        }
+      }
+    }
+    .img-wrapper {
+      img {
+        position: absolute;
+      }
+      .ufo2 {
+        left: -98px;
+        top: 280px;
+        width: 704px;
+        @include laptop {
+          left: -78px;
+          top: 216px;
+          width: 563px;
+        }
+        @include laptop-small {
+          left: -69px;
+          width: 501px;
+        }
+      }
+      .ufo3 {
+        width: 933px;
+        top: 362px;
+        left: -992px;
+        transform: rotate(334deg);
+        z-index: 6;
+        @include laptop {
+          width: 746px;
+          top: 322px;
+          left: -844px;
+        }
+        @include laptop-small {
+          width: 663px;
+          left: -750px;
+        }
+      }
+    }
   }
 }
 .sc-creator .bottom-section {
   position: relative;
   height: 150vh;
-}
-.sc-creator .bottom-section strong {
-  position: absolute;
-  top: 8.8rem;
-  right: 21.6rem;
-  color: #ffca20;
-  font-size: 2.5vw;
-  line-height: 1.27;
-  font-weight: 300;
-  letter-spacing: -0.4px;
-  text-transform: uppercase;
-}
-.sc-creator .bottom-section .description {
-  position: absolute;
-  top: 13.15rem;
-  right: 15.8rem;
-}
-.sc-creator .parts-area {
-  [class*="circle-"] {
+  strong {
     position: absolute;
-    width: 218px;
-    height: 218px;
-    border-radius: 50%;
-    background-color: #88b2e0;
-    @include laptop {
-      width: 174px;
-      height: 174px;
+    top: 8.8rem;
+    right: 21.6rem;
+    color: $yellow;
+    font-size: 2.5vw;
+    line-height: 1.27;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+  }
+  .description {
+    position: absolute;
+    top: 13.15rem;
+    right: 15.8rem;
+  }
+  .parts-area {
+    [class*="circle-"] {
+      position: absolute;
+      width: 218px;
+      height: 218px;
+      border-radius: 50%;
+      background-color: $skyblue;
+      @include laptop {
+        width: 174px;
+        height: 174px;
+      }
+      @include laptop-small {
+        width: 155px;
+        height: 155px;
+      }
     }
-    @include laptop-small {
-      width: 155px;
-      height: 155px;
+    .circle-yellow {
+      left: 275px;
+      top: 650px;
+      @include laptop {
+        left: 220px;
+        top: 520px;
+      }
+      @include laptop-small {
+        left: 196px;
+        top: 462px;
+      }
+    }
+    .circle-gray {
+      left: 670px;
+      top: 288px;
+      @include laptop {
+        left: 536px;
+        top: 230px;
+      }
+      @include laptop-small {
+        left: 477px;
+        top: 204px;
+      }
+    }
+    .circle-blue {
+      right: 70px;
+      top: 698px;
+      @include laptop {
+        right: 56px;
+        top: 558px;
+      }
+      @include laptop-small {
+        right: 50px;
+        top: 496px;
+      }
+    }
+    span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -45px;
+      color: $white;
+      font-size: 1.3vw;
+      font-weight: 400;
+      @include laptop {
+        top: -36px;
+      }
+      @include laptop-small {
+        top: -32px;
+      }
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .yellow-parts,
+    .gray-parts {
+      width: 173px;
+      @include laptop {
+        width: 138px;
+      }
+      @include laptop-small {
+        width: 123px;
+      }
+    }
+    .blue-parts {
+      width: 219px;
+      @include laptop {
+        width: 175px;
+      }
+      @include laptop-small {
+        width: 156px;
+      }
     }
   }
-  .circle-yellow {
-    left: 275px;
-    top: 650px;
-    @include laptop {
-      left: 220px;
-      top: 520px;
+  .spaceship-area {
+    img {
+      position: absolute;
     }
-    @include laptop-small {
-      left: 196px;
+    .yellow-lego {
+      left: 542px;
+      top: 804px;
+      width: 250px;
+      z-index: 6;
+      animation: yellowLegoAnimation 40s ease-in-out infinite;
+      @include laptop {
+        left: 433px;
+        top: 643px;
+        width: 200px;
+      }
+      @include laptop-small {
+        left: 385px;
+        top: 572px;
+        width: 178px;
+      }
+    }
+    .white-lego {
+      left: 912px;
+      top: 641px;
+      width: 158px;
+      z-index: 6;
+      animation: whiteLegoAnimation 40s ease-in-out infinite;
+      @include laptop {
+        left: 730px;
+        top: 513px;
+        width: 127px;
+      }
+      @include laptop-small {
+        left: 649px;
+        top: 456px;
+        width: 113px;
+      }
+    }
+    .blue-lego {
+      right: 484px;
       top: 462px;
+      width: 158px;
+      z-index: 6;
+      animation: blueLegoAnimation 40s ease-in-out infinite;
+      @include laptop {
+        right: 387px;
+        top: 369px;
+        width: 127px;
+      }
+      @include laptop-small {
+        right: 344px;
+        top: 328px;
+        width: 113px;
+      }
     }
-  }
-  .circle-gray {
-    left: 670px;
-    top: 288px;
-    @include laptop {
-      left: 536px;
-      top: 230px;
+    .planet2 {
+      left: -189px;
+      top: 754px;
+      width: 317px;
+      animation: planet2Animation 60s ease-in-out infinite;
+      @include laptop {
+        left: -151px;
+        top: 603px;
+        width: 254px;
+      }
+      @include laptop-small {
+        left: -134px;
+        top: 536px;
+        width: 226px;
+      }
     }
-    @include laptop-small {
-      left: 477px;
-      top: 204px;
-    }
-  }
-  .circle-blue {
-    right: 70px;
-    top: 698px;
-    @include laptop {
-      right: 56px;
-      top: 558px;
-    }
-    @include laptop-small {
-      right: 50px;
-      top: 496px;
-    }
-  }
-  span {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -45px;
-    color: #fdf8f1;
-    font-size: 1.3vw;
-    font-weight: 400;
-    @include laptop {
-      top: -36px;
-    }
-    @include laptop-small {
-      top: -32px;
-    }
-  }
-  img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .yellow-parts,
-  .gray-parts {
-    width: 173px;
-    @include laptop {
-      width: 138px;
-    }
-    @include laptop-small {
-      width: 123px;
-    }
-  }
-  .blue-parts {
-    width: 219px;
-    @include laptop {
-      width: 175px;
-    }
-    @include laptop-small {
-      width: 156px;
+    .spaceship3 {
+      left: 440px;
+      top: 422px;
+      width: 1088px;
+      z-index: 5;
+      @include laptop {
+        left: 352px;
+        top: 338px;
+        width: 870px;
+      }
+      @include laptop-small {
+        left: 313px;
+        top: 301px;
+        width: 773px;
+      }
     }
   }
 }
@@ -771,475 +861,389 @@ em {
     transform: translateX(74px) translateY(-204px);
   }
 }
-.sc-creator .spaceship-area {
-  img {
-    position: absolute;
-  }
-  .yellow-lego {
-    left: 542px;
-    top: 804px;
-    width: 250px;
-    z-index: 6;
-    animation: yellowLegoAnimation 40s ease-in-out infinite;
-    @include laptop {
-      left: 433px;
-      top: 643px;
-      width: 200px;
-    }
-    @include laptop-small {
-      left: 385px;
-      top: 572px;
-      width: 178px;
-    }
-  }
-  .white-lego {
-    left: 912px;
-    top: 641px;
-    width: 158px;
-    z-index: 6;
-    animation: whiteLegoAnimation 40s ease-in-out infinite;
-    @include laptop {
-      left: 730px;
-      top: 513px;
-      width: 127px;
-    }
-    @include laptop-small {
-      left: 649px;
-      top: 456px;
-      width: 113px;
-    }
-  }
-  .blue-lego {
-    right: 484px;
-    top: 462px;
-    width: 158px;
-    z-index: 6;
-    animation: blueLegoAnimation 40s ease-in-out infinite;
-    @include laptop {
-      right: 387px;
-      top: 369px;
-      width: 127px;
-    }
-    @include laptop-small {
-      right: 344px;
-      top: 328px;
-      width: 113px;
-    }
-  }
-  .planet2 {
-    left: -189px;
-    top: 754px;
-    width: 317px;
-    animation: planet2Animation 60s ease-in-out infinite;
-    @include laptop {
-      left: -151px;
-      top: 603px;
-      width: 254px;
-    }
-    @include laptop-small {
-      left: -134px;
-      top: 536px;
-      width: 226px;
-    }
-  }
-  .spaceship3 {
-    left: 440px;
-    top: 422px;
-    width: 1088px;
-    z-index: 5;
-    @include laptop {
-      left: 352px;
-      top: 338px;
-      width: 870px;
-    }
-    @include laptop-small {
-      left: 313px;
-      top: 301px;
-      width: 773px;
-    }
-  }
-}
 
 .sc-first-sets {
   position: relative;
   height: 158vh;
-}
-.sc-first-sets .content-area {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-.sc-first-sets .content-area .label {
-  grid-row: 1/2;
-  grid-column: 1 / span 2;
-  padding-left: 3.5rem;
-}
-.sc-first-sets .content-area .title {
-  grid-row: 1 / 3;
-  grid-column: 3 / span4;
-}
-.sc-first-sets .content-area .description {
-  grid-row: 3/4;
-  grid-column: 5 / span 4;
-  padding-left: 2rem;
-}
-.sc-first-sets .content-area .description2 {
-  position: absolute;
-  top: 25.6rem;
-  left: 21.9rem;
-  color: #fdf8f1;
-  font-size: 1vw;
-  line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.sc-first-sets {
-  .table-area::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 354px;
-    background: url("../imgs/table.png") no-repeat center / cover;
-    @include laptop {
-      height: 283px;
+  .content-area {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    .label {
+      grid-row: 1/2;
+      grid-column: 1 / span 2;
+      padding-left: 3.5rem;
     }
-    @include laptop-small {
-      height: 252px;
+    .title {
+      grid-row: 1 / 3;
+      grid-column: 3 / span4;
+    }
+    .description {
+      grid-row: 3/4;
+      grid-column: 5 / span 4;
+      padding-left: 2rem;
+    }
+    .description2 {
+      position: absolute;
+      top: 25.6rem;
+      left: 21.9rem;
+      color: $white;
+      font-size: 1vw;
+      line-height: 1.2;
+      font-weight: 400;
+      text-transform: uppercase;
     }
   }
-  .lego-set {
-    position: absolute;
-    left: -221px;
-    bottom: 154px;
-    width: 975px;
-    z-index: 4;
-    @include laptop {
-      left: -177px;
-      bottom: 123px;
-      width: 780px;
+  .table-area {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 354px;
+      background: url("../imgs/table.png") no-repeat center / cover;
+      @include laptop {
+        height: 283px;
+      }
+      @include laptop-small {
+        height: 252px;
+      }
     }
-    @include laptop-small {
-      left: -157px;
-      bottom: 109px;
-      width: 693px;
+    .lego-set {
+      position: absolute;
+      left: -221px;
+      bottom: 154px;
+      width: 975px;
+      z-index: 4;
+      @include laptop {
+        left: -177px;
+        bottom: 123px;
+        width: 780px;
+      }
+      @include laptop-small {
+        left: -157px;
+        bottom: 109px;
+        width: 693px;
+      }
     }
-  }
-  .boy {
-    position: absolute;
-    right: -783px;
-    bottom: -381px;
-    width: 2227px;
-    max-width: none;
-    z-index: 4;
-    @include laptop {
-      right: -626px;
-      bottom: -305px;
-      width: 1782px;
+    .boy {
+      position: absolute;
+      right: -783px;
+      bottom: -381px;
+      width: 2227px;
+      max-width: none;
+      z-index: 4;
+      @include laptop {
+        right: -626px;
+        bottom: -305px;
+        width: 1782px;
+      }
+      @include laptop-small {
+        right: -557px;
+        bottom: -271px;
+        width: 1584px;
+      }
     }
-    @include laptop-small {
-      right: -557px;
-      bottom: -271px;
-      width: 1584px;
-    }
-  }
-  .lego-block-pile div {
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .shuttle {
-    width: 368px;
-    height: 368px;
-    right: -320px;
-    bottom: 186px;
-    background-image: url("../imgs/shuttle.png");
-    z-index: 5;
-    @include laptop {
-      width: 295px;
-      height: 295px;
-      right: -270px;
-      bottom: 95px;
-    }
-    @include laptop-small {
-      width: 262px;
-      height: 262px;
-      right: -240px;
-      bottom: 84px;
-    }
-  }
-  .pile-y1 {
-    width: 296px;
-    bottom: 170px;
-    right: 330px;
-    height: 235px;
-    z-index: 34;
-    background-image: url("../imgs/parts1.png");
-    transform: rotate(346deg);
-    @include laptop {
-      width: 237px;
-      bottom: 82px;
-      right: 265px;
-      height: 188px;
-    }
-    @include laptop-small {
-      width: 211px;
-      bottom: 73px;
-      right: 236px;
-      height: 167px;
-    }
-  }
-  .pile-y2 {
-    width: 296px;
-    bottom: 120px;
-    right: 300px;
-    height: 235px;
-    z-index: 35;
-    background-image: url("../imgs/parts1.png");
-    transform: rotate(135deg);
-    @include laptop {
-      width: 237px;
-      bottom: 46px;
-      right: 242px;
-      height: 188px;
-    }
-    @include laptop-small {
-      width: 211px;
-      bottom: 41px;
-      right: 215px;
-      height: 167px;
-    }
-  }
-  .pile-y3 {
-    width: 296px;
-    bottom: 240px;
-    right: 190px;
-    height: 235px;
-    z-index: 33;
-    background-image: url("../imgs/parts1.png");
-    transform: rotate(125deg);
-    @include laptop {
-      width: 237px;
-      bottom: 136px;
-      right: 155px;
-      height: 188px;
-    }
-    @include laptop-small {
-      width: 211px;
-      bottom: 121px;
-      right: 138px;
-      height: 167px;
-    }
-  }
-  .pile-y4 {
-    width: 296px;
-    bottom: 140px;
-    right: 75px;
-    height: 235px;
-    z-index: 41;
-    background-image: url("../imgs/parts1.png");
-    transform: rotate(162deg);
-    @include laptop {
-      width: 237px;
-      bottom: 60px;
-      right: 60px;
-      height: 188px;
-    }
-    @include laptop-small {
-      width: 211px;
-      bottom: 53px;
-      right: 53px;
-      height: 167px;
-    }
-  }
-  .pile-dg1 {
-    width: 136px;
-    bottom: 125px;
-    right: 350px;
-    height: 160px;
-    z-index: 37;
-    background-image: url("../imgs/parts2.png");
-    transform: rotate(234deg);
-    @include laptop {
-      width: 109px;
-      bottom: 46px;
-      right: 280px;
-      height: 128px;
-    }
-    @include laptop-small {
-      width: 97px;
-      bottom: 41px;
-      right: 249px;
-      height: 114px;
-    }
-  }
-  .pile-dg2 {
-    width: 117px;
-    bottom: 245px;
-    right: 370px;
-    height: 122px;
-    z-index: 30;
-    background-image: url("../imgs/parts2.png");
-    transform: rotate(147deg);
-    @include laptop {
-      width: 93px;
-      bottom: 144px;
-      right: 297px;
-      height: 97px;
-    }
-    @include laptop-small {
-      width: 83px;
-      bottom: 128px;
-      right: 264px;
-      height: 86px;
-    }
-  }
-  .pile-dg3 {
-    width: 117px;
-    bottom: 253px;
-    right: 255px;
-    height: 122px;
-    z-index: 29;
-    background-image: url("../imgs/parts2.png");
-    transform: rotate(162deg);
-    @include laptop {
-      width: 93px;
-      bottom: 151px;
-      right: 204px;
-      height: 97px;
-    }
-    @include laptop-small {
-      width: 83px;
-      bottom: 134px;
-      right: 181px;
-      height: 86px;
-    }
-  }
-  .pile-dg4 {
-    width: 117px;
-    bottom: 280px;
-    right: 154px;
-    height: 122px;
-    z-index: 38;
-    background-image: url("../imgs/parts2.png");
-    transform: rotate(330deg);
-    @include laptop {
-      width: 93px;
-      bottom: 176px;
-      right: 120px;
-      height: 97px;
-    }
-    @include laptop-small {
-      width: 83px;
-      bottom: 156px;
-      right: 107px;
-      height: 86px;
-    }
-  }
-  .pile-g1 {
-    width: 115px;
-    bottom: 243px;
-    right: 472px;
-    height: 120px;
-    z-index: 40;
-    background-image: url("../imgs/parts3.png");
-    transform: rotate(228deg);
-    @include laptop {
-      width: 92px;
-      bottom: 141px;
-      right: 378px;
-      height: 96px;
-    }
-    @include laptop-small {
-      width: 82px;
-      bottom: 125px;
-      right: 336px;
-      height: 85px;
-    }
-  }
-  .pile-g2 {
-    width: 101px;
-    bottom: 266px;
-    right: 370px;
-    height: 106px;
-    z-index: 36;
-    background-image: url("../imgs/parts4.png");
-    transform: rotate(198deg);
-    @include laptop {
-      width: 81px;
-      bottom: 160px;
-      right: 297px;
-      height: 85px;
-    }
-    @include laptop-small {
-      width: 72px;
-      bottom: 142px;
-      right: 264px;
-      height: 76px;
-    }
-  }
-  .pile-g3 {
-    width: 101px;
-    bottom: 203px;
-    right: 340px;
-    height: 106px;
-    z-index: 32;
-    background-image: url("../imgs/parts4.png");
-    transform: rotate(137deg);
-    @include laptop {
-      width: 81px;
-      bottom: 108px;
-      right: 271px;
-      height: 85px;
-    }
-    @include laptop-small {
-      width: 72px;
-      bottom: 96px;
-      right: 241px;
-      height: 76px;
-    }
-  }
-  .pile-g4 {
-    width: 101px;
-    bottom: 180px;
-    right: 197px;
-    height: 106px;
-    z-index: 39;
-    background-image: url("../imgs/parts4.png");
-    transform: rotate(20deg);
-    @include laptop {
-      width: 81px;
-      bottom: 88px;
-      right: 158px;
-      height: 85px;
-    }
-    @include laptop-small {
-      width: 72px;
-      bottom: 78px;
-      right: 140px;
-      height: 76px;
-    }
-  }
-  .pile-g5 {
-    width: 115px;
-    bottom: 173px;
-    right: 303px;
-    height: 120px;
-    z-index: 42;
-    background-image: url("../imgs/parts3.png");
-    transform: rotate(20deg);
-    @include laptop {
-      width: 92px;
-      bottom: 85px;
-      right: 242px;
-      height: 96px;
-    }
-    @include laptop-small {
-      width: 82px;
-      bottom: 76px;
-      right: 215px;
-      height: 85px;
+    .lego-block-pile {
+      div {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .shuttle {
+        width: 368px;
+        height: 368px;
+        right: -320px;
+        bottom: 186px;
+        background-image: url("../imgs/shuttle.png");
+        z-index: 5;
+        @include laptop {
+          width: 295px;
+          height: 295px;
+          right: -270px;
+          bottom: 95px;
+        }
+        @include laptop-small {
+          width: 262px;
+          height: 262px;
+          right: -240px;
+          bottom: 84px;
+        }
+      }
+      .pile-y1 {
+        width: 296px;
+        bottom: 170px;
+        right: 330px;
+        height: 235px;
+        z-index: 34;
+        background-image: url("../imgs/parts1.png");
+        transform: rotate(346deg);
+        @include laptop {
+          width: 237px;
+          bottom: 82px;
+          right: 265px;
+          height: 188px;
+        }
+        @include laptop-small {
+          width: 211px;
+          bottom: 73px;
+          right: 236px;
+          height: 167px;
+        }
+      }
+      .pile-y2 {
+        width: 296px;
+        bottom: 120px;
+        right: 300px;
+        height: 235px;
+        z-index: 35;
+        background-image: url("../imgs/parts1.png");
+        transform: rotate(135deg);
+        @include laptop {
+          width: 237px;
+          bottom: 46px;
+          right: 242px;
+          height: 188px;
+        }
+        @include laptop-small {
+          width: 211px;
+          bottom: 41px;
+          right: 215px;
+          height: 167px;
+        }
+      }
+      .pile-y3 {
+        width: 296px;
+        bottom: 240px;
+        right: 190px;
+        height: 235px;
+        z-index: 33;
+        background-image: url("../imgs/parts1.png");
+        transform: rotate(125deg);
+        @include laptop {
+          width: 237px;
+          bottom: 136px;
+          right: 155px;
+          height: 188px;
+        }
+        @include laptop-small {
+          width: 211px;
+          bottom: 121px;
+          right: 138px;
+          height: 167px;
+        }
+      }
+      .pile-y4 {
+        width: 296px;
+        bottom: 140px;
+        right: 75px;
+        height: 235px;
+        z-index: 41;
+        background-image: url("../imgs/parts1.png");
+        transform: rotate(162deg);
+        @include laptop {
+          width: 237px;
+          bottom: 60px;
+          right: 60px;
+          height: 188px;
+        }
+        @include laptop-small {
+          width: 211px;
+          bottom: 53px;
+          right: 53px;
+          height: 167px;
+        }
+      }
+      .pile-dg1 {
+        width: 136px;
+        bottom: 125px;
+        right: 350px;
+        height: 160px;
+        z-index: 37;
+        background-image: url("../imgs/parts2.png");
+        transform: rotate(234deg);
+        @include laptop {
+          width: 109px;
+          bottom: 46px;
+          right: 280px;
+          height: 128px;
+        }
+        @include laptop-small {
+          width: 97px;
+          bottom: 41px;
+          right: 249px;
+          height: 114px;
+        }
+      }
+      .pile-dg2 {
+        width: 117px;
+        bottom: 245px;
+        right: 370px;
+        height: 122px;
+        z-index: 30;
+        background-image: url("../imgs/parts2.png");
+        transform: rotate(147deg);
+        @include laptop {
+          width: 93px;
+          bottom: 144px;
+          right: 297px;
+          height: 97px;
+        }
+        @include laptop-small {
+          width: 83px;
+          bottom: 128px;
+          right: 264px;
+          height: 86px;
+        }
+      }
+      .pile-dg3 {
+        width: 117px;
+        bottom: 253px;
+        right: 255px;
+        height: 122px;
+        z-index: 29;
+        background-image: url("../imgs/parts2.png");
+        transform: rotate(162deg);
+        @include laptop {
+          width: 93px;
+          bottom: 151px;
+          right: 204px;
+          height: 97px;
+        }
+        @include laptop-small {
+          width: 83px;
+          bottom: 134px;
+          right: 181px;
+          height: 86px;
+        }
+      }
+      .pile-dg4 {
+        width: 117px;
+        bottom: 280px;
+        right: 154px;
+        height: 122px;
+        z-index: 38;
+        background-image: url("../imgs/parts2.png");
+        transform: rotate(330deg);
+        @include laptop {
+          width: 93px;
+          bottom: 176px;
+          right: 120px;
+          height: 97px;
+        }
+        @include laptop-small {
+          width: 83px;
+          bottom: 156px;
+          right: 107px;
+          height: 86px;
+        }
+      }
+      .pile-g1 {
+        width: 115px;
+        bottom: 243px;
+        right: 472px;
+        height: 120px;
+        z-index: 40;
+        background-image: url("../imgs/parts3.png");
+        transform: rotate(228deg);
+        @include laptop {
+          width: 92px;
+          bottom: 141px;
+          right: 378px;
+          height: 96px;
+        }
+        @include laptop-small {
+          width: 82px;
+          bottom: 125px;
+          right: 336px;
+          height: 85px;
+        }
+      }
+      .pile-g2 {
+        width: 101px;
+        bottom: 266px;
+        right: 370px;
+        height: 106px;
+        z-index: 36;
+        background-image: url("../imgs/parts4.png");
+        transform: rotate(198deg);
+        @include laptop {
+          width: 81px;
+          bottom: 160px;
+          right: 297px;
+          height: 85px;
+        }
+        @include laptop-small {
+          width: 72px;
+          bottom: 142px;
+          right: 264px;
+          height: 76px;
+        }
+      }
+      .pile-g3 {
+        width: 101px;
+        bottom: 203px;
+        right: 340px;
+        height: 106px;
+        z-index: 32;
+        background-image: url("../imgs/parts4.png");
+        transform: rotate(137deg);
+        @include laptop {
+          width: 81px;
+          bottom: 108px;
+          right: 271px;
+          height: 85px;
+        }
+        @include laptop-small {
+          width: 72px;
+          bottom: 96px;
+          right: 241px;
+          height: 76px;
+        }
+      }
+      .pile-g4 {
+        width: 101px;
+        bottom: 180px;
+        right: 197px;
+        height: 106px;
+        z-index: 39;
+        background-image: url("../imgs/parts4.png");
+        transform: rotate(20deg);
+        @include laptop {
+          width: 81px;
+          bottom: 88px;
+          right: 158px;
+          height: 85px;
+        }
+        @include laptop-small {
+          width: 72px;
+          bottom: 78px;
+          right: 140px;
+          height: 76px;
+        }
+      }
+      .pile-g5 {
+        width: 115px;
+        bottom: 173px;
+        right: 303px;
+        height: 120px;
+        z-index: 42;
+        background-image: url("../imgs/parts3.png");
+        transform: rotate(20deg);
+        @include laptop {
+          width: 92px;
+          bottom: 85px;
+          right: 242px;
+          height: 96px;
+        }
+        @include laptop-small {
+          width: 82px;
+          bottom: 76px;
+          right: 215px;
+          height: 85px;
+        }
+      }
     }
   }
 }
@@ -1249,121 +1253,118 @@ em {
   position: relative;
   max-width: 100%;
   background: #121023;
-}
-.sc-classic-space::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background: url("../imgs/space-bg2.png") repeat-y center / cover;
-}
-.sc-classic-space .sticky-wrapper {
-  position: relative;
-  height: 250vh;
-  padding-top: 10rem;
-}
-.sc-classic-space .top-section {
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 42;
-  overflow-x: hidden;
-}
-.sc-classic-space .top-section .title {
-  padding-top: 2rem;
-  padding-left: 22rem;
-}
-.sc-classic-space .top-section .classic-space-list {
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
-  padding-top: 6rem;
-  gap: 8rem;
-}
-.sc-classic-space .classic-space-list li {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  color: #dbdbdb;
-}
-.sc-classic-space {
-  .classic-space-list img {
-    padding-bottom: 2rem;
-    object-fit: cover;
-    max-width: none;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("../imgs/space-bg2.png") repeat-y center / cover;
   }
-  .classic-space-item1 img {
-    width: 592px;
-    @include laptop {
-      width: 474px;
-    }
-    @include laptop-small {
-      width: 421px;
-    }
-  }
-  .classic-space-item2 img {
-    width: 554px;
-    @include laptop {
-      width: 443px;
-    }
-    @include laptop-small {
-      width: 394px;
-    }
-  }
-  .classic-space-item3 img {
-    width: 614px;
-    @include laptop {
-      width: 492px;
-    }
-    @include laptop-small {
-      width: 437px;
-    }
-  }
-  .classic-space-item4 img {
-    width: 592px;
-    @include laptop {
-      width: 474px;
-    }
-    @include laptop-small {
-      width: 421px;
-    }
-  }
-  .classic-space-item5 img {
-    width: 552px;
-    @include laptop {
-      width: 442px;
-    }
-    @include laptop-small {
-      width: 393px;
+  .sticky-wrapper {
+    position: relative;
+    height: 250vh;
+    padding-top: 10rem;
+    .top-section {
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 42;
+      overflow-x: hidden;
+      .title {
+        padding-top: 2rem;
+        padding-left: 22rem;
+      }
+      .classic-space-list {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        padding-top: 6rem;
+        gap: 8rem;
+        li {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          color: #dbdbdb;
+          img {
+            padding-bottom: 2rem;
+            object-fit: cover;
+            max-width: none;
+          }
+        }
+        .classic-space-item1 img {
+          width: 592px;
+          @include laptop {
+            width: 474px;
+          }
+          @include laptop-small {
+            width: 421px;
+          }
+        }
+        .classic-space-item2 img {
+          width: 554px;
+          @include laptop {
+            width: 443px;
+          }
+          @include laptop-small {
+            width: 394px;
+          }
+        }
+        .classic-space-item3 img {
+          width: 614px;
+          @include laptop {
+            width: 492px;
+          }
+          @include laptop-small {
+            width: 437px;
+          }
+        }
+        .classic-space-item4 img {
+          width: 592px;
+          @include laptop {
+            width: 474px;
+          }
+          @include laptop-small {
+            width: 421px;
+          }
+        }
+        .classic-space-item5 img {
+          width: 552px;
+          @include laptop {
+            width: 442px;
+          }
+          @include laptop-small {
+            width: 393px;
+          }
+        }
+        li .content-area {
+          display: flex;
+          flex-direction: column;
+          padding-left: 2rem;
+          width: 100%;
+          .first-line {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 1rem;
+            font-size: 1.2vw;
+            font-weight: 300;
+            line-height: 1.55;
+            text-transform: uppercase;
+          }
+          p {
+            font-size: 0.9vw;
+            line-height: 1.3;
+            font-weight: 400;
+          }
+        }
+      }
     }
   }
 }
-.sc-classic-space .classic-space-list .content-area {
-  display: flex;
-  flex-direction: column;
-  padding-left: 2rem;
-  width: 100%;
-}
-.sc-classic-space .classic-space-list li .first-line {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 1rem;
-  font-size: 1.2vw;
-  font-weight: 300;
-  line-height: 1.55;
-  text-transform: uppercase;
-}
-.sc-classic-space .classic-space-list li p {
-  font-size: 0.9vw;
-  line-height: 1.3;
-  font-weight: 400;
-}
-
 .sc-classic-space .bottom-section {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -1372,38 +1373,36 @@ em {
   height: 140vh;
   padding-top: 15rem;
   text-transform: uppercase;
-}
-.sc-classic-space .bottom-section #year-1987 {
-  grid-row: 1/3;
-  grid-column: 1 / span 3;
-  padding-left: 3.5rem;
-  color: #ffca20;
-  font-size: 8.8vw;
-  font-weight: 300;
-  letter-spacing: -0.4px;
-}
-.sc-classic-space .bottom-section .sub-title {
-  grid-row: 2/3;
-  grid-column: 3 / span 5;
-  align-self: center;
-  padding-left: 1rem;
-  padding-top: 1.5rem;
-}
-.sc-classic-space .bottom-section .description {
-  grid-row: 3/4;
-  grid-column: 5 / span 2;
-  align-self: center;
-  color: #fdf8f1;
-  font-size: 1vw;
-  line-height: 1.2;
-  font-weight: 400;
-  padding-left: 2.5rem;
-}
-.sc-classic-space {
-  .img-wrapper img {
-    position: absolute;
+  #year-1987 {
+    grid-row: 1/3;
+    grid-column: 1 / span 3;
+    padding-left: 3.5rem;
+    color: $yellow;
+    font-size: 8.8vw;
+    font-weight: 300;
+    letter-spacing: -0.4px;
   }
-  .bottom-section {
+  .sub-title {
+    grid-row: 2/3;
+    grid-column: 3 / span 5;
+    align-self: center;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+  }
+  .description {
+    grid-row: 3/4;
+    grid-column: 5 / span 2;
+    align-self: center;
+    color: $white;
+    font-size: 1vw;
+    line-height: 1.2;
+    font-weight: 400;
+    padding-left: 2.5rem;
+  }
+  .img-wrapper {
+    img {
+      position: absolute;
+    }
     .big-blue-lego {
       left: 130px;
       bottom: 80px;
@@ -1454,113 +1453,111 @@ em {
   position: relative;
   max-width: 100%;
   background-color: #16244a;
-}
-.sc-spacesuits::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 520vh;
-  background: url("../imgs/space-bg3.png") repeat-y center / cover;
-  z-index: 1;
-}
-.sc-spacesuits .title-wrapper {
-  display: flex;
-  width: 100%;
-  position: relative;
-  padding-top: 40rem;
-  padding-left: 3.5rem;
-  z-index: 4;
-  @include laptop {
-    padding-top: 37rem;
-  }
-  @include laptop-small {
-    padding-top: 36rem;
-  }
-}
-.sc-spacesuits .title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-}
-.sc-spacesuits {
-  .img-wrapper img {
+  &::before {
+    content: "";
     position: absolute;
-  }
-  .alien1 {
-    left: -37px;
-    top: 26px;
-    width: 163px;
-    z-index: 1;
-    @include laptop {
-      left: -95px;
-      top: 20px;
-      width: 131px;
-    }
-    @include laptop-small {
-      left: -121px;
-      top: 18px;
-      width: 116px;
-    }
-  }
-  .alien2 {
-    right: 49px;
-    top: 24px;
-    width: 171px;
-    z-index: 1;
-    @include laptop {
-      top: 18px;
-      right: -13px;
-      width: 137px;
-    }
-    @include laptop-small {
-      top: 16px;
-      right: -31px;
-      width: 122px;
-    }
-  }
-  .yellow-white-block {
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 130%;
-    max-width: none;
-    z-index: 1;
-    @include laptop {
-      top: -50px;
-    }
-    @include laptop-small {
-      top: -44px;
-    }
-  }
-  .follow-ufo {
+    top: 0;
     left: 0;
-    top: -27px;
-    width: 720px;
-    pointer-events: none;
-    z-index: 3;
-    @include laptop {
-      top: -22px;
-      width: 576px;
-    }
-    @include laptop-small {
-      top: -10px;
-      width: 512px;
-    }
-  }
-  .ground {
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 138%;
-    max-width: none;
+    width: 100%;
+    height: 520vh;
+    background: url("../imgs/space-bg3.png") repeat-y center / cover;
     z-index: 1;
   }
-}
-.sc-spacesuits {
+  .title-wrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    padding-top: 40rem;
+    padding-left: 3.5rem;
+    z-index: 4;
+    @include laptop {
+      padding-top: 37rem;
+    }
+    @include laptop-small {
+      padding-top: 36rem;
+    }
+    .title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .img-wrapper {
+    img {
+      position: absolute;
+    }
+    .alien1 {
+      left: -37px;
+      top: 26px;
+      width: 163px;
+      z-index: 1;
+      @include laptop {
+        left: -95px;
+        top: 20px;
+        width: 131px;
+      }
+      @include laptop-small {
+        left: -121px;
+        top: 18px;
+        width: 116px;
+      }
+    }
+    .alien2 {
+      right: 49px;
+      top: 24px;
+      width: 171px;
+      z-index: 1;
+      @include laptop {
+        top: 18px;
+        right: -13px;
+        width: 137px;
+      }
+      @include laptop-small {
+        top: 16px;
+        right: -31px;
+        width: 122px;
+      }
+    }
+    .yellow-white-block {
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130%;
+      max-width: none;
+      z-index: 1;
+      @include laptop {
+        top: -50px;
+      }
+      @include laptop-small {
+        top: -44px;
+      }
+    }
+    .follow-ufo {
+      left: 0;
+      top: -27px;
+      width: 720px;
+      pointer-events: none;
+      z-index: 3;
+      @include laptop {
+        top: -22px;
+        width: 576px;
+      }
+      @include laptop-small {
+        top: -10px;
+        width: 512px;
+      }
+    }
+    .ground {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 138%;
+      max-width: none;
+      z-index: 1;
+    }
+  }
   .suit-list {
     display: flex;
     width: 100%;
@@ -1730,20 +1727,18 @@ em {
   @include laptop-small {
     height: 125vh;
   }
-}
-.sc-lego-value .title {
-  position: relative;
-  left: 22rem;
-  top: 1rem;
-  z-index: 1;
-}
-.sc-lego-value .description {
-  position: relative;
-  top: 1rem;
-  left: 45.5rem;
-  z-index: 1;
-}
-.sc-lego-value {
+  .title {
+    position: relative;
+    left: 22rem;
+    top: 1rem;
+    z-index: 1;
+  }
+  .description {
+    position: relative;
+    top: 1rem;
+    left: 45.5rem;
+    z-index: 1;
+  }
   .photo {
     position: absolute;
     left: 384px;
@@ -1784,187 +1779,184 @@ em {
   max-width: 100%;
   padding-top: 3rem;
   background-color: #16244a;
-}
-.sc-2011 .top-section {
-  position: relative;
-  height: 100vh;
-  z-index: 1;
-}
-.sc-2011 .top-section .content-area {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-.sc-2011 .content-area .label {
-  grid-row: 1/2;
-  grid-column: 1 / span 2;
-  align-self: self-start;
-  padding-left: 3.5rem;
-}
-.sc-2011 .content-area .title {
-  grid-row: 1/2;
-  grid-column: 3 / span 3;
-  align-self: self-start;
-}
-.sc-2011 .content-area .description {
-  grid-row: 2/3;
-  grid-column: 4 / span 4;
-  padding-left: 3rem;
-}
-.sc-2011 {
-  .rocket {
-    position: absolute;
-    width: 915px;
-    height: 1283px;
-    top: -443px;
-    right: -667px;
-    object-fit: cover;
-    z-index: 1;
-    @include laptop {
-      width: 732px;
-      height: 1027px;
-      top: -350px;
-      right: -620px;
-    }
-    @include laptop-small {
-      width: 651px;
-      height: 913px;
-      top: -311px;
-      right: -551px;
-    }
-  }
-  .boarding-wrapper {
-    height: 100%;
-    overflow-x: hidden;
-  }
-  .boarding-line {
+  .top-section {
     position: relative;
-    img {
+    height: 100vh;
+    z-index: 1;
+    .content-area {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      .label {
+        grid-row: 1/2;
+        grid-column: 1 / span 2;
+        align-self: self-start;
+        padding-left: 3.5rem;
+      }
+      .title {
+        grid-row: 1/2;
+        grid-column: 3 / span 3;
+        align-self: self-start;
+      }
+      .description {
+        grid-row: 2/3;
+        grid-column: 4 / span 4;
+        padding-left: 3rem;
+      }
+    }
+    .rocket {
       position: absolute;
-    }
-    .mechanic {
-      left: 723px;
-      top: 60px;
-      width: 197px;
+      width: 915px;
+      height: 1283px;
+      top: -443px;
+      right: -667px;
+      object-fit: cover;
+      z-index: 1;
       @include laptop {
-        left: 579px;
-        top: 53px;
-        width: 157px;
+        width: 732px;
+        height: 1027px;
+        top: -350px;
+        right: -620px;
       }
       @include laptop-small {
-        left: 515px;
-        top: 47px;
-        width: 140px;
+        width: 651px;
+        height: 913px;
+        top: -311px;
+        right: -551px;
       }
     }
-    .good {
-      left: 438px;
-      top: 105px;
-      width: 216px;
-      @include laptop {
-        left: 351px;
-        top: 89px;
-        width: 173px;
-      }
-      @include laptop-small {
-        left: 312px;
-        top: 79px;
-        width: 154px;
-      }
-    }
-    .bad {
-      left: 104px;
-      top: 107px;
-      width: 339px;
-      @include laptop {
-        left: 83px;
-        top: 90px;
-        width: 271px;
-      }
-      @include laptop-small {
-        left: 74px;
-        top: 80px;
-        width: 241px;
-      }
-    }
-    .scientist {
-      left: -152px;
-      top: 119px;
-      width: 302px;
-      @include laptop {
-        left: -122px;
-        top: 101px;
-        width: 242px;
-      }
-      @include laptop-small {
-        left: -108px;
-        top: 90px;
-        width: 215px;
-      }
-    }
-    .atom {
-      left: -448px;
-      top: 113px;
-      width: 320px;
-      @include laptop {
-        left: -358px;
-        top: 95px;
-        width: 256px;
-      }
-      @include laptop-small {
-        left: -318px;
-        top: 84px;
-        width: 228px;
-      }
-    }
-    .alien2 {
-      left: -702px;
-      top: 124px;
-      width: 240px;
-      @include laptop {
-        left: -562px;
-        top: 104px;
-        width: 192px;
-      }
-      @include laptop-small {
-        left: -500px;
-        top: 92px;
-        width: 171px;
-      }
-    }
-    .alien3 {
-      left: -994px;
-      top: 123px;
-      width: 214px;
-      @include laptop {
-        left: -795px;
-        top: 103px;
-        width: 172px;
-      }
-      @include laptop-small {
-        left: -707px;
-        top: 92px;
-        width: 153px;
-      }
-    }
-    .alien4 {
-      left: -1299px;
-      top: 118px;
-      width: 224px;
-      @include laptop {
-        left: -1039px;
-        top: 99px;
-        width: 179px;
-      }
-      @include laptop-small {
-        left: -924px;
-        top: 88px;
-        width: 159px;
+    .boarding-wrapper {
+      height: 100%;
+      overflow-x: hidden;
+      .boarding-line {
+        position: relative;
+        img {
+          position: absolute;
+        }
+        .mechanic {
+          left: 723px;
+          top: 60px;
+          width: 197px;
+          @include laptop {
+            left: 579px;
+            top: 53px;
+            width: 157px;
+          }
+          @include laptop-small {
+            left: 515px;
+            top: 47px;
+            width: 140px;
+          }
+        }
+        .good {
+          left: 438px;
+          top: 105px;
+          width: 216px;
+          @include laptop {
+            left: 351px;
+            top: 89px;
+            width: 173px;
+          }
+          @include laptop-small {
+            left: 312px;
+            top: 79px;
+            width: 154px;
+          }
+        }
+        .bad {
+          left: 104px;
+          top: 107px;
+          width: 339px;
+          @include laptop {
+            left: 83px;
+            top: 90px;
+            width: 271px;
+          }
+          @include laptop-small {
+            left: 74px;
+            top: 80px;
+            width: 241px;
+          }
+        }
+        .scientist {
+          left: -152px;
+          top: 119px;
+          width: 302px;
+          @include laptop {
+            left: -122px;
+            top: 101px;
+            width: 242px;
+          }
+          @include laptop-small {
+            left: -108px;
+            top: 90px;
+            width: 215px;
+          }
+        }
+        .atom {
+          left: -448px;
+          top: 113px;
+          width: 320px;
+          @include laptop {
+            left: -358px;
+            top: 95px;
+            width: 256px;
+          }
+          @include laptop-small {
+            left: -318px;
+            top: 84px;
+            width: 228px;
+          }
+        }
+        .alien2 {
+          left: -702px;
+          top: 124px;
+          width: 240px;
+          @include laptop {
+            left: -562px;
+            top: 104px;
+            width: 192px;
+          }
+          @include laptop-small {
+            left: -500px;
+            top: 92px;
+            width: 171px;
+          }
+        }
+        .alien3 {
+          left: -994px;
+          top: 123px;
+          width: 214px;
+          @include laptop {
+            left: -795px;
+            top: 103px;
+            width: 172px;
+          }
+          @include laptop-small {
+            left: -707px;
+            top: 92px;
+            width: 153px;
+          }
+        }
+        .alien4 {
+          left: -1299px;
+          top: 118px;
+          width: 224px;
+          @include laptop {
+            left: -1039px;
+            top: 99px;
+            width: 179px;
+          }
+          @include laptop-small {
+            left: -924px;
+            top: 88px;
+            width: 159px;
+          }
+        }
       }
     }
   }
 }
-
 .sc-2011 .bottom-section {
   display: flex;
   flex-direction: column;
@@ -1975,122 +1967,76 @@ em {
   @include laptop-small {
     height: 140vh;
   }
-}
-.sc-2011 .bottom-section .strong-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 16.3rem;
-  z-index: 2;
-}
-.sc-2011 .bottom-section strong {
-  color: #ffca20;
-  font-size: 2.5vw;
-  line-height: 1.26;
-  font-weight: 300;
-  letter-spacing: -0.4px;
-  text-transform: uppercase;
-  transition: opacity 0.2s ease-in-out;
-}
-.sc-2011 .bottom-section .arrow {
-  width: 32px;
-  padding-top: 3rem;
-  transition: opacity 0.2s ease-in-out;
-  animation: arrowAnimation 3s ease-in-out infinite;
-  @include laptop {
-    width: 26px;
+  .strong-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 16.3rem;
+    z-index: 2;
+    strong {
+      color: $yellow;
+      font-size: 2.5vw;
+      line-height: 1.26;
+      font-weight: 300;
+      letter-spacing: -0.4px;
+      text-transform: uppercase;
+      transition: opacity 0.2s ease-in-out;
+    }
+    .arrow {
+      width: 32px;
+      padding-top: 3rem;
+      transition: opacity 0.2s ease-in-out;
+      animation: arrowAnimation 3s ease-in-out infinite;
+      @include laptop {
+        width: 26px;
+      }
+      @include laptop-small {
+        width: 23px;
+      }
+    }
+    &.hide {
+      opacity: 0;
+    }
   }
-  @include laptop-small {
-    width: 23px;
+  .img-wrapper {
+    img {
+      position: absolute;
+    }
+    .planet2 {
+      right: 105px;
+      top: 178px;
+      width: 317px;
+      z-index: 1;
+      animation: bluePlanetAnimation 60s linear infinite;
+      @include laptop {
+        right: 85px;
+        top: 142px;
+        width: 253px;
+      }
+      @include laptop-small {
+        right: 76px;
+        top: 126px;
+        width: 225px;
+      }
+    }
+    .planet3 {
+      left: 5px;
+      top: -107px;
+      width: 570px;
+      z-index: 1;
+      animation: greenPlanetAnimation 60s linear infinite;
+      @include laptop {
+        left: 4px;
+        top: -86px;
+        width: 456px;
+      }
+      @include laptop-small {
+        left: 4px;
+        top: -76px;
+        width: 405px;
+      }
+    }
   }
-}
-.sc-2011 .bottom-section .strong-wrapper.hide {
-  opacity: 0;
-}
-.sc-2011 .bottom-section .img-wrapper img {
-  position: absolute;
-}
-.sc-2011 .img-wrapper .planet2 {
-  right: 105px;
-  top: 178px;
-  width: 317px;
-  z-index: 1;
-  animation: bluePlanetAnimation 60s linear infinite;
-  @include laptop {
-    right: 85px;
-    top: 142px;
-    width: 253px;
-  }
-  @include laptop-small {
-    right: 76px;
-    top: 126px;
-    width: 225px;
-  }
-}
-.sc-2011 .img-wrapper .planet3 {
-  left: 5px;
-  top: -107px;
-  width: 570px;
-  z-index: 1;
-  animation: greenPlanetAnimation 60s linear infinite;
-  @include laptop {
-    left: 4px;
-    top: -86px;
-    width: 456px;
-  }
-  @include laptop-small {
-    left: 4px;
-    top: -76px;
-    width: 405px;
-  }
-}
-@keyframes arrowAnimation {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(20px);
-  }
-}
-@keyframes bluePlanetAnimation {
-  0% {
-    transform: translateX(0px) translateY(0px);
-  }
-
-  25% {
-    transform: translateX(1px) translateY(-357px);
-  }
-
-  50% {
-    transform: translateX(1px) translateY(42px);
-  }
-
-  75% {
-    transform: translateX(-144px) translateY(-133px);
-  }
-
-  100% {
-    transform: translateX(74px) translateY(-204px);
-  }
-}
-@keyframes greenPlanetAnimation {
-  0% {
-    transform: translateX(0px) translateY(0px);
-  }
-  25% {
-    transform: translateX(1px) translateY(144px);
-  }
-  50% {
-    transform: translateX(1px) translateY(-144px);
-  }
-  75% {
-    transform: translateX(161px) translateY(-36px);
-  }
-  100% {
-    transform: translateX(-161px) translateY(-36px);
-  }
-}
-.sc-2011 {
   .pick-the-characters {
     position: relative;
     width: 100%;
@@ -2125,7 +2071,7 @@ em {
         width: 88px;
         height: 125px;
         border-radius: 6px;
-        background-color: #fdf8f1;
+        background-color: $white;
         opacity: 0;
         z-index: 1;
         transition: all 0.3s ease-in-out;
@@ -2142,7 +2088,7 @@ em {
         }
         &.show {
           opacity: 1;
-          background-color: #88b2e0;
+          background-color: $skyblue;
         }
       }
     }
@@ -2300,6 +2246,52 @@ em {
         width: 126px;
       }
     }
+  }
+}
+@keyframes arrowAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+@keyframes bluePlanetAnimation {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+
+  25% {
+    transform: translateX(1px) translateY(-357px);
+  }
+
+  50% {
+    transform: translateX(1px) translateY(42px);
+  }
+
+  75% {
+    transform: translateX(-144px) translateY(-133px);
+  }
+
+  100% {
+    transform: translateX(74px) translateY(-204px);
+  }
+}
+@keyframes greenPlanetAnimation {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(1px) translateY(144px);
+  }
+  50% {
+    transform: translateX(1px) translateY(-144px);
+  }
+  75% {
+    transform: translateX(161px) translateY(-36px);
+  }
+  100% {
+    transform: translateX(-161px) translateY(-36px);
   }
 }
 @keyframes goodAnimation {
