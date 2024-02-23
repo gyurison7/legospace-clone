@@ -60,6 +60,7 @@ em {
         justify-content: space-between;
         width: 27vw;
         gap: 10px;
+        z-index: 2;
         li {
           flex: 1;
           min-width: 73px;
@@ -944,32 +945,29 @@ em {
         width: 1584px;
       }
     }
+    .rover {
+      position: absolute;
+      height: 368px;
+      right: -320px;
+      bottom: 186px;
+      z-index: 43;
+      @include laptop {
+        height: 295px;
+        right: -270px;
+        bottom: 95px;
+      }
+      @include laptop-small {
+        height: 262px;
+        right: -240px;
+        bottom: 84px;
+      }
+    }
     .lego-block-pile {
       div {
         position: absolute;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-      }
-      .shuttle {
-        width: 368px;
-        height: 368px;
-        right: -320px;
-        bottom: 186px;
-        background-image: url("../imgs/shuttle.png");
-        z-index: 5;
-        @include laptop {
-          width: 295px;
-          height: 295px;
-          right: -270px;
-          bottom: 95px;
-        }
-        @include laptop-small {
-          width: 262px;
-          height: 262px;
-          right: -240px;
-          bottom: 84px;
-        }
       }
       .pile-y1 {
         width: 296px;

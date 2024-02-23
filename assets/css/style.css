@@ -658,6 +658,7 @@ em {
           justify-content: space-between;
   width: 27vw;
   gap: 10px;
+  z-index: 2;
 }
 .sc-main .top-section .left-section .award-list li {
   -webkit-box-flex: 1;
@@ -1873,35 +1874,32 @@ em {
     width: 1584px;
   }
 }
-.sc-first-sets .table-area .lego-block-pile div {
+.sc-first-sets .table-area .rover {
   position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.sc-first-sets .table-area .lego-block-pile .shuttle {
-  width: 368px;
   height: 368px;
   right: -320px;
   bottom: 186px;
-  background-image: url("../imgs/shuttle.png");
-  z-index: 5;
+  z-index: 43;
 }
 @media (max-width: 1536px) {
-  .sc-first-sets .table-area .lego-block-pile .shuttle {
-    width: 295px;
+  .sc-first-sets .table-area .rover {
     height: 295px;
     right: -270px;
     bottom: 95px;
   }
 }
 @media (max-width: 1366px) {
-  .sc-first-sets .table-area .lego-block-pile .shuttle {
-    width: 262px;
+  .sc-first-sets .table-area .rover {
     height: 262px;
     right: -240px;
     bottom: 84px;
   }
+}
+.sc-first-sets .table-area .lego-block-pile div {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .sc-first-sets .table-area .lego-block-pile .pile-y1 {
   width: 296px;

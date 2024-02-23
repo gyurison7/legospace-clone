@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
 
+    <link rel="shortcut icon" href="./assets/imgs/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -20,81 +21,88 @@
         <h1 class="logo">
           <a href=""><span class="blind">레고 스페이스 로고</span></a>
         </h1>
-        <button class="anchor-menu" href=""></button>
+        <button class="anchor-menu" href=""><span class="blind">GNB 메뉴 열기 버튼</span></button>
       </div>
 
       <nav class="gnb">
+        <h2 class="blind">GNB 메뉴</h2>
         <ul class="menu-list">
           <li class="menu1">
             <a href="#start">
               <span class="inter">1</span>
-              <img src="./assets/imgs/menu1.png" class="menu-img" alt="" />
-              <img src="./assets/imgs/big-blue-lego.png" class="hover-img" alt="" />
+              <img src="./assets/imgs/menu1.png" class="menu-img" alt="blue lego 조립 과정" />
+              <img src="./assets/imgs/big-blue-lego.png" class="hover-img" alt="blue lego" />
               <span>beginning</span>
             </a>
           </li>
           <li class="menu2">
             <a href="#creator">
               <span class="inter">2</span>
-              <img src="./assets/imgs/menu2.png" class="menu-img" alt="" />
-              <img src="./assets/imgs/good-astronaut.png" class="hover-img" alt="" />
+              <img src="./assets/imgs/menu2.png" class="menu-img" alt="white lego 조립 과정" />
+              <img src="./assets/imgs/good-astronaut.png" class="hover-img" alt="white lego" />
               <span>creator</span>
             </a>
           </li>
           <li class="menu3">
             <a href="#firstsets">
               <span class="inter">3</span>
-              <img src="./assets/imgs/menu3.png" class="menu-img" alt="" />
-              <img src="./assets/imgs/yellow-lego.png" class="hover-img" alt="" />
+              <img src="./assets/imgs/menu3.png" class="menu-img" alt="yellow lego 조립 과정" />
+              <img src="./assets/imgs/yellow-lego.png" class="hover-img" alt="yellow lego" />
               <span>first collentions</span>
             </a>
           </li>
           <li class="menu4">
             <a href="#spacesuitcolors">
               <span class="inter">4</span>
-              <img src="./assets/imgs/menu4.png" class="menu-img" alt="" />
-              <img src="./assets/imgs/bad-astronaut.png" class="hover-img" alt="" />
+              <img src="./assets/imgs/menu4.png" class="menu-img" alt="red lego 조립 과정" />
+              <img src="./assets/imgs/bad-astronaut.png" class="hover-img" alt="red lego" />
               <span>spacesuit colors</span>
             </a>
           </li>
           <li class="menu5">
             <a href="#lestsplay">
               <span class="inter">5</span>
-              <img src="./assets/imgs/menu5-1.png" class="menu-img" alt="" />
-              <img src="./assets/imgs/menu5-2.png" alt="" class="hover-img" />
+              <img src="./assets/imgs/menu5-1.png" class="menu-img" alt="태블릿" />
+              <img
+                src="./assets/imgs/menu5-2.png"
+                class="hover-img"
+                alt="캐릭터를 선택할 수 있는 태블릿"
+              />
               <span>let's play</span>
             </a>
           </li>
         </ul>
-        <button class="close"><img src="./assets/svgs/close.svg" alt="" /></button>
+        <button class="close">
+          <img src="./assets/svgs/close.svg" alt="GNB 메뉴 닫기 버튼" />
+        </button>
       </nav>
     </header>
 
     <div class="whole-wrapper">
       <main class="container">
         <section class="sc-main">
-          <h2 class="blind">레고 클래식 스페이스 시리즈의 역사</h2>
+          <h2 class="blind">Hitory of the LEGO "Classic Space"</h2>
           <div class="top-section">
             <div class="left-section">
               <ul class="award-list">
                 <li class="award-item1">
                   <a href="">
-                    <img src="./assets/imgs/award1.png" alt="BEST INNOVATION" />
+                    <img src="./assets/imgs/award1.png" alt="BEST INNOVATION AWARDED" />
                   </a>
                 </li>
                 <li class="award-item2">
                   <a href="">
-                    <img src="./assets/imgs/award2.png" alt="BEST UI DESIGN" />
+                    <img src="./assets/imgs/award2.png" alt="BEST UI DESIGN AWARDED" />
                   </a>
                 </li>
                 <li class="award-item3">
                   <a href="">
-                    <img src="./assets/imgs/award3.png" alt="BEST US EDSIGN" />
+                    <img src="./assets/imgs/award3.png" alt="BEST US DESIGN AWARDED" />
                   </a>
                 </li>
                 <li class="award-item4">
                   <a href="">
-                    <img src="./assets/imgs/award4.png" alt="SPECIAL DESIGN KUDOS" />
+                    <img src="./assets/imgs/award4.png" alt="SPECIAL DESIGN KUDOS AWARDED" />
                   </a>
                 </li>
               </ul>
@@ -105,13 +113,14 @@
               <a class="anchor-link" href="#start"><span>start</span></a>
             </div>
             <div class="center-section">
-              <img class="atom" src="./assets/imgs/atom.png" alt />
+              <img class="atom" src="./assets/imgs/atom.png" alt="아래 섹션으로 이동하는 atom" />
             </div>
             <div class="right-section">
               <a class="site-of-the-day" href=""
-                ><img src="./assets/imgs/siteoftheday.png" alt=""
+                ><img src="./assets/imgs/siteoftheday.png" alt="Site of the Day 뱃지"
               /></a>
               <a class="honors" href="">
+                <span class="blind">Honors 뱃지</span>
                 <svg width="53.08" height="171.358">
                   <path class="js-color-bg" fill="white" d="M0 0h53.08v171.358H0z"></path>
                   <g class="js-color-text" fill="black">
@@ -142,48 +151,72 @@
             interest in space and the space race.
           </p>
           <div class="img-wrapper">
-            <img class="satellite" src="./assets/imgs/satellite.png" alt />
-            <img class="spaceship" src="./assets/imgs/spaceship.png" alt />
-            <img class="alien1" src="./assets/imgs/alien1.png" alt />
-            <img class="alien2" src="./assets/imgs/alien2.png" alt />
-            <img class="block-bottom" src="./assets/imgs/block-bottom.png" alt />
+            <img
+              class="satellite"
+              src="./assets/imgs/satellite.png"
+              alt="둥둥 떠다니는 satellite"
+            />
+            <img
+              class="spaceship"
+              src="./assets/imgs/spaceship.png"
+              alt="둥둥 떠다니는 spaceship"
+            />
+            <img class="alien1" src="./assets/imgs/alien1.png" alt="왼쪽에서 등장하는 alien" />
+            <img class="alien2" src="./assets/imgs/alien2.png" alt="오른쪽에서 등장하는 alien" />
+            <img class="block-bottom" src="./assets/imgs/block-bottom.png" alt="레고 블럭" />
           </div>
         </section>
 
         <div class="blue-bg-group">
           <section class="sc-since">
             <div class="content-area">
-              <strong id="year-1978">0</strong>
+              <strong id="year-1978" aria-live="polite">0</strong>
               <h2 class="title">one of successful series was<br />launched - LEGO Space</h2>
             </div>
             <div class="img-wrapper">
-              <img class="block-top" src="./assets/imgs/block-top.png" alt />
-              <img class="ufo" src="./assets/imgs/ufo.png" alt />
-              <img class="spaceship2" src="./assets/imgs/spaceship2.png" alt />
-              <img class="planet" src="./assets/imgs/planet.png" alt />
+              <img class="block-top" src="./assets/imgs/block-top.png" alt="레고 블럭" />
+              <img class="ufo" src="./assets/imgs/ufo.png" alt="오른쪽에서 등장하는 ufo" />
+              <img
+                class="spaceship2"
+                src="./assets/imgs/spaceship2.png"
+                alt="오른쪽으로 사라지는 spaceship"
+              />
+              <img class="planet" src="./assets/imgs/planet.png" alt="둥둥 떠다니는 planet" />
             </div>
           </section>
 
           <section class="sc-creator" id="creator">
             <div class="top-section">
               <span class="label tt">⌈station 2 // creator⌉</span>
-              <h3 class="title">
+              <h2 class="title">
                 <em>The creator</em>
                 <span>of LEGO Space is</span>
                 <span>Jens</span>
                 <span>Nygaard</span>
                 <span>Knudsen</span>
-              </h3>
+              </h2>
               <p class="description tt">
                 It was he who designed the first sets<br />
                 of this line.
               </p>
               <div class="creator-area">
-                <img class="creator" src="./assets/imgs/creator.png" alt="" />
+                <img
+                  class="creator"
+                  src="./assets/imgs/creator.png"
+                  alt="Creator Jens Nygaard Knudsen"
+                />
               </div>
               <div class="img-wrapper">
-                <img class="ufo2" src="./assets/imgs/ufo2.png" alt />
-                <img class="ufo3" src="./assets/imgs/ufo3.png" alt />
+                <img
+                  class="ufo2"
+                  src="./assets/imgs/ufo2.png"
+                  alt="아래로 내려와서 오른쪽으로 사라지는 ufo"
+                />
+                <img
+                  class="ufo3"
+                  src="./assets/imgs/ufo3.png"
+                  alt="왼쪽에서 등장해서 아래로 내려가는 ufo"
+                />
               </div>
             </div>
             <div class="bottom-section">
@@ -196,38 +229,62 @@
               <div class="parts-area tt">
                 <div class="circle-yellow">
                   <span>Yellow</span>
-                  <img class="yellow-parts" src="./assets/imgs/yellow-parts.png" alt />
+                  <img
+                    class="yellow-parts"
+                    src="./assets/imgs/yellow-parts.png"
+                    alt="노란색 레고 부품"
+                  />
                 </div>
                 <div class="circle-gray">
                   <span>Gray</span>
-                  <img class="gray-parts" src="./assets/imgs/gray-parts.png" alt />
+                  <img class="gray-parts" src="./assets/imgs/gray-parts.png" alt="회색 레고 부품" />
                 </div>
                 <div class="circle-blue">
                   <span>Blue</span>
-                  <img class="blue-parts" src="./assets/imgs/blue-parts.png" alt />
+                  <img
+                    class="blue-parts"
+                    src="./assets/imgs/blue-parts.png"
+                    alt="파란색 레고 부품"
+                  />
                 </div>
               </div>
               <div class="spaceship-area">
-                <img class="yellow-lego" src="./assets/imgs/yellow-lego.png" alt />
-                <img class="white-lego" src="./assets/imgs/white-lego.png" alt />
-                <img class="blue-lego" src="./assets/imgs/blue-lego.png" alt />
-                <img class="planet2" src="./assets/imgs/planet2.png" alt />
-                <img class="spaceship3" src="./assets/imgs/spaceship3.png" alt />
+                <img
+                  class="yellow-lego"
+                  src="./assets/imgs/yellow-lego.png"
+                  alt="둥둥 떠다니는 yellow lego"
+                />
+                <img
+                  class="white-lego"
+                  src="./assets/imgs/white-lego.png"
+                  alt="둥둥 떠다니는 white lego"
+                />
+                <img
+                  class="blue-lego"
+                  src="./assets/imgs/blue-lego.png"
+                  alt="둥둥 떠다니는 blue lego"
+                />
+                <img class="planet2" src="./assets/imgs/planet2.png" alt="둥둥 떠다니는 planet" />
+                <img
+                  class="spaceship3"
+                  src="./assets/imgs/spaceship3.png"
+                  alt="아래 섹션으로 이동하는 spaceship"
+                />
               </div>
             </div>
           </section>
 
           <section class="sc-first-sets" id="firstsets">
             <div class="content-area">
-              <span class="label tt"
-                >⌈station 3 // first<br />
-                sets⌉</span
-              >
-              <h3 class="title">
+              <span class="label tt">
+                ⌈station 3 // first<br />
+                sets⌉
+              </span>
+              <h2 class="title">
                 <em>The first sets</em> won<br />
                 a large number<br />
                 of fans
-              </h3>
+              </h2>
               <p class="description tt">
                 Despite the lack of bright colors and the<br />
                 limited number of details
@@ -238,10 +295,11 @@
               </p>
             </div>
             <div class="table-area">
-              <img class="lego-set" src="./assets/imgs/lego-set.png" alt="" />
-              <img class="boy" src="./assets/imgs/boy.png" alt="" />
+              <img class="lego-set" src="./assets/imgs/lego-set.png" alt="Lego Space Cruiser Set" />
+              <img class="boy" src="./assets/imgs/boy.png" alt="레고를 갖고 노는 소년" />
+              <img class="rover" src="./assets/imgs/rover.png" alt="우주 탐사 rover" />
               <div class="lego-block-pile">
-                <div class="shuttle"></div>
+                <span class="blind">탐사 rover에 부딪혀서 흩어지는 레고 블럭 더미</span>
                 <div class="pile-y1"></div>
                 <div class="pile-y2"></div>
                 <div class="pile-y3"></div>
@@ -270,7 +328,7 @@
                 </h2>
                 <ul class="classic-space-list">
                   <li class="classic-space-item1">
-                    <img src="./assets/imgs/classic-space1.png" alt="" />
+                    <img src="./assets/imgs/classic-space1.png" alt />
                     <div class="content-area">
                       <div class="first-line">
                         <strong>«Starfleet Voyager»</strong>
@@ -283,7 +341,7 @@
                     </div>
                   </li>
                   <li class="classic-space-item2">
-                    <img src="./assets/imgs/classic-space2.png" alt="" />
+                    <img src="./assets/imgs/classic-space2.png" alt />
                     <div class="content-area">
                       <div class="first-line">
                         <strong>«Surface Explorer»</strong>
@@ -296,7 +354,7 @@
                     </div>
                   </li>
                   <li class="classic-space-item3">
-                    <img src="./assets/imgs/classic-space3.png" alt="" />
+                    <img src="./assets/imgs/classic-space3.png" alt />
                     <div class="content-area">
                       <div class="first-line">
                         <strong>«Galaxy Commander»</strong>
@@ -309,7 +367,7 @@
                     </div>
                   </li>
                   <li class="classic-space-item4">
-                    <img src="./assets/imgs/classic-space4.png" alt="" />
+                    <img src="./assets/imgs/classic-space4.png" alt />
                     <div class="content-area">
                       <div class="first-line">
                         <strong>«Intergalactic Command Base»</strong>
@@ -321,7 +379,7 @@
                     </div>
                   </li>
                   <li class="classic-space-item5">
-                    <img src="./assets/imgs/classic-space5.png" alt="" />
+                    <img src="./assets/imgs/classic-space5.png" alt />
                     <div class="content-area">
                       <div class="first-line">
                         <strong>«Solar Power Transporter»</strong>
@@ -337,15 +395,19 @@
               </div>
             </div>
             <div class="bottom-section">
-              <strong id="year-1987">0</strong>
+              <strong id="year-1987" aria-live="polite">0</strong>
               <h3 class="sub-title">
                 The <em>latest model</em> in the<br />series "classic space"
               </h3>
               <p class="description tt">LEGO Space "Space<br />Cruiser" set from 1978</p>
               <div class="img-wrapper">
-                <img class="big-blue-lego" src="./assets/imgs/big-blue-lego.png" alt="" />
-                <img class="cruiser" src="./assets/imgs/cruiser.png" alt="" />
-                <img class="yellow-block" src="./assets/imgs/yellow-block.png" alt="" />
+                <img
+                  class="big-blue-lego"
+                  src="./assets/imgs/big-blue-lego.png"
+                  alt="big blue lego"
+                />
+                <img class="cruiser" src="./assets/imgs/cruiser.png" alt="space cruiser" />
+                <img class="yellow-block" src="./assets/imgs/yellow-block.png" alt="레고 블럭" />
               </div>
             </div>
           </section>
@@ -366,42 +428,54 @@
             </div>
             <ul class="suit-list">
               <li>
-                <img class="scientist" src="./assets/imgs/scientist.png" alt="" />
+                <img class="scientist" src="./assets/imgs/scientist.png" alt="Scientist Lego" />
                 <div class="bubble-scientist">
                   <span class="tt">Scientist</span>
                 </div>
               </li>
               <li>
-                <img class="bad" src="./assets/imgs/bad-astronaut.png" alt="" />
+                <img class="bad" src="./assets/imgs/bad-astronaut.png" alt="Bad astronaut Lego" />
                 <div class="bubble-bad">
                   <span class="tt">Bad astronaut</span>
                 </div>
               </li>
               <li>
-                <img class="good" src="./assets/imgs/good-astronaut.png" alt="" />
+                <img
+                  class="good"
+                  src="./assets/imgs/good-astronaut.png"
+                  alt="Good astronaut Lego"
+                />
                 <div class="bubble-good">
                   <span class="tt">Good astronaut</span>
                 </div>
               </li>
               <li>
-                <img class="mechanic" src="./assets/imgs/mechanic.png" alt="" />
+                <img class="mechanic" src="./assets/imgs/mechanic.png" alt="Mechanic Lego" />
                 <div class="bubble-mechanic">
                   <span class="tt">Mechanic</span>
                 </div>
               </li>
               <li>
-                <img class="soldier" src="./assets/imgs/soldier.png" alt="" />
+                <img class="soldier" src="./assets/imgs/soldier.png" alt="Soldier Lego" />
                 <div class="bubble-soldier">
                   <span class="tt">Soldier</span>
                 </div>
               </li>
             </ul>
             <div class="img-wrapper">
-              <img class="alien1" src="./assets/imgs/alien1.png" alt="" />
-              <img class="alien2" src="./assets/imgs/alien2.png" alt="" />
-              <img class="yellow-white-block" src="./assets/imgs/yellow-white-block.png" alt="" />
-              <img class="follow-ufo" src="./assets/imgs/follow-ufo.png" alt="" />
-              <img class="ground" src="./assets/imgs/ground-bg.png" alt="" />
+              <img class="alien1" src="./assets/imgs/alien1.png" alt="왼쪽에서 등장하는 alien" />
+              <img class="alien2" src="./assets/imgs/alien2.png" alt="오른쪽에서 등장하는 alien" />
+              <img
+                class="yellow-white-block"
+                src="./assets/imgs/yellow-white-block.png"
+                alt="레고 블럭"
+              />
+              <img
+                class="follow-ufo"
+                src="./assets/imgs/follow-ufo.png"
+                alt="마우스의 움직임을 따라다니는 ufo"
+              />
+              <img class="ground" src="./assets/imgs/ground-bg.png" alt />
             </div>
           </section>
 
@@ -418,8 +492,12 @@
               not occur.
             </p>
             <div class="img-wrapper">
-              <img class="photo" src="./assets/imgs/photo.png" alt="" />
-              <img class="attach" src="./assets/svgs/attach.svg" alt="" />
+              <img
+                class="photo"
+                src="./assets/imgs/photo.png"
+                alt="우주비행사와 외계인들이 같이 찍은 사진"
+              />
+              <img class="attach" src="./assets/svgs/attach.svg" alt />
             </div>
           </section>
 
@@ -434,49 +512,101 @@
                   they behave in microgravity conditions in space.
                 </p>
               </div>
-              <img class="rocket" src="./assets/imgs/rocket.png" alt />
+              <img class="rocket" src="./assets/imgs/rocket.png" alt="Rocket" />
               <div class="boarding-wrapper">
                 <div class="boarding-line">
-                  <img class="mechanic" src="./assets/imgs/mechanic.png" alt="" />
-                  <img class="good" src="./assets/imgs/good-astronaut.png" alt="" />
-                  <img class="bad" src="./assets/imgs/bad-astronaut.png" alt="" />
-                  <img class="scientist" src="./assets/imgs/scientist.png" alt="" />
-                  <img class="atom" src="./assets/imgs/atom.png" alt="" />
-                  <img class="alien2" src="./assets/imgs/alien2.png" alt="" />
-                  <img class="alien3" src="./assets/imgs/alien3.png" alt="" />
-                  <img class="alien4" src="./assets/imgs/alien4.png" alt="" />
+                  <img
+                    class="mechanic"
+                    src="./assets/imgs/mechanic.png"
+                    alt="Mechanic Lego in Boarding line"
+                  />
+                  <img
+                    class="good"
+                    src="./assets/imgs/good-astronaut.png"
+                    alt="Good astronaut Lego in Boarding line"
+                  />
+                  <img
+                    class="bad"
+                    src="./assets/imgs/bad-astronaut.png"
+                    alt="Bad astronaut Lego in Boarding line"
+                  />
+                  <img
+                    class="scientist"
+                    src="./assets/imgs/scientist.png"
+                    alt="Scientist Lego in Boarding line"
+                  />
+                  <img class="atom" src="./assets/imgs/atom.png" alt="Atom Lego in Boarding line" />
+                  <img
+                    class="alien2"
+                    src="./assets/imgs/alien2.png"
+                    alt="Alien Lego in Boarding line"
+                  />
+                  <img
+                    class="alien3"
+                    src="./assets/imgs/alien3.png"
+                    alt="Alien Lego in Boarding line"
+                  />
+                  <img
+                    class="alien4"
+                    src="./assets/imgs/alien4.png"
+                    alt="Alien Lego in Boarding line"
+                  />
                 </div>
               </div>
             </div>
             <div class="bottom-section">
               <div class="strong-wrapper">
                 <strong>pick the characters</strong>
-                <img class="arrow" src="./assets/svgs/arrow.svg" alt="" />
+                <img class="arrow" src="./assets/svgs/arrow.svg" alt="아래를 가리키는 화살표" />
               </div>
               <div class="img-wrapper">
-                <img class="planet2" src="./assets/imgs/planet2.png" alt="" />
-                <img class="planet3" src="./assets/imgs/planet3.png" alt="" />
+                <img class="planet2" src="./assets/imgs/planet2.png" alt="둥둥 떠다니는 planet" />
+                <img class="planet3" src="./assets/imgs/planet3.png" alt="둥둥 떠다니는 planet" />
               </div>
               <div class="pick-the-characters">
+                <img class="characters" src="./assets/imgs/characters.png" alt="캐릭터 선택" />
                 <div class="btn-wrapper">
-                  <button class="btn-good"></button>
-                  <button class="btn-scientist"></button>
-                  <button class="btn-bad"></button>
-                  <button class="btn-mechanic"></button>
-                  <button class="btn-atom"></button>
-                  <button class="btn-alien3"></button>
-                  <button class="btn-alien4"></button>
-                  <button class="btn-alien2"></button>
+                  <button class="btn-good">
+                    <span class="blind">Good astronaut 선택 버튼</span>
+                  </button>
+                  <button class="btn-scientist">
+                    <span class="blind">Scientist 선택 버튼</span>
+                  </button>
+                  <button class="btn-bad">
+                    <span class="blind">Bad astronaut 선택 버튼</span>
+                  </button>
+                  <button class="btn-mechanic">
+                    <span class="blind">Mechanic 선택 버튼</span>
+                  </button>
+                  <button class="btn-atom"><span class="blind">Atom 선택 버튼</span></button>
+                  <button class="btn-alien3"><span class="blind">Alien 선택 버튼</span></button>
+                  <button class="btn-alien4"><span class="blind">Alien 선택 버튼</span></button>
+                  <button class="btn-alien2"><span class="blind">Alien 선택 버튼</span></button>
                 </div>
-                <img class="characters" src="./assets/imgs/characters.png" alt="" />
-                <img class="good" src="./assets/imgs/good-astronaut.png" alt="" />
-                <img class="scientist" src="./assets/imgs/scientist.png" alt="" />
-                <img class="bad" src="./assets/imgs/bad-astronaut.png" alt="" />
-                <img class="mechanic" src="./assets/imgs/mechanic.png" alt="" />
-                <img class="atom" src="./assets/imgs/atom.png" alt="" />
-                <img class="alien3" src="./assets/imgs/alien3.png" alt="" />
-                <img class="alien4" src="./assets/imgs/alien4.png" alt="" />
-                <img class="alien2" src="./assets/imgs/alien2.png" alt="" />
+                <img
+                  class="good"
+                  src="./assets/imgs/good-astronaut.png"
+                  alt="둥둥 떠다니는 Good astronaut"
+                />
+                <img
+                  class="scientist"
+                  src="./assets/imgs/scientist.png"
+                  alt="둥둥 떠다니는 Scientist"
+                />
+                <img
+                  class="bad"
+                  src="./assets/imgs/bad-astronaut.png"
+                  alt="둥둥 떠다니는 Bad astronaut"
+                />
+                <img
+                  class="mechanic"
+                  src="./assets/imgs/mechanic.png"
+                  alt="둥둥 떠다니는 Mechanic"
+                />
+                <img class="atom" src="./assets/imgs/atom.png" alt="둥둥 떠다니는 Atom" />
+                <img class="alien3" src="./assets/imgs/alien3.png" alt="둥둥 떠다니는 Alien" />
+                <img class="alien4" src="./assets/imgs/alien4.png" alt="둥둥 떠다니는 Alien" />
+                <img class="alien2" src="./assets/imgs/alien2.png" alt="둥둥 떠다니는 Alien" />
               </div>
             </div>
           </section>
@@ -500,10 +630,22 @@
           <button class="sources tt">⌈sources⌉</button>
         </div>
         <div class="img-wrapper">
-          <img class="launch-rocket" src="./assets/svgs/launch-rocket.svg" alt="" />
-          <img class="spaceship4" src="./assets/imgs/spaceship4.png" alt="" />
-          <img class="designer-lego" src="./assets/imgs/designer.png" alt="" />
-          <img class="alien4" src="./assets/imgs/alien4.png" alt="" />
+          <img
+            class="launch-rocket"
+            src="./assets/svgs/launch-rocket.svg"
+            alt="위로 올라가는 rocket"
+          />
+          <img
+            class="spaceship4"
+            src="./assets/imgs/spaceship4.png"
+            alt="둥둥 떠다니는 spaceship"
+          />
+          <img
+            class="designer-lego"
+            src="./assets/imgs/designer.png"
+            alt="둥둥 떠다니는 desinger lego"
+          />
+          <img class="alien4" src="./assets/imgs/alien4.png" alt="둥둥 떠다니는 alien" />
         </div>
       </footer>
     </div>

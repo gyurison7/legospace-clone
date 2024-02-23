@@ -147,10 +147,10 @@ const spaceshipMotion = gsap.to(".sc-creator .spaceship3", {
 });
 
 // sc-first-sets
-gsap.to(".sc-first-sets .shuttle", {
+gsap.to(".sc-first-sets .rover", {
   scrollTrigger: {
     trigger: ".sc-first-sets",
-    start: "20% 0%",
+    start: "25% 0%",
     end: "100% 40%",
     scrub: true,
     // markers: true,
@@ -162,7 +162,7 @@ gsap.to(".sc-first-sets .shuttle", {
 const scatterMotion = gsap.timeline({
   scrollTrigger: {
     trigger: ".sc-classic-space",
-    start: "0% 100%",
+    start: "0% 110%",
     end: "40% 0%",
     scrub: true,
     // markers: true,
